@@ -6,63 +6,58 @@ if (user) {
   const avatarURL = user.avatar || "../assets/img/avatar1.jpg";
 
   perfilDiv.innerHTML = `
-    <div style="text-align: center;">
-      <img id="avatar-img" src="${avatarURL}" alt="avatar"
-        style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 8px rgba(0,0,0,0.1); margin-bottom: 1rem;" />
+    <div class="perfil-box">
+      <img id="avatar-img" src="${avatarURL}" alt="avatar" class="perfil-avatar" />
 
-      <label><strong>Elegí tu avatar:</strong></label><br><br>
-
-      <div id="avatar-options" style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 1rem;">
+      <label class="avatar-label">Elegí tu avatar:</label>
+      <div id="avatar-options" class="avatar-options">
         ${[1, 2, 3, 4, 5].map(num => `
           <label>
-            <input type="radio" name="avatar" value="../assets/img/avatar${num}.jpg" ${user.avatar === `../assets/img/avatar${num}.jpg` ? 'checked' : ''}>
-            <img src="../assets/img/avatar${num}.jpg" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid #ccc;" />
+            <input type="radio" name="avatar" value="../assets/img/avatar${num}.jpg"
+              ${user.avatar === `../assets/img/avatar${num}.jpg` ? 'checked' : ''}>
+            <img src="../assets/img/avatar${num}.jpg" class="avatar-thumb" />
           </label>
         `).join('')}
       </div>
 
       <form id="edit-form">
-        <label>Nombre:</label><br>
-        <input type="text" id="edit-name" value="${user.name}" required><br><br>
+        <label>🙋 Nombre:</label>
+        <input type="text" id="edit-name" value="${user.name}" required />
 
-        <label>Email:</label><br>
-        <input type="email" id="edit-email" value="${user.email}" required><br><br>
+        <label>📧 Email:</label>
+        <input type="email" id="edit-email" value="${user.email}" required />
 
-        <label><strong>📝 Tu biografía:</strong></label><br>
-        <textarea id="bio-text" rows="4" style="width: 100%; padding: 0.5rem;">${bio}</textarea><br>
+        <label>📝 Biografía:</label>
+        <textarea id="bio-text" rows="4">${bio}</textarea>
 
-        <button type="submit" style="margin-top: 1rem;">💾 Guardar cambios</button>
+        <div class="perfil-buttons">
+          <button type="submit">💾 Guardar cambios</button>
+          <button type="button" id="cerrar-sesion">🔓 Cerrar sesión</button>
+        </div>
       </form>
 
-      <hr style="margin: 2rem 0;" />
-      <a href="favoritos.html" style="display: block; margin-bottom: 1rem; color: #f47521; font-weight: bold;">⭐ Ver mis favoritos</a>
-      <a href="lectura.html" style="display: block; margin-bottom: 1rem; color: #f47521; font-weight: bold;">📖 Ver mi lista de lectura</a>
-      <a href="../index.html" style="display: block; margin-bottom: 1rem; color: #f47521; font-weight: bold;">← Volver al inicio</a>
-      <button onclick="cerrarSesion()" style="
-        background-color: #f47521;
-        color: white;
-        border: none;
-        padding: 0.5rem 1rem;
-        border-radius: 4px;
-        cursor: pointer;
-        font-weight: bold;
-      ">Cerrar sesión</button>
+      <hr />
+      <div class="perfil-links">
+        <a href="favoritos.html">⭐ Ver mis favoritos</a>
+        <a href="lectura.html">📖 Mi lista de lectura</a>
+        <a href="../index.html">← Volver al inicio</a>
+      </div>
     </div>
   `;
 
+  // 💬 Avatar en tiempo real
   document.querySelectorAll('input[name="avatar"]').forEach(radio => {
     radio.addEventListener("change", () => {
-      const nueva = radio.value;
-      const avatarImg = document.getElementById("avatar-img");
-      if (avatarImg) avatarImg.src = nueva;
+      document.getElementById("avatar-img").src = radio.value;
     });
   });
 
+  // 📝 Guardar edición
   document.getElementById("edit-form").addEventListener("submit", function (e) {
     e.preventDefault();
     const newName = document.getElementById("edit-name").value.trim();
     const newEmail = document.getElementById("edit-email").value.trim();
-    const nuevaBio = document.getElementById("bio-text").value;
+    const nuevaBio = document.getElementById("bio-text").value.trim();
     const nuevaAvatar = document.querySelector('input[name="avatar"]:checked').value;
 
     const updatedUser = { ...user, name: newName, email: newEmail, avatar: nuevaAvatar };
@@ -72,14 +67,17 @@ if (user) {
     alert("Perfil actualizado ✨");
   });
 
+  // 🚪 Cerrar sesión
+  document.getElementById("cerrar-sesion").addEventListener("click", () => {
+    localStorage.removeItem("bamUser");
+    alert("Sesión cerrada");
+    window.location.href = "../index.html";
+  });
+
 } else {
   perfilDiv.innerHTML = `
-    <p>No hay sesión activa. <a href="login.html" style="color: #f47521; font-weight: bold;">Iniciar sesión</a></p>
+    <p style="text-align: center;">
+      No hay sesión activa. <a href="login.html" style="color: #f47521; font-weight: bold;">Iniciar sesión</a>
+    </p>
   `;
-}
-
-function cerrarSesion() {
-  localStorage.removeItem("bamUser");
-  alert("Sesión cerrada");
-  window.location.href = "../index.html";
 }

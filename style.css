@@ -9,28 +9,160 @@ body {
   font-family: 'Open Sans', Arial, sans-serif;
   background-color: #f9f9f9;
   color: #333;
-  margin: 0;
-  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* 🧭 Header y navegación */
-header {
-  background-color: #f47521;
-  padding: 1rem 2rem;
-  color: white;
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* 🧢 Header refinado */
+.bam-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #f47521;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-nav a {
-  margin-left: 1rem;
+.header-left,
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.logo {
+  font-size: 2.4rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.logo-link {
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  transition: color 0.2s ease;
 }
 
-/* 📋 Sección de manga */
+.logo-link:hover {
+  color: #ffe2d1;
+}
+
+.main-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.main-nav a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.main-nav a:hover {
+  background-color: rgba(255,255,255,0.2);
+}
+
+/* 🌓 Botón de tema */
+#toggle-theme {
+  background-color: white;
+  color: #f47521;
+  font-weight: bold;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+  margin: 1rem auto;
+  display: block;
+}
+
+#toggle-theme:hover {
+  background-color: #ffe2d1;
+  transform: scale(1.04);
+}
+
+body.dark-mode .bam-header {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode #toggle-theme {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode .main-nav a:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+body.dark-mode .logo-link:hover {
+  color: #f9b47d;
+}
+
+/* 👤 Panel de usuario */
+.usuario-panel {
+  background-color: #fff8f2;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  box-shadow: 0 0 6px rgba(0,0,0,0.06);
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  max-width: 280px;
+}
+
+.usuario-panel strong {
+  color: #f47521;
+}
+
+.usuario-links {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.usuario-links a,
+.usuario-links button {
+  background-color: #f47521;
+  color: white;
+  padding: 0.35rem 0.7rem;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.2s ease;
+}
+
+.usuario-links a:hover,
+.usuario-links button:hover {
+  background-color: #d96212;
+}
+
+body.dark-mode .usuario-panel {
+  background-color: #252018;
+  color: #eee;
+}
+
+body.dark-mode .usuario-links a,
+body.dark-mode .usuario-links button {
+  background-color: #333;
+  color: #fff;
+}
+
+/* 📋 Lista de mangas */
 #manga-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -39,12 +171,10 @@ nav a {
 }
 
 .manga-card {
-  position: relative;
-  background-color: #fff;
+  background-color: #fff8f2;
   border-radius: 8px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
   text-align: center;
-  overflow: hidden;
   transition: transform 0.3s ease;
 }
 
@@ -72,154 +202,286 @@ nav a {
   font-weight: bold;
 }
 
-/* 🎬 Etiqueta de género */
-.genre-badge {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background-color: #f47521;
-  color: white;
-  padding: 0.3rem 0.6rem;
-  font-size: 0.75rem;
-  border-radius: 4px;
-  font-weight: bold;
-  z-index: 3;
+body.dark-mode .manga-card {
+  background-color: #252018;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  color: #eee;
 }
 
-/* ✨ Descripción hover */
-.manga-card .hover-description {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  font-size: 0.85rem;
-  padding: 0.5rem 1rem;
-  color: #555;
-}
-
-.manga-card:hover .hover-description {
-  opacity: 1;
-}
-
-/* ⭐ Botón de favorito */
-.fav-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: transparent;
-  border: none;
-  font-size: 1.5rem;
-  color: #ccc;
-  cursor: pointer;
-  z-index: 4;
-}
-
-.fav-btn.active {
-  color: #f47521;
-  text-shadow: 0 0 3px #f47521;
-}
-
-.fav-btn:hover {
+body.dark-mode .manga-card h3 {
   color: #f47521;
 }
 
-/* 🔓 Botones y enlaces */
-button,
-#logout-btn,
-button[type="submit"] {
-  background-color: #f47521;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
-  margin-top: 0.5rem;
-}
-
-button:hover,
-#logout-btn:hover,
-button[type="submit"]:hover {
-  background-color: #d96212;
-}
-
-a[href*="perfil"],
-.acceso a,
-#acceso a {
-  color: #f47521;
-  font-weight: bold;
-  text-decoration: none;
-  margin: 0.5rem 0;
-  display: inline-block;
-}
-
-/* 👤 Acceso y sesión */
-.acceso {
-  text-align: center;
-  margin-top: 2rem;
-}
-
-#usuario-logueado {
-  margin-top: 1rem;
+/* 🧍 Perfil */
+.perfil-box {
   text-align: center;
 }
 
-input {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 250px;
-}
-
-/* 🖼️ Avatar del perfil */
-img[alt*="avatar"] {
-  width: 120px;
-  height: 120px;
+.perfil-avatar {
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   margin: 1rem auto;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.avatar-label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
   display: block;
 }
 
-/* 👤 Avatar principal del perfil */
-#avatar-img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1rem;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* 🖼️ Avatares en el selector de opciones */
-#avatar-options label {
+.avatar-options {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
 }
 
-#avatar-options input[type="radio"] {
-  display: none;
-}
-
-#avatar-options img {
+.avatar-thumb {
   width: 60px;
   height: 60px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid #ccc;
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-#avatar-options img:hover {
+.avatar-thumb:hover {
   transform: scale(1.08);
 }
 
-/* 🔘 Cuando está seleccionado */
-#avatar-options input[type="radio"]:checked + img {
+input[type="radio"]:checked + .avatar-thumb {
   border-color: #f47521;
   box-shadow: 0 0 6px #f47521;
+}
+
+form#edit-form {
+  text-align: left;
+  max-width: 480px;
+  margin: 1rem auto;
+}
+
+form#edit-form label {
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+form#edit-form input,
+form#edit-form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+form#edit-form input:focus,
+form#edit-form textarea:focus {
+  outline: none;
+  border-color: #f47521;
+  box-shadow: 0 0 0 2px rgba(244,117,33,0.2);
+}
+
+body.dark-mode form#edit-form input,
+body.dark-mode form#edit-form textarea {
+  background-color: #2a2a2a;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.dark-mode form#edit-form input:focus,
+body.dark-mode form#edit-form textarea:focus {
+  border-color: #f47521;
+  box-shadow: 0 0 0 2px rgba(244,117,33,0.3);
+}
+
+.perfil-buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.perfil-buttons button {
+  background-color: #f47521;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.perfil-buttons button:hover {
+  background-color: #d96212;
+  transform: scale(1.03);
+}
+
+body.dark-mode
+
+/* 📦 Formulario centrado y coherente */
+.form-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 2rem;
+}
+
+.form-container {
+  background-color: #fff8f2;
+  padding: 2.5rem 2rem;
+  max-width: 480px;
+  width: 100%;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 0 14px rgba(0,0,0,0.08);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.form-container h2 {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-container label {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 0.65rem 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 1.2rem;
+  transition: border-color 0.2s ease;
+}
+
+.form-container input:focus {
+  outline: none;
+  border-color: #f47521;
+  box-shadow: 0 0 0 2px rgba(244,117,33,0.2);
+}
+
+.form-container button[type="submit"] {
+  background-color: #f47521;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.form-container button[type="submit"]:hover {
+  background-color: #d96212;
+  transform: scale(1.02);
+}
+
+.form-footer {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.form-footer a {
+  color: #f47521;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* 🌒 Modo oscuro para formularios */
+body.dark-mode .form-container {
+  background-color: #252018;
+  color: #eee;
+}
+
+body.dark-mode .form-container input {
+  background-color: #2a2a2a;
+  border: 1px solid #555;
+  color: #fff;
+}
+
+body.dark-mode .form-container input:focus {
+  border-color: #f47521;
+  box-shadow: 0 0 0 2px rgba(244,117,33,0.3);
+}
+
+/* 📱 Responsive fino */
+@media (max-width: 480px) {
+  .form-container {
+    padding: 2rem 1.2rem;
+  }
+
+  .form-container input,
+  .form-container button[type="submit"] {
+    font-size: 1rem;
+  }
+}
+
+
+/* 🔍 Selector de género */
+.filtro-genero-container {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.filtro-genero-container label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+#filtro-genero {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: white;
+  color: #333;
+  transition: border-color 0.2s ease;
+}
+
+#filtro-genero:focus {
+  border-color: #f47521;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(244,117,33,0.2);
+}
+
+body.dark-mode #filtro-genero {
+  background-color: #2a2a2a;
+  border: 1px solid #555;
+  color: #eee;
+}
+
+/* 📚 Título de manga destacado */
+.titulo-manga {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #f47521;
+  text-align: center;
+  margin: 2rem 0 1rem;
+  letter-spacing: -0.5px;
+}
+
+body.dark-mode .titulo-manga {
+  color: #f9b47d;
 }

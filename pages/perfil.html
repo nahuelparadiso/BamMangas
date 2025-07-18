@@ -7,6 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
+
+  <!-- Botón de tema -->
+  <button id="toggle-theme" style="
+    background-color: #f47521;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    margin: 1rem auto;
+    display: block;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  ">🌓 Cambiar tema</button>
+
   <header>
     <div class="logo">
       <a href="../index.html" class="logo-link">BamMangas</a>
@@ -26,5 +40,21 @@
   </main>
 
   <script src="../perfil.js"></script>
+
+  <!-- Script de tema -->
+  <script>
+    const toggleBtn = document.getElementById("toggle-theme");
+    const body = document.body;
+
+    if (localStorage.getItem("tema") === "oscuro") {
+      body.classList.add("dark-mode");
+    }
+
+    toggleBtn?.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      const nuevoTema = body.classList.contains("dark-mode") ? "oscuro" : "claro";
+      localStorage.setItem("tema", nuevoTema);
+    });
+  </script>
 </body>
 </html>
