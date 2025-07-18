@@ -1,6 +1,6 @@
 # 📚 BamMangas
 
-BamMangas es una aplicación web creada con HTML, CSS y JavaScript para mostrar una galería visual de mangas destacados. Incluye sistema de usuarios, fichas coleccionables, favoritos, lista de lectura, filtros por género y experiencia personalizada sin necesidad de backend.
+**BamMangas** es una aplicación web creada con HTML, CSS y JavaScript para mostrar una galería visual de mangas destacados. Incluye sistema de usuarios, fichas coleccionables, favoritos, lista de lectura, filtros por género y experiencia personalizada sin necesidad de backend.
 
 ---
 
@@ -20,9 +20,28 @@ BamMangas es una aplicación web creada con HTML, CSS y JavaScript para mostrar 
 
 ---
 
-## 🧱 Estructura del proyecto
+## 👤 Perfil de Usuario – Novedades
 
-BamMangas/ ├── index.html ├── style.css ├── app.js ├── manga.js ├── lectura.js ├── favoritos.js ├── auth.js ├── data/ │ └── mangas.json ├── assets/ │ └── img/ │ ├── onepiece.jpg │ ├── naruto.jpg │ ├── aot.jpg │ ├── jujutsu.jpg │ └── ...otras imágenes └── pages/ ├── manga.html ├── login.html ├── register.html ├── perfil.html ├── lectura.html └── favoritos.html
+Se mejoró la sección de perfil para ofrecer una experiencia más completa y personalizada:
+
+- 🖼️ **Selección de avatar personalizada**  
+  El usuario puede elegir entre 5 avatares visuales ubicados en `/assets/img/`. El cambio se refleja al instante.
+
+- ✏️ **Edición del perfil**  
+  Formulario para modificar nombre, email y biografía. Todo se guarda en `localStorage`.
+
+- 🔄 **Actualización dinámica**  
+  El avatar se actualiza en tiempo real al seleccionar uno nuevo.
+
+- 🔐 **Persistencia**  
+  Todos los datos del perfil se conservan entre sesiones.
+
+- 🚪 **Cierre de sesión**  
+  Elimina los datos locales y redirige al inicio.
+
+- 🛠️ **Corrección de rutas relativas**  
+  Las imágenes se cargan correctamente desde `pages/perfil.html` gracias al ajuste: `../assets/img/avatarX.jpg`.
+
 
 
 ---
@@ -59,10 +78,13 @@ npx live-server
 Luego abrir en: http://localhost:8080
 
 📦 Sistema de favoritos y lectura
-⭐ Favoritos	: Se marcan con una estrellita desde el index
-📖 Lista de lectura	: Se marca desde la página de detalle manga.html
-📂 Vista personal : favoritos.html y lectura.html muestran solo los mangas marcados
-🧑 Sesión requerida	: Las funciones están disponibles solo si hay sesión activa
+⭐ Favoritos: se marcan con una estrellita desde el index
+
+📖 Lista de lectura: se marca desde la página de detalle manga.html
+
+📂 Vista personal: favoritos.html y lectura.html muestran solo los mangas marcados
+
+🧑 Sesión requerida: funciones disponibles solo si hay sesión activa
 
 📘 Filtros inteligentes
 Búsqueda por género desde el menú desplegable
@@ -73,6 +95,4 @@ Actualizado cada vez que se cargan nuevos mangas
 
 👤 Autor
 Nahuel Paradiso
-
-FotoWeb:
 
