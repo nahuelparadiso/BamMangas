@@ -1,83 +1,71 @@
-# 📚 BamMangas
+📚 BamMangas
+BamMangas es una aplicación web desarrollada con HTML, CSS y JavaScript puro, inspirada en el estilo visual de Crunchyroll. Está pensada como proyecto personal demostrativo, sin fines comerciales, con foco en experiencia de usuario, interacción y diseño.
 
-**BamMangas** es una aplicación web hecha con **HTML, CSS y JavaScript**, pensada para brindar una experiencia visual estilo Crunchyroll, totalmente personalizada desde el navegador. Cuenta con sistema de usuario, fichas coleccionables, favoritos, lista de lectura, filtros inteligentes, modo claro/oscuro y una interfaz responsive sin necesidad de backend.
+Este sitio no será distribuido públicamente y su objetivo es mostrar mis capacidades como desarrollador frontend.
 
----
+🚀 Funcionalidades principales
+🖼️ Tarjetas de manga con portada, título estilizado y descripción oculta (aparece al pasar el cursor)
 
-## 🚀 Funcionalidades principales
+🔍 Filtro inteligente por género extraído dinámicamente desde mangas.json
 
-- 🖼️ Galería visual con imagen, título, género y descripción
-- 🔎 Filtro inteligente por género generado automáticamente desde `mangas.json`
-- 🔐 Sistema de usuarios:
-  - Registro, login, perfil editable
-  - Sesión persistente con `localStorage`
-  - Saludo personalizado en el header
-  - Cierre de sesión visual y redirección automática
-- ⭐ Favoritos por usuario (marcado desde el index)
-- 📖 Lista de lectura ("Quiero leer") personalizada
-- 📦 Vista detallada del manga con sinopsis extendida
-- 🔁 Interfaz responsive para dispositivos móviles y escritorio
+🔐 Sistema de usuarios completo:
 
----
+Registro, login, edición de perfil
 
-## 👤 Perfil de usuario – actualizado
+Sesión persistente con localStorage
 
-La sección de perfil fue rediseñada para brindar una experiencia cómoda y visualmente integrada:
+Saludo personalizado en el header
 
-- 🖼️ Selección de avatar (5 opciones visuales) con actualización en tiempo real  
-- ✏️ Formulario editable para nombre, email y biografía  
-- 💾 Persistencia local entre sesiones con `localStorage`  
-- 🔓 Cierre de sesión dinámico desde botón  
-- 📂 Acceso directo a favoritos y lista de lectura desde el perfil  
-- 🌗 Compatible con modo claro/oscuro  
-- 📱 Responsive con layout centrado y estilizado  
+Cierre de sesión dinámico
 
----
+⭐ Marcado de favoritos por usuario
 
-## 🎨 Estilo visual
+📖 Lista de lectura personalizada por sesión
 
-BamMangas se destaca por un diseño profesional, accesible y coherente en todo el sitio:
+📦 Vista detallada del manga con sinopsis narrativa expandida
 
-| Elemento             | Estética aplicada                          |
-|----------------------|--------------------------------------------|
-| Tarjetas de manga    | Fichas con imagen, sombra, hover sutil     |
-| Header y navegación  | Diseño moderno, espaciado, colores vivos   |
-| Botón de tema        | Cambia entre claro/oscuro con animación    |
-| Formularios login/registro | Centrados, legibles, visualmente cómodos |
-| Perfil               | Avatar, inputs y botones con coherencia total |
-| Responsive           | Layout flexible, adaptado a pantallas pequeñas |
+🌓 Modo claro/oscuro con transición visual
 
-Modo oscuro integrado para toda la interfaz. 🎨
+📱 Interfaz completamente responsive
 
----
+🧑‍🎨 Detalles visuales y diseño aplicado
+El sitio presenta una estética cuidada, moderna y adaptable:
 
-## 🧠 Tecnologías utilizadas
+Componente	Estilo aplicado
+Tarjetas de manga	Fondo suave, sombra, hover interactivo, descripción dinámica
+Título de manga	Mayúsculas estilizadas, color destacado
+Header y navegación	Espaciado, colores vivos, botón de cambio de tema
+Formulario login/registro	Layout centrado, inputs estilizados, feedback visual
+Perfil de usuario	Selección de avatar con vista previa + edición de datos
+Detalle de manga	Imagen ampliada + sinopsis narrativa en bloque destacado
+Modo oscuro	Aplicado en toda la interfaz (tarjetas, formularios, headers)
+Responsive	Layout adaptable a escritorio y móvil 📱
 
-- HTML5
-- CSS3 con estilo modular y responsivo
-- JavaScript Vanilla
-- `localStorage` para persistencia de sesión y datos
-- Live Server para entorno local
+🧠 Tecnologías utilizadas
+HTML5 semántico
 
----
+CSS3 modular + media queries
 
-## 💻 ¿Cómo ejecutar?
+JavaScript Vanilla
 
-```bash
+localStorage para manejo de sesión, lectura y favoritos
+
+Live Server para entorno local
+
+¿Cómo ejecutar?
 git clone https://github.com/nahuelparadiso/BamMangas.git
 cd BamMangas
 npx live-server
+http://localhost:8080
 
-Abrir en: http://localhost:8080
-
-📘 Extras funcionales
-📦 Sistema de favoritos y lectura por usuario
-
-📂 Vistas dedicadas: favoritos.html y lectura.html
-
-🔎 Filtro por género dinámico desde menú desplegable
-
-🔁 Menú generado automáticamente desde los datos en mangas.json
-
-🧑 Autor
+Autor
 Nahuel Paradiso
+
+
+📜 Licencia y reconocimiento de derechos
+Este proyecto fue creado con fines educativos y demostrativos. BamMangas no tiene fines comerciales ni será distribuido públicamente.
+
+Todas las obras de manga presentadas pertenecen a sus respectivos autores y editoriales. Este sitio no posee derechos sobre el contenido original y respeta la propiedad intelectual.
+
+
+
