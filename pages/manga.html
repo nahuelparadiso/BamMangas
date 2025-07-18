@@ -7,13 +7,27 @@
 </head>
 <body>
 
-  <header>
-    <div class="logo">
-      <a href="../index.html" style="color: white; text-decoration: none;">BamMangas</a>
+  <header class="bam-header">
+    <div class="header-left">
+      <div class="logo">
+        <a href="../index.html" class="logo-link">BamMangas</a>
+      </div>
     </div>
   </header>
 
-  <main id="manga-details" style="padding: 2rem;"></main>
+  <main id="manga-details" style="padding: 2rem;">
+    <div class="manga-info-container">
+      <img id="manga-imagen" alt="Portada del manga" style="max-width: 280px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+      <h2 id="manga-titulo" style="margin: 1rem 0 0.5rem;"></h2>
+      <p id="manga-genero" style="font-weight: bold; color: #f47521;"></p>
+      <p id="manga-descripcion"></p>
+    </div>
+
+    <section class="manga-sinopsis">
+      <h3>📝 Historia resumida</h3>
+      <p id="historia-texto"></p>
+    </section>
+  </main>
 
   <script src="../manga.js"></script>
 </body>

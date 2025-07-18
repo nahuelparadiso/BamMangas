@@ -4,69 +4,79 @@
     "titulo": "One Piece",
     "genero": "Aventura",
     "imagen": "assets/img/onepiece.jpg",
-    "descripcion": "Un joven pirata se embarca en la búsqueda del tesoro legendario, el One Piece."
+    "descripcion": "Un joven pirata se embarca en la búsqueda del tesoro legendario, el One Piece.",
+    "historiaResumida": "En un mundo gobernado por el mar y la libertad, Luffy sueña con encontrar el legendario tesoro One Piece y convertirse en el Rey de los Piratas. Para lograrlo, formará una tripulación inolvidable y enfrentará desafíos que pondrán a prueba sus ideales."
   },
   {
     "id": 2,
     "titulo": "Naruto",
     "genero": "Acción",
     "imagen": "assets/img/naruto.jpg",
-    "descripcion": "La historia de un ninja decidido a convertirse en el líder de su aldea."
+    "descripcion": "La historia de un ninja decidido a convertirse en el líder de su aldea.",
+    "historiaResumida": "Naruto Uzumaki es más que un niño hiperactivo con sueños gigantes: carga dentro de sí a una criatura legendaria y el deseo de ser aceptado. Su camino como ninja lo enfrentará a rivales, traiciones y amistades que marcarán su destino."
   },
   {
     "id": 3,
     "titulo": "Attack on Titan",
     "genero": "Drama",
     "imagen": "assets/img/aot.jpg",
-    "descripcion": "Humanos luchan por sobrevivir contra gigantes devoradores en un mundo postapocalíptico."
+    "descripcion": "Humanos luchan por sobrevivir contra gigantes devoradores en un mundo postapocalíptico.",
+    "historiaResumida": "Tras siglos de encierro tras enormes muros, la humanidad se enfrenta nuevamente al horror de los Titanes. Eren y sus amigos descubren que la verdad está oculta tanto en la historia como en su propia sangre."
   },
   {
     "id": 4,
     "titulo": "Jujutsu Kaisen",
     "genero": "Sobrenatural",
     "imagen": "assets/img/jujutsu.jpg",
-    "descripcion": "Estudiantes de una escuela de hechicería enfrentan maldiciones oscuras y peligrosas."
+    "descripcion": "Estudiantes de una escuela de hechicería enfrentan maldiciones oscuras y peligrosas.",
+    "historiaResumida": "Cuando Yuji Itadori consume un dedo maldito, su vida cambia para siempre. Entra al mundo de los hechiceros jujutsu, donde las emociones humanas pueden convertirse en maldiciones mortales — y él es el nuevo huésped de una de las más temibles."
   },
   {
     "id": 5,
     "titulo": "Bleach",
     "genero": "Espiritual",
     "imagen": "assets/img/bleach.jpg",
-    "descripcion": "Un adolescente obtiene poderes de Shinigami para proteger el mundo de los espíritus malignos."
+    "descripcion": "Un adolescente obtiene poderes de Shinigami para proteger el mundo de los espíritus malignos.",
+    "historiaResumida": "Ichigo Kurosaki nunca pensó que podría ver espíritus... hasta que se convierte en un Shinigami accidentalmente. Entre la vida y la muerte, deberá proteger almas inocentes y enfrentarse a amenazas que cruzan dimensiones."
   },
   {
     "id": 6,
     "titulo": "Fullmetal Alchemist",
     "genero": "Fantasía",
     "imagen": "assets/img/fullmetal.jpg",
-    "descripcion": "Dos hermanos alquimistas buscan la piedra filosofal para recuperar lo que perdieron."
+    "descripcion": "Dos hermanos alquimistas buscan la piedra filosofal para recuperar lo que perdieron.",
+    "historiaResumida": "Tras una tragedia provocada por sus propios errores, Edward y Alphonse Elric pagan un precio brutal. Ahora recorren el mundo en busca de la Piedra Filosofal, enfrentando secretos oscuros del gobierno y de la alquimia misma."
   },
   {
     "id": 7,
     "titulo": "Tokyo Revengers",
     "genero": "Viajes en el tiempo",
     "imagen": "assets/img/tokyo.jpg",
-    "descripcion": "Un joven regresa al pasado para cambiar el destino trágico de su exnovia."
+    "descripcion": "Un joven regresa al pasado para cambiar el destino trágico de su exnovia.",
+    "historiaResumida": "Takemichi recibe una segunda oportunidad: viajar al pasado para salvar a la chica que amó. Pero cada decisión puede cambiar el destino de bandas enteras, amigos y de él mismo. ¿Hasta dónde puede sacrificarse por amor?"
   },
   {
     "id": 8,
     "titulo": "Demon Slayer",
     "genero": "Acción",
     "imagen": "assets/img/demonslayer.jpg",
-    "descripcion": "Un chico lucha contra demonios para salvar a su hermana convertida en uno de ellos."
+    "descripcion": "Un chico lucha contra demonios para salvar a su hermana convertida en uno de ellos.",
+    "historiaResumida": "Tanjiro Kamado vive una vida simple, hasta que la tragedia lo golpea. Con su hermana convertida en demonio, emprende un viaje lleno de dolor, belleza y acción, donde cada encuentro lo lleva más cerca de entender el verdadero mal."
   },
   {
     "id": 9,
     "titulo": "My Hero Academia",
     "genero": "Superhéroes",
     "imagen": "assets/img/mha.jpg",
-    "descripcion": "En un mundo lleno de poderes, un chico sin habilidades quiere convertirse en héroe."
+    "descripcion": "En un mundo lleno de poderes, un chico sin habilidades quiere convertirse en héroe.",
+    "historiaResumida": "Izuku Midoriya nació sin poderes, pero eso no le impide soñar con salvar a otros. Cuando hereda una habilidad legendaria, comienza su camino entre héroes y villanos — descubriendo que la fuerza real está en el corazón."
   },
   {
     "id": 10,
     "titulo": "Death Note",
     "genero": "Thriller psicológico",
     "imagen": "assets/img/deathnote.jpg",
-    "descripcion": "Un estudiante encuentra un cuaderno capaz de matar a quien escriba en él."
+    "descripcion": "Un estudiante encuentra un cuaderno capaz de matar a quien escriba en él.",
+    "historiaResumida": "¿Y si pudieras decidir quién vive y quién muere? Light Yagami lo intenta, pero en su búsqueda de justicia, se convierte en algo más oscuro. Un juego mental entre genio y detective que redefine los límites del poder humano."
   }
 ]

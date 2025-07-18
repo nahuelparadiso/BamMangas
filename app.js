@@ -26,9 +26,9 @@ function mostrarMangas(lista) {
       <button class="fav-btn ${isFav ? 'active' : ''}" data-id="${manga.id}">★</button>
       <a href="pages/manga.html?id=${manga.id}">
         <img src="${manga.imagen}" alt="${manga.titulo}" onerror="this.src='assets/img/default.jpg'" />
-        <h3>${manga.titulo}</h3>
+        <h3>${manga.titulo.toUpperCase()}</h3>
       </a>
-      <div class="hover-description">${manga.descripcion}</div>
+      <p class="descripcion">${manga.descripcion}</p>
     `;
 
     container.appendChild(card);
