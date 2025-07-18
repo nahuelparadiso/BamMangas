@@ -1,27 +1,41 @@
 # 📚 BamMangas
 
-BamMangas es una aplicación web creada con HTML, CSS y JavaScript para mostrar una galería de mangas destacados. Incluye funcionalidades dinámicas, experiencia de usuario personalizada y un sistema de usuarios simple pero completo sin backend.
+BamMangas es una aplicación web creada con HTML, CSS y JavaScript para mostrar una galería visual de mangas destacados. Incluye sistema de usuarios, fichas coleccionables, favoritos, lista de lectura, filtros por género y experiencia personalizada sin necesidad de backend.
 
 ---
 
 ## 🚀 Funcionalidades principales
 
-- 🖼️ Visualización de mangas destacados con imagen, título y género
-- 🔍 Vista de detalles por manga al hacer clic
-- 📦 Carga dinámica desde un archivo `mangas.json`
+- 🖼️ Galería visual estilo Crunchyroll con imagen, título, género y descripción
+- 🔎 Filtro por género generado automáticamente desde el JSON
 - 🔐 Sistema de usuarios con:
-  - Registro y login
-  - Sesión persistente con saludo personalizado
-  - Redirección automática si no hay sesión
-  - Perfil de usuario con edición de nombre y email
-  - Botón de cierre de sesión con recarga
+  - Registro, login y perfil editable
+  - Sesión persistente en `localStorage`
+  - Saludo personalizado en el header
+  - Cierre de sesión y redirección automática
+- ⭐ Marcar favoritos (guardados en navegador)
+- 📖 Lista de lectura ("Quiero leer") por usuario
+- 📦 Detalle de manga con sinopsis extendida
+- 🔁 Vista responsive adaptada para móvil y escritorio
 
 ---
 
 ## 🧱 Estructura del proyecto
 
-BamMangas/ ├── index.html ├── style.css ├── app.js ├── manga.js ├── auth.js ├── data/ │ └── mangas.json ├── assets/ │ └── img/ │ ├── onepiece.jpg │ ├── naruto.jpg │ ├── aot.jpg │ └── jujutsu.jpg └── pages/ ├── manga.html ├── login.html ├── register.html └── perfil.html
+BamMangas/ ├── index.html ├── style.css ├── app.js ├── manga.js ├── lectura.js ├── favoritos.js ├── auth.js ├── data/ │ └── mangas.json ├── assets/ │ └── img/ │ ├── onepiece.jpg │ ├── naruto.jpg │ ├── aot.jpg │ ├── jujutsu.jpg │ └── ...otras imágenes └── pages/ ├── manga.html ├── login.html ├── register.html ├── perfil.html ├── lectura.html └── favoritos.html
 
+
+---
+
+## 🎨 Estilo visual
+
+Inspirado en la estética moderna de Crunchyroll:
+
+- ✅ Tarjetas estilo ficha coleccionable
+- ✅ Hover con descripción
+- ✅ Etiquetas de género con color destacado
+- ✅ Colores suaves y naranja como primario (`#f47521`)
+- ✅ Responsive con grid adaptable
 
 ---
 
@@ -30,39 +44,32 @@ BamMangas/ ├── index.html ├── style.css ├── app.js ├── m
 - HTML5
 - CSS3
 - JavaScript Vanilla
-- LocalStorage (para simular persistencia de datos)
+- `localStorage` para persistencia
 - Live Server para entorno local
 
 ---
 
 ## 💻 ¿Cómo ejecutar?
 
-1. Cloná el repositorio:
-   ```bash
-   git clone https://github.com/nahuelparadiso/BamMangas.git
-
-2. Abrí la carpeta en VSCode
-
-3. Usá Live Server o cualquier servidor local:
+```bash
+git clone https://github.com/nahuelparadiso/BamMangas.git
+cd BamMangas
 npx live-server
 
-4. Navegá a http://localhost:8080 o el puerto correspondiente
+Luego abrir en: http://localhost:8080
 
-👤 Sistema de usuario
-Funciona 100% en el navegador usando localStorage:
+📦 Sistema de favoritos y lectura
+⭐ Favoritos	: Se marcan con una estrellita desde el index
+📖 Lista de lectura	: Se marca desde la página de detalle manga.html
+📂 Vista personal : favoritos.html y lectura.html muestran solo los mangas marcados
+🧑 Sesión requerida	: Las funciones están disponibles solo si hay sesión activa
 
-Acción	Comportamiento
-Registro	Crea un usuario con nombre, email y contraseña (validación incluida)
-Login	Inicia sesión si los datos coinciden
-Perfil	Muestra los datos y permite editarlos
-Cierre de sesión	Borra la sesión y recarga la página
-Seguridad	Redirección automática si se accede a perfil.html sin sesión activa
+📘 Filtros inteligentes
+Búsqueda por género desde el menú desplegable
 
-📦 Mejoras futuras (opcional)
-Buscador por título o género
-Favoritos guardados por usuario
-Comentarios o reseñas por manga
-Integración con backend (Python + Flask)
+Menú generado automáticamente según los géneros disponibles en mangas.json
 
-🧑‍💻 Autor
+Actualizado cada vez que se cargan nuevos mangas
+
+👤 Autor
 Nahuel Paradiso
