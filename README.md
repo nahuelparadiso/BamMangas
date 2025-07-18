@@ -48,4 +48,8 @@ Posible integración con backend (Python + Flask)
 🧑‍💻 Autor
 Nahuel Paradiso GitHub
 
+Muestra:
+<img width="1906" height="958" alt="muestrabam" src="https://github.com/user-attachments/assets/99d35f74-5193-4f77-b67e-488b0e92b699" />
+
+
 
