@@ -1,3 +1,7 @@
+Fotos del proyecto:
+<img width="1903" height="961" alt="foto 1" src="https://github.com/user-attachments/assets/8a860cba-ce78-49c0-825c-a153107e86a8" />
+<img width="1904" height="960" alt="foto 2" src="https://github.com/user-attachments/assets/a61261f2-d073-4ca1-8de1-fecd75696b77" />
+
 # 📚 BamMangas
 
 **BamMangas** es una aplicación web creada con HTML, CSS y JavaScript para mostrar una galería visual de mangas destacados. Incluye sistema de usuarios, fichas coleccionables, favoritos, lista de lectura, filtros por género y experiencia personalizada sin necesidad de backend.
