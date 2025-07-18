@@ -58,20 +58,21 @@
 
       // Mostrar bloque de usuario
       if (usuarioDiv) {
-        usuarioDiv.innerHTML = `
-          <p>🔓 Sesión activa: <strong>${user.name}</strong></p>
-          <a href="pages/perfil.html" style="display: block; margin: 0.5rem 0; color: #f47521; font-weight: bold;">Ver mi perfil</a>
-          <button id="logout-btn" style="
-            background-color: #f47521;
-            color: white;
-            border: none;
-            padding: 0.5rem 1rem;
-            margin-top: 0.5rem;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: bold;
-          ">Cerrar sesión</button>
-        `;
+  usuarioDiv.innerHTML = `
+    <p>🔓 Sesión activa: <strong>${user.name}</strong></p>
+    <a href="pages/perfil.html" style="display: block; margin: 0.5rem 0; color: #f47521; font-weight: bold;">Ver mi perfil</a>
+    <a href="pages/favoritos.html" style="display: block; margin: 0.5rem 0; color: #f47521; font-weight: bold;">❤️ Ver mis favoritos</a>
+    <button id="logout-btn" style="
+      background-color: #f47521;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin-top: 0.5rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    ">Cerrar sesión</button>
+  `;
 
         document.getElementById("logout-btn").addEventListener("click", () => {
           localStorage.removeItem("bamUser");
