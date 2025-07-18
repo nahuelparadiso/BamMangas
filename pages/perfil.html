@@ -2,71 +2,29 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Mi Perfil</title>
+  <title>Mi perfil | BamMangas</title>
   <link rel="stylesheet" href="../style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
   <header>
     <div class="logo">
-      <a href="../index.html" style="color: white; text-decoration: none;">BamMangas</a>
+      <a href="../index.html" class="logo-link">BamMangas</a>
     </div>
+    <h2 style="text-align: center; margin: 1rem;">👤 Mi Perfil</h2>
   </header>
 
-  <main style="padding: 2rem; text-align: center;">
-    <h2>Mi Perfil</h2>
-    <div id="perfil-box"></div>
+  <main style="padding: 2rem; max-width: 600px; margin: auto;">
+    <section id="perfil-container" style="
+      background-color: #fff8f2;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 0 12px rgba(0,0,0,0.06);
+    ">
+      <!-- El contenido dinámico se insertará aquí por perfil.js -->
+    </section>
   </main>
 
-  <script>
-  const user = JSON.parse(localStorage.getItem("bamUser"));
-  const box = document.getElementById("perfil-box");
-
-  if (user) {
-    box.innerHTML = `
-      <form id="edit-form" style="margin-bottom: 2rem;">
-        <label>Nombre:</label><br>
-        <input type="text" id="edit-name" value="${user.name}" required><br><br>
-        <label>Email:</label><br>
-        <input type="email" id="edit-email" value="${user.email}" required><br><br>
-        <button type="submit">Guardar cambios</button>
-      </form>
-      <a href="../index.html" style="display: block; margin: 1rem 0; color: #f47521; font-weight: bold;">← Volver al inicio</a>
-      <button onclick="cerrarSesion()" style="
-        background-color: #f47521;
-        color: white;
-        border: none;
-        padding: 0.5rem 1rem;
-        border-radius: 4px;
-        cursor: pointer;
-        font-weight: bold;
-      ">Cerrar sesión</button>
-    `;
-
-    document.getElementById("edit-form").addEventListener("submit", function (e) {
-      e.preventDefault();
-      const newName = document.getElementById("edit-name").value.trim();
-      const newEmail = document.getElementById("edit-email").value.trim();
-
-      if (newName && newEmail) {
-        const updatedUser = { ...user, name: newName, email: newEmail };
-        localStorage.setItem("bamUser", JSON.stringify(updatedUser));
-        alert("Datos actualizados");
-        window.location.reload();
-      } else {
-        alert("Completá todos los campos");
-      }
-    });
-
-  } else {
-    alert("No estás logueado");
-    window.location.href = "login.html";
-  }
-
-  function cerrarSesion() {
-    localStorage.removeItem("bamUser");
-    alert("Sesión cerrada");
-    window.location.href = "../index.html";
-  }
-</script>
+  <script src="../perfil.js"></script>
 </body>
 </html>
