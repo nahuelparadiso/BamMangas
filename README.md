@@ -73,3 +73,6 @@ Actualizado cada vez que se cargan nuevos mangas
 
 👤 Autor
 Nahuel Paradiso
+
+FotoWeb:
+![alt text](muestrabam2.PNG)
