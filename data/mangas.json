@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "One Piece",
+    "cover": "assets/img/onepiece.jpg",
+    "genre": "Aventura"
+  },
+  {
+    "id": 2,
+    "title": "Naruto",
+    "cover": "assets/img/naruto.jpg",
+    "genre": "Acción"
+  },
+  {
+    "id": 3,
+    "title": "Attack on Titan",
+    "cover": "assets/img/aot.jpg",
+    "genre": "Drama"
+  },
+  {
+    "id": 4,
+    "title": "Jujutsu Kaisen",
+    "cover": "assets/img/jujutsu.jpg",
+    "genre": "Sobrenatural"
+  }
+]
