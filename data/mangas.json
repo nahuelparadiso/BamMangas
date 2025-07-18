@@ -1,26 +1,72 @@
 [
   {
     "id": 1,
-    "title": "One Piece",
-    "cover": "assets/img/onepiece.jpg",
-    "genre": "Aventura"
+    "titulo": "One Piece",
+    "genero": "Aventura",
+    "imagen": "assets/img/onepiece.jpg",
+    "descripcion": "Un joven pirata se embarca en la búsqueda del tesoro legendario, el One Piece."
   },
   {
     "id": 2,
-    "title": "Naruto",
-    "cover": "assets/img/naruto.jpg",
-    "genre": "Acción"
+    "titulo": "Naruto",
+    "genero": "Acción",
+    "imagen": "assets/img/naruto.jpg",
+    "descripcion": "La historia de un ninja decidido a convertirse en el líder de su aldea."
   },
   {
     "id": 3,
-    "title": "Attack on Titan",
-    "cover": "assets/img/aot.jpg",
-    "genre": "Drama"
+    "titulo": "Attack on Titan",
+    "genero": "Drama",
+    "imagen": "assets/img/aot.jpg",
+    "descripcion": "Humanos luchan por sobrevivir contra gigantes devoradores en un mundo postapocalíptico."
   },
   {
     "id": 4,
-    "title": "Jujutsu Kaisen",
-    "cover": "assets/img/jujutsu.jpg",
-    "genre": "Sobrenatural"
+    "titulo": "Jujutsu Kaisen",
+    "genero": "Sobrenatural",
+    "imagen": "assets/img/jujutsu.jpg",
+    "descripcion": "Estudiantes de una escuela de hechicería enfrentan maldiciones oscuras y peligrosas."
+  },
+  {
+    "id": 5,
+    "titulo": "Bleach",
+    "genero": "Espiritual",
+    "imagen": "assets/img/bleach.jpg",
+    "descripcion": "Un adolescente obtiene poderes de Shinigami para proteger el mundo de los espíritus malignos."
+  },
+  {
+    "id": 6,
+    "titulo": "Fullmetal Alchemist",
+    "genero": "Fantasía",
+    "imagen": "assets/img/fullmetal.jpg",
+    "descripcion": "Dos hermanos alquimistas buscan la piedra filosofal para recuperar lo que perdieron."
+  },
+  {
+    "id": 7,
+    "titulo": "Tokyo Revengers",
+    "genero": "Viajes en el tiempo",
+    "imagen": "assets/img/tokyo.jpg",
+    "descripcion": "Un joven regresa al pasado para cambiar el destino trágico de su exnovia."
+  },
+  {
+    "id": 8,
+    "titulo": "Demon Slayer",
+    "genero": "Acción",
+    "imagen": "assets/img/demonslayer.jpg",
+    "descripcion": "Un chico lucha contra demonios para salvar a su hermana convertida en uno de ellos."
+  },
+  {
+    "id": 9,
+    "titulo": "My Hero Academia",
+    "genero": "Superhéroes",
+    "imagen": "assets/img/mha.jpg",
+    "descripcion": "En un mundo lleno de poderes, un chico sin habilidades quiere convertirse en héroe."
+  },
+  {
+    "id": 10,
+    "titulo": "Death Note",
+    "genero": "Thriller psicológico",
+    "imagen": "assets/img/deathnote.jpg",
+    "descripcion": "Un estudiante encuentra un cuaderno capaz de matar a quien escriba en él."
   }
 ]

@@ -6,13 +6,15 @@ fetch('./data/mangas.json')
     mangas.forEach(manga => {
       const card = document.createElement("div");
       card.classList.add("manga-card");
+
       card.innerHTML = `
         <a href="pages/manga.html?id=${manga.id}">
-          <img src="${manga.cover}" alt="${manga.title}" />
-          <h3>${manga.title}</h3>
+          <img src="${manga.imagen}" alt="${manga.titulo}" onerror="this.src='assets/img/default.jpg'" />
+          <h3>${manga.titulo}</h3>
         </a>
-        <p>${manga.genre}</p>
+        <p>${manga.genero}</p>
       `;
+
       container.appendChild(card);
     });
   })
