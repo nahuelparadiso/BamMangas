@@ -1,55 +1,68 @@
 # 📚 BamMangas
 
-BamMangas es una aplicación web sencilla creada con HTML, CSS y JavaScript, diseñada para mostrar una galería de mangas destacados. Permite navegar entre títulos, visualizar sus portadas y ver información detallada sobre cada manga.
+BamMangas es una aplicación web creada con HTML, CSS y JavaScript para mostrar una galería de mangas destacados. Incluye funcionalidades dinámicas, experiencia de usuario personalizada y un sistema de usuarios simple pero completo sin backend.
 
 ---
 
-## 🚀 Funcionalidades
+## 🚀 Funcionalidades principales
 
-- ✅ Visualización de mangas destacados en una cuadrícula responsive
-- ✅ Cada manga incluye imagen, título y género
-- ✅ Al hacer clic, se abre una página de detalles con más información
-- ✅ Datos cargados dinámicamente desde un archivo `mangas.json`
+- 🖼️ Visualización de mangas destacados con imagen, título y género
+- 🔍 Vista de detalles por manga al hacer clic
+- 📦 Carga dinámica desde un archivo `mangas.json`
+- 🔐 Sistema de usuarios con:
+  - Registro y login
+  - Sesión persistente con saludo personalizado
+  - Redirección automática si no hay sesión
+  - Perfil de usuario con edición de nombre y email
+  - Botón de cierre de sesión con recarga
 
 ---
 
+## 🧱 Estructura del proyecto
 
-## 🧱 Tecnologías usadas
+BamMangas/ ├── index.html ├── style.css ├── app.js ├── manga.js ├── auth.js ├── data/ │ └── mangas.json ├── assets/ │ └── img/ │ ├── onepiece.jpg │ ├── naruto.jpg │ ├── aot.jpg │ └── jujutsu.jpg └── pages/ ├── manga.html ├── login.html ├── register.html └── perfil.html
+
+
+---
+
+## 🧠 Tecnologías utilizadas
 
 - HTML5
 - CSS3
-- JavaScript (vanilla)
+- JavaScript Vanilla
+- LocalStorage (para simular persistencia de datos)
 - Live Server para entorno local
 
 ---
 
-## 🔧 Cómo ejecutar el proyecto
+## 💻 ¿Cómo ejecutar?
 
 1. Cloná el repositorio:
    ```bash
    git clone https://github.com/nahuelparadiso/BamMangas.git
 
-2. Abrí la carpeta en VSCode o tu editor favorito
+2. Abrí la carpeta en VSCode
 
-3. Usá Live Server (o un servidor local) para evitar errores de fetch:
-   npx live-server
+3. Usá Live Server o cualquier servidor local:
+npx live-server
 
-4. Navegá a http://localhost:8080 y ¡listo!
+4. Navegá a http://localhost:8080 o el puerto correspondiente
 
-📦 Próximas mejoras
+👤 Sistema de usuario
+Funciona 100% en el navegador usando localStorage:
+
+Acción	Comportamiento
+Registro	Crea un usuario con nombre, email y contraseña (validación incluida)
+Login	Inicia sesión si los datos coinciden
+Perfil	Muestra los datos y permite editarlos
+Cierre de sesión	Borra la sesión y recarga la página
+Seguridad	Redirección automática si se accede a perfil.html sin sesión activa
+
+📦 Mejoras futuras (opcional)
 Buscador por título o género
-
-Página de login y registro
-
-Sistema de favoritos con localStorage
-
-Posible integración con backend (Python + Flask)
+Favoritos guardados por usuario
+Comentarios o reseñas por manga
+Integración con backend (Python + Flask)
 
 🧑‍💻 Autor
-Nahuel Paradiso GitHub
-
-Muestra:
-<img width="1906" height="958" alt="muestrabam" src="https://github.com/user-attachments/assets/99d35f74-5193-4f77-b67e-488b0e92b699" />
-
-
-
+Nahuel Paradiso
