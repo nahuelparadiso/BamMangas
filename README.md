@@ -75,4 +75,4 @@ Actualizado cada vez que se cargan nuevos mangas
 Nahuel Paradiso
 
 FotoWeb:
-<img width="1904" height="964" alt="muestrabam2" src="https://github.com/user-attachments/assets/ae2e3dae-75b8-4a03-afce-e53ddafc4e71" />
+
