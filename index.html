@@ -12,14 +12,74 @@
     <div class="logo">BamMangas</div>
     <nav>
       <a href="index.html">Inicio</a>
+      <a href="pages/login.html" class="nav-login">Login</a>
+      <a href="pages/register.html" class="nav-register">Registro</a>
     </nav>
+    <!-- Saludo del usuario logueado -->
+    <div id="saludo-header" style="color: white; font-weight: bold; margin-top: 0.5rem;"></div>
   </header>
 
   <main>
     <h2>Mangas Destacados</h2>
     <div id="manga-list"></div>
+
+    <!-- Bloque de acceso para login/registro -->
+    <section class="acceso" id="bloque-acceso">
+      <h3>¿Tenés cuenta?</h3>
+      <a href="pages/login.html">Ingresar</a> |
+      <a href="pages/register.html">Registrarse</a>
+    </section>
+
+    <!-- Bloque opcional para mostrar nombre del usuario y logout -->
+    <div id="usuario-logueado" style="margin-top: 1rem; text-align: center;"></div>
   </main>
 
   <script src="app.js"></script>
+  <script>
+    const user = JSON.parse(localStorage.getItem("bamUser"));
+    const usuarioDiv = document.getElementById("usuario-logueado");
+    const saludoHeader = document.getElementById("saludo-header");
+    const accesoSection = document.getElementById("bloque-acceso");
+    const navLogin = document.querySelector(".nav-login");
+    const navRegister = document.querySelector(".nav-register");
+
+    if (user) {
+      // Ocultar enlaces del header
+      if (navLogin) navLogin.style.display = "none";
+      if (navRegister) navRegister.style.display = "none";
+
+      // Ocultar sección de acceso
+      if (accesoSection) accesoSection.style.display = "none";
+
+      // Mostrar saludo en el header
+      if (saludoHeader) {
+        saludoHeader.textContent = `👋 ¡Hola, ${user.name}!`;
+      }
+
+      // Mostrar bloque de usuario
+      if (usuarioDiv) {
+        usuarioDiv.innerHTML = `
+          <p>🔓 Sesión activa: <strong>${user.name}</strong></p>
+          <a href="pages/perfil.html" style="display: block; margin: 0.5rem 0; color: #f47521; font-weight: bold;">Ver mi perfil</a>
+          <button id="logout-btn" style="
+            background-color: #f47521;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            margin-top: 0.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+          ">Cerrar sesión</button>
+        `;
+
+        document.getElementById("logout-btn").addEventListener("click", () => {
+          localStorage.removeItem("bamUser");
+          alert("Sesión cerrada");
+          window.location.reload();
+        });
+      }
+    }
+  </script>
 </body>
 </html>
