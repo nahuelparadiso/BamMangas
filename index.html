@@ -27,7 +27,6 @@
     </div>
   </header>
 
-  <!-- 🔍 Buscador por género -->
   <section class="filtro-genero-container">
     <label for="filtro-genero">🔍 Buscar por género:</label>
     <select id="filtro-genero">
@@ -35,13 +34,11 @@
     </select>
   </section>
 
-  <!-- 📚 Sección de destacados -->
   <main>
     <h2 class="titulo-manga">📚 Mangas Destacados</h2>
     <div id="manga-list" class="manga-grid"></div>
   </main>
 
-  <!-- 📘 Reconocimiento de derechos -->
   <footer class="footer-legal">
     Proyecto personal creado por <strong>Nahuel Paradiso</strong> con fines educativos y profesionales.<br />
     Las obras de manga presentadas pertenecen a sus respectivos autores y editoriales.<br />
@@ -57,7 +54,7 @@
 
   <script src="app.js"></script>
   <script>
-    const user = JSON.parse(localStorage.getItem("bamUser"));
+    const user = JSON.parse(localStorage.getItem("bamActivo"));
     const panelContainer = document.getElementById("usuario-panel-container");
 
     if (user) {
@@ -65,10 +62,7 @@
 
       panelContainer.innerHTML = `
         <div class="usuario-panel" style="display: flex; align-items: center; gap: 1rem;">
-          <a href="pages/perfil.html" id="boton-perfil" title="Ir a tu perfil" style="
-            display: inline-block;
-            text-decoration: none;
-          ">
+          <a href="pages/perfil.html" id="boton-perfil" title="Ir a tu perfil">
             <img src="${avatar}" alt="Avatar" style="
               width: 48px;
               height: 48px;
@@ -92,7 +86,7 @@
       `;
 
       document.getElementById("logout-btn").addEventListener("click", () => {
-        localStorage.removeItem("bamUser");
+        localStorage.removeItem("bamActivo");
         alert("Sesión cerrada");
         window.location.reload();
       });
