@@ -730,3 +730,323 @@ body.dark-mode #capitulo-contenido p {
 body.dark-mode #capitulo-contenido em {
   color: #ffb07b;
 }
+
+
+#selector-capitulo {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 2px solid var(--color-acento, #f47521);
+  background-color: var(--color-fondo, #fff);
+  color: var(--color-texto, #000);
+  margin: 0.5rem 0 1rem 0;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+body.dark-mode #selector-capitulo {
+  background-color: #2c2c2c;
+  color: #f1f1f1;
+  border-color: #f47521;
+}
+
+.perfil-seccion {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.columna-izquierda,
+.columna-derecha {
+  flex: 1 1 300px;
+  background-color: #fff8f2;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+}
+
+body.dark-mode .columna-izquierda,
+body.dark-mode .columna-derecha {
+  background-color: #1f1f1f;
+  color: #f1f1f1;
+}
+
+.columna-derecha {
+  flex: 1 1 380px;
+  background-color: #fffaf4;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.06);
+  border-left: 6px solid #f47521;
+}
+
+.biblioteca-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+
+.biblioteca-links li {
+  margin: 0.4rem 0;
+}
+
+.biblioteca-links a {
+  font-weight: bold;
+  color: #f47521;
+  text-decoration: none;
+}
+
+.biblioteca-links a:hover {
+  text-decoration: underline;
+}
+
+#lectura-historial h4 {
+  margin-top: 1.5rem;
+  color: #f47521;
+}
+
+#lectura-historial ul {
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+#lectura-historial li {
+  padding: 0.3rem 0;
+  border-bottom: 1px dashed #ccc;
+}
+
+.perfil-comentarios {
+  margin-top: 3rem;
+  background-color: #fefefe;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  border-top: 4px solid #f47521;
+}
+
+body.dark-mode .perfil-comentarios {
+  background-color: #1a1a1a;
+  color: #f1f1f1;
+}
+
+/* 🌟 Diseño general moderno */
+body {
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(to bottom, #fffaf4, #ffffff);
+}
+body.dark-mode {
+  background: linear-gradient(to bottom, #1f1f1f, #121212);
+  color: #f1f1f1;
+}
+
+/* 🎯 Encabezados */
+h2, h3, h4 {
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* 🧩 Columnas principales */
+.columna-izquierda,
+.columna-derecha,
+.perfil-comentarios {
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease;
+  padding: 1.5rem;
+  background-color: #fffaf4;
+}
+
+.columna-derecha {
+  border-left: 6px solid #f47521;
+}
+
+body.dark-mode .columna-izquierda,
+body.dark-mode .columna-derecha,
+body.dark-mode .perfil-comentarios {
+  background-color: #1f1f1f;
+}
+
+/* 🌈 Efecto hover */
+.columna-izquierda:hover,
+.columna-derecha:hover,
+.perfil-comentarios:hover {
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* 🖼️ Avatar estilo moderno */
+.perfil-avatar {
+  border-radius: 50%;
+  border: 3px solid #f47521;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+/* 🔘 Botones con interacción */
+button {
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+button:hover {
+  transform: scale(1.03);
+  filter: brightness(1.05);
+}
+
+/* 📚 Enlaces en Biblioteca */
+.biblioteca-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+.biblioteca-links li {
+  margin: 0.4rem 0;
+}
+.biblioteca-links a {
+  font-weight: bold;
+  color: #f47521;
+  text-decoration: none;
+}
+.biblioteca-links a:hover {
+  text-decoration: underline;
+}
+
+/* 💬 Comentarios listados */
+#comentarios-lista div {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid #ccc;
+}
+body.dark-mode #comentarios-lista div {
+  border-color: #444;
+}
+
+/* 🌟 Avatar en el menú: animación + estilo dinámico */
+#boton-perfil img {
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+}
+
+#boton-perfil img:hover {
+  transform: scale(1.15);
+}
+
+/* 🌙 Borde dinámico según tema */
+body.dark-mode #boton-perfil img {
+  border-color: #ffffff;
+}
+
+body:not(.dark-mode) #boton-perfil img {
+  border-color: #f47521;
+}
+
+
+
+body.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('../assets/img/login-page.jpg') no-repeat center center;
+  background-size: cover;
+  backdrop-filter: blur(2px);
+  padding: 0 1rem;
+}
+
+
+.login-box {
+  max-width: 420px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.3);
+  backdrop-filter: blur(6px);
+  animation: aparecer 0.8s ease-out forwards;
+  transform: scale(1.05);
+}
+
+body.dark-mode .login-box {
+  background: rgba(30, 30, 30, 0.9);
+  color: #f1f1f1;
+}
+
+body.dark-mode .login-box {
+  background: rgba(30, 30, 30, 0.85);
+  color: #f1f1f1;
+}
+
+body.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* 🎬 Animación de fade-in */
+@keyframes aparecer {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.login-box {
+  animation: aparecer 0.8s ease-out forwards;
+}
+
+/* 🗯️ Texto de bienvenida animado */
+.bienvenida-login {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #f47521;
+  opacity: 0;
+  animation: aparecer 1s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+body.dark-mode .bienvenida-login {
+  color: #ffb570;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0 1rem 0;
+  border: none;
+  border-radius: 8px;
+  background-color: #f3f3f3;
+  font-size: 1rem;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: #f47521;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.login-box button:hover {
+  background-color: #e16415;
+  transform: scale(1.02);
+}
+
+#registro-exito {
+  animation: aparecer 0.6s ease-out forwards;
+}
+
+@keyframes aparecer {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+

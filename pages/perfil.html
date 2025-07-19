@@ -8,7 +8,6 @@
 </head>
 <body>
 
-  <!-- Botón de tema -->
   <button id="toggle-theme" style="
     background-color: #f47521;
     color: white;
@@ -25,23 +24,64 @@
     <div class="logo">
       <a href="../index.html" class="logo-link">BamMangas</a>
     </div>
-    <h2 style="text-align: center; margin: 1rem;">👤 Mi Perfil</h2>
+    <a href="perfil.html" id="boton-perfil" style="
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #f47521;
+">
+  <img id="icono-perfil" src="../assets/img/avatar1.jpg" alt="Mi avatar" style="
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #f47521;
+  ">
+  Mi Perfil
+</a>
   </header>
 
-  <main style="padding: 2rem; max-width: 600px; margin: auto;">
-    <section id="perfil-container" style="
-      background-color: #fff8f2;
-      border-radius: 8px;
-      padding: 2rem;
-      box-shadow: 0 0 12px rgba(0,0,0,0.06);
-    ">
-      <!-- El contenido dinámico se insertará aquí por perfil.js -->
+  <main style="padding: 2rem;">
+    <!-- 🧑‍🎨 Sección principal con dos columnas -->
+    <section class="perfil-seccion">
+      <div class="columna-izquierda" id="perfil-personal"></div>
+      <div class="columna-derecha" id="perfil-biblioteca"></div>
+    </section>
+
+    <!-- 💬 Hoja inferior con comentarios -->
+    <section class="perfil-comentarios">
+      <h3>💬 Comentarios de usuarios</h3>
+
+      <form id="comentario-form" style="margin-top: 1rem;">
+        <label for="comentario-texto">Dejá tu comentario:</label>
+        <textarea id="comentario-texto" rows="3" required style="
+          width: 100%;
+          padding: 0.5rem;
+          border: 1px solid #ccc;
+          border-radius: 6px;
+          margin-bottom: 0.8rem;
+        "></textarea>
+        <button type="submit" style="
+          background-color: #f47521;
+          color: white;
+          border: none;
+          padding: 0.5rem 1rem;
+          border-radius: 6px;
+          font-weight: bold;
+          cursor: pointer;
+        ">💾 Enviar comentario</button>
+      </form>
+
+      <div id="comentarios-lista" style="margin-top: 2rem;">
+        <!-- Comentarios insertados dinámicamente -->
+      </div>
     </section>
   </main>
 
   <script src="../perfil.js"></script>
 
-  <!-- Script de tema -->
   <script>
     const toggleBtn = document.getElementById("toggle-theme");
     const body = document.body;

@@ -38,8 +38,6 @@
   <!-- 📚 Sección de destacados -->
   <main>
     <h2 class="titulo-manga">📚 Mangas Destacados</h2>
-
-    <!-- 📦 Contenedor de tarjetas -->
     <div id="manga-list" class="manga-grid"></div>
   </main>
 
@@ -63,14 +61,33 @@
     const panelContainer = document.getElementById("usuario-panel-container");
 
     if (user) {
+      const avatar = user.avatar || "assets/img/avatar1.jpg";
+
       panelContainer.innerHTML = `
-        <div class="usuario-panel">
-          <p>👋 ¡Hola, <strong>${user.name}</strong>!</p>
-          <div class="usuario-links">
-            <a href="pages/perfil.html">👤 Perfil</a>
-            <a href="pages/favoritos.html">❤️ Favoritos</a>
-            <button id="logout-btn">🔓 Cerrar sesión</button>
-          </div>
+        <div class="usuario-panel" style="display: flex; align-items: center; gap: 1rem;">
+          <a href="pages/perfil.html" id="boton-perfil" title="Ir a tu perfil" style="
+            display: inline-block;
+            text-decoration: none;
+          ">
+            <img src="${avatar}" alt="Avatar" style="
+              width: 48px;
+              height: 48px;
+              border-radius: 50%;
+              object-fit: cover;
+              border: 3px solid #f47521;
+              box-shadow: 0 0 6px rgba(0,0,0,0.1);
+              transition: transform 0.2s ease;
+            ">
+          </a>
+          <button id="logout-btn" style="
+            background-color: crimson;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+          ">🔓 Cerrar sesión</button>
         </div>
       `;
 

@@ -6,39 +6,66 @@
   <title>Registro | BamMangas</title>
   <link rel="stylesheet" href="../style.css" />
 </head>
-<body>
+<body class="login-page">
 
-  <!-- 🌓 Botón para tema claro/oscuro -->
-  <button id="toggle-theme">🌓 Cambiar tema</button>
+  <!-- 🌓 Botón para cambiar tema -->
+  <button id="toggle-theme" style="
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 0.5rem;
+    border-radius: 6px;
+    background-color: #f47521;
+    color: white;
+    border: none;
+    cursor: pointer;
+  ">🌓 Cambiar tema</button>
 
   <main class="form-main">
-    <div class="form-container">
-      <h2>📝 Registro de Usuario</h2>
+    <div class="login-box">
+      <p class="bienvenida-login">✍️ Unite al universo BamMangas</p>
+      <h2 style="text-align: center;">📝 Registro</h2>
 
       <form id="register-form">
-        <label for="name">🙋 Nombre completo</label>
+        <label for="name">🙍‍♂️ Nombre</label>
         <input type="text" id="name" placeholder="Tu nombre" required />
 
         <label for="email">📧 Email</label>
         <input type="email" id="email" placeholder="usuario@mail.com" required />
 
         <label for="password">🔒 Contraseña</label>
-        <input type="password" id="password" placeholder="Mínimo 6 caracteres" required />
-
-        <label for="avatar">🖼️ Imagen de perfil (URL)</label>
-        <input type="text" id="avatar" placeholder="https://ejemplo.com/avatar.jpg" />
+        <input type="password" id="password" placeholder="Tu contraseña" required />
 
         <button type="submit">Registrarse</button>
       </form>
 
-      <p class="form-footer">¿Ya tenés cuenta? <a href="login.html">Ingresá acá</a></p>
+      <p class="form-footer" style="text-align: center;">
+        ¿Ya tenés cuenta? <a href="login.html">Iniciá sesión acá</a>
+      </p>
     </div>
   </main>
 
-  <!-- Script de autenticación -->
-  <script src="../auth.js"></script>
+  <!-- ✅ Modal visual de éxito -->
+  <div id="registro-exito" style="
+    display: none;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f47521;
+    color: white;
+    font-weight: bold;
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    font-size: 1.2rem;
+    z-index: 9999;
+    text-align: center;
+  ">
+    ✅ ¡Registro exitoso!
+  </div>
 
-  <!-- Tema claro/oscuro -->
+  <script src="../auth.js"></script>
   <script>
     const toggleBtn = document.getElementById("toggle-theme");
     const body = document.body;
@@ -51,6 +78,21 @@
       body.classList.toggle("dark-mode");
       const nuevoTema = body.classList.contains("dark-mode") ? "oscuro" : "claro";
       localStorage.setItem("tema", nuevoTema);
+    });
+
+    // ✅ PASO 2 – Animación de registro exitoso
+    const form = document.getElementById("register-form");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      // Mostrar modal de éxito
+      const modal = document.getElementById("registro-exito");
+      modal.style.display = "block";
+
+      setTimeout(() => {
+        modal.style.display = "none";
+        window.location.href = "login.html"; // redirige al login
+      }, 2000);
     });
   </script>
 </body>

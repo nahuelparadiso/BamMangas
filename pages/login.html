@@ -6,14 +6,25 @@
   <title>Iniciar sesión | BamMangas</title>
   <link rel="stylesheet" href="../style.css" />
 </head>
-<body>
+<body class="login-page">
 
   <!-- 🌓 Botón para cambiar tema -->
-  <button id="toggle-theme">🌓 Cambiar tema</button>
+  <button id="toggle-theme" style="
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 0.5rem;
+    border-radius: 6px;
+    background-color: #f47521;
+    color: white;
+    border: none;
+    cursor: pointer;
+  ">🌓 Cambiar tema</button>
 
   <main class="form-main">
-    <div class="form-container">
-      <h2>🔓 Iniciar Sesión</h2>
+    <div class="login-box">
+      <p class="bienvenida-login">👋 ¡Bienvenido de nuevo a BamMangas!</p>
+      <h2 style="text-align: center;">🔓 Iniciar Sesión</h2>
 
       <form id="login-form">
         <label for="email">📧 Email</label>
@@ -25,7 +36,7 @@
         <button type="submit">Ingresar</button>
       </form>
 
-      <p class="form-footer">¿No tenés cuenta? <a href="register.html">Registrate acá</a></p>
+      <p class="form-footer" style="text-align: center;">¿No tenés cuenta? <a href="register.html">Registrate acá</a></p>
     </div>
   </main>
 
