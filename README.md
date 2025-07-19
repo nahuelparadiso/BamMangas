@@ -1,8 +1,3 @@
-Fotos Basicas de como se ve el proyecto:
-<img width="1913" height="906" alt="foto1" src="https://github.com/user-attachments/assets/f04f0fec-2110-45d1-8643-87989322467c" />
-<img width="1897" height="666" alt="foto2" src="https://github.com/user-attachments/assets/7b501f6d-213d-4dcc-ba4a-19bc7e4930b1" />
-<img width="1919" height="965" alt="foto3" src="https://github.com/user-attachments/assets/01fb671d-23ca-4009-ad45-45ed9dc2ba30" />
-
 # 📚 BamMangas
 
 **BamMangas** es una aplicación web desarrollada con **HTML, CSS y JavaScript** puro, inspirada en el estilo visual de Crunchyroll. Está pensada como proyecto personal demostrativo, sin fines comerciales, con foco en experiencia de usuario, interacción y diseño.
