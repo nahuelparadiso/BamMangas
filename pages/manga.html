@@ -16,16 +16,26 @@
   </header>
 
   <main id="manga-details" style="padding: 2rem;">
+    <!-- Información principal del manga -->
     <div class="manga-info-container">
-      <img id="manga-imagen" alt="Portada del manga" style="max-width: 280px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-      <h2 id="manga-titulo" style="margin: 1rem 0 0.5rem;"></h2>
-      <p id="manga-genero" style="font-weight: bold; color: #f47521;"></p>
+      <img id="manga-imagen" alt="Portada del manga">
+      <h2 id="manga-titulo"></h2>
+      <p id="manga-genero"></p>
       <p id="manga-descripcion"></p>
     </div>
 
+    <!-- Historia narrativa -->
     <section class="manga-sinopsis">
       <h3>📝 Historia resumida</h3>
       <p id="historia-texto"></p>
+    </section>
+
+    <!-- Capítulo de lectura -->
+    <section class="manga-capitulo">
+      <h3>📖 Capítulo de lectura</h3>
+      <div id="capitulo-contenido">
+        <p>Cargando contenido del capítulo...</p>
+      </div>
     </section>
   </main>
 

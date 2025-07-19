@@ -680,3 +680,53 @@ body.dark-mode .manga-card h3 {
 body.dark-mode .manga-card .descripcion {
   color: #ddd;
 }
+
+.manga-capitulo {
+  background-color: #fff;
+  padding: 2.2rem;
+  max-width: 800px;
+  margin: 2.5rem auto;
+  border-radius: 12px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.07);
+  transition: background-color 0.3s ease;
+}
+
+.manga-capitulo h3 {
+  font-size: 1.6rem;
+  color: #f47521;
+  text-align: center;
+  margin-bottom: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+#capitulo-contenido p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 1.2rem;
+  text-align: justify;
+  padding: 0 0.2rem;
+}
+
+#capitulo-contenido em {
+  font-style: italic;
+  color: #d94c00;
+}
+
+/* 🌒 Modo oscuro */
+body.dark-mode .manga-capitulo {
+  background-color: #2a1c14;
+}
+
+body.dark-mode .manga-capitulo h3 {
+  color: #f9b47d;
+}
+
+body.dark-mode #capitulo-contenido p {
+  color: #eee;
+}
+
+body.dark-mode #capitulo-contenido em {
+  color: #ffb07b;
+}

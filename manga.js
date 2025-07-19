@@ -7,7 +7,7 @@ fetch("../data/mangas.json")
     const manga = mangas.find(m => m.id === mangaId);
 
     if (manga) {
-      // Insertamos todos los datos y la historia narrativa
+      // Datos principales
       document.getElementById("manga-imagen").src = `../${manga.imagen}`;
       document.getElementById("manga-imagen").alt = manga.titulo;
       document.getElementById("manga-titulo").textContent = manga.titulo;
@@ -15,7 +15,21 @@ fetch("../data/mangas.json")
       document.getElementById("manga-descripcion").textContent = manga.descripcion;
       document.getElementById("historia-texto").textContent = manga.historiaResumida;
 
-      // Evento para agregar a lista de lectura
+      // Capítulo de lectura desde el JSON
+      const capituloContainer = document.getElementById("capitulo-contenido");
+      capituloContainer.innerHTML = "";
+
+      if (Array.isArray(manga.capituloDemo)) {
+        manga.capituloDemo.forEach(parrafo => {
+          const p = document.createElement("p");
+          p.textContent = parrafo;
+          capituloContainer.appendChild(p);
+        });
+      } else {
+        capituloContainer.innerHTML = "<p>Este manga aún no tiene capítulo demo.</p>";
+      }
+
+      // Botón de lista de lectura
       const btnLectura = document.createElement("button");
       btnLectura.textContent = "📖 Agregar a lista de lectura";
       btnLectura.style = `

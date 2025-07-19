@@ -5,7 +5,14 @@
     "genero": "Aventura",
     "imagen": "assets/img/onepiece.jpg",
     "descripcion": "Un joven pirata se embarca en la búsqueda del tesoro legendario, el One Piece.",
-    "historiaResumida": "En un mundo gobernado por el mar y la libertad, Luffy sueña con encontrar el legendario tesoro One Piece y convertirse en el Rey de los Piratas. Para lograrlo, formará una tripulación inolvidable y enfrentará desafíos que pondrán a prueba sus ideales."
+    "historiaResumida": "En un mundo gobernado por el mar y la libertad, Luffy sueña con encontrar el legendario tesoro One Piece y convertirse en el Rey de los Piratas. Para lograrlo, formará una tripulación inolvidable y enfrentará desafíos que pondrán a prueba sus ideales.",
+    "capituloDemo": [
+      "Capítulo 1: El sombrero y el mar",
+      "Luffy flotaba sobre una tabla rota, mirando el cielo despejado.",
+      "—¡Pronto zarparé! —gritó, mientras una gaviota robaba su merienda.",
+      "La silueta de un barco gigante apareció en el horizonte: el Going Merry renacido.",
+      "Y con él, una nueva promesa de aventura."
+    ]
   },
   {
     "id": 2,
@@ -13,7 +20,14 @@
     "genero": "Acción",
     "imagen": "assets/img/naruto.jpg",
     "descripcion": "La historia de un ninja decidido a convertirse en el líder de su aldea.",
-    "historiaResumida": "Naruto Uzumaki es más que un niño hiperactivo con sueños gigantes: carga dentro de sí a una criatura legendaria y el deseo de ser aceptado. Su camino como ninja lo enfrentará a rivales, traiciones y amistades que marcarán su destino."
+    "historiaResumida": "Naruto Uzumaki es más que un niño hiperactivo con sueños gigantes: carga dentro de sí a una criatura legendaria y el deseo de ser aceptado. Su camino como ninja lo enfrentará a rivales, traiciones y amistades que marcarán su destino.",
+    "capituloDemo": [
+      "Capítulo 1: Ecos de Konoha",
+      "Naruto recorría el bosque con una sonrisa traviesa. Era su primer día como genin.",
+      "El viento movía las hojas, susurrando historias antiguas de Hokages olvidados.",
+      "—¡Hoy empiezo mi camino ninja! —exclamó, con el sol iluminando su bandana.",
+      "Pero algo lo observaba entre los árboles..."
+    ]
   },
   {
     "id": 3,
@@ -21,7 +35,14 @@
     "genero": "Drama",
     "imagen": "assets/img/aot.jpg",
     "descripcion": "Humanos luchan por sobrevivir contra gigantes devoradores en un mundo postapocalíptico.",
-    "historiaResumida": "Tras siglos de encierro tras enormes muros, la humanidad se enfrenta nuevamente al horror de los Titanes. Eren y sus amigos descubren que la verdad está oculta tanto en la historia como en su propia sangre."
+    "historiaResumida": "Tras siglos de encierro tras enormes muros, la humanidad se enfrenta nuevamente al horror de los Titanes. Eren y sus amigos descubren que la verdad está oculta tanto en la historia como en su propia sangre.",
+    "capituloDemo": [
+      "Capítulo 1: Murallas y recuerdos",
+      "Eren miraba la muralla con los puños apretados.",
+      "—Algún día… las romperé —dijo, mientras Armin le pasaba un libro de mapas.",
+      "El cielo gris anunciaba cambios, y los cuervos volaban en círculo.",
+      "La tierra tembló. Algo se acercaba."
+    ]
   },
   {
     "id": 4,
@@ -29,7 +50,14 @@
     "genero": "Sobrenatural",
     "imagen": "assets/img/jujutsu.jpg",
     "descripcion": "Estudiantes de una escuela de hechicería enfrentan maldiciones oscuras y peligrosas.",
-    "historiaResumida": "Cuando Yuji Itadori consume un dedo maldito, su vida cambia para siempre. Entra al mundo de los hechiceros jujutsu, donde las emociones humanas pueden convertirse en maldiciones mortales — y él es el nuevo huésped de una de las más temibles."
+    "historiaResumida": "Cuando Yuji Itadori consume un dedo maldito, su vida cambia para siempre. Entra al mundo de los hechiceros jujutsu, donde las emociones humanas pueden convertirse en maldiciones mortales — y él es el nuevo huésped de una de las más temibles.",
+    "capituloDemo": [
+      "Capítulo 1: Maleficio latente",
+      "Yuji sostenía el amuleto escolar mientras los demás reían.",
+      "No sabían que lo habían desatado.",
+      "Una sombra salió del suelo, y la risa se convirtió en gritos.",
+      "—¿Qué hice? —pensó Yuji, mientras la oscuridad lo rodeaba."
+    ]
   },
   {
     "id": 5,
@@ -37,7 +65,14 @@
     "genero": "Espiritual",
     "imagen": "assets/img/bleach.jpg",
     "descripcion": "Un adolescente obtiene poderes de Shinigami para proteger el mundo de los espíritus malignos.",
-    "historiaResumida": "Ichigo Kurosaki nunca pensó que podría ver espíritus... hasta que se convierte en un Shinigami accidentalmente. Entre la vida y la muerte, deberá proteger almas inocentes y enfrentarse a amenazas que cruzan dimensiones."
+    "historiaResumida": "Ichigo Kurosaki nunca pensó que podría ver espíritus... hasta que se convierte en un Shinigami accidentalmente. Entre la vida y la muerte, deberá proteger almas inocentes y enfrentarse a amenazas que cruzan dimensiones.",
+    "capituloDemo": [
+      "Capítulo 1: El alma que despierta",
+      "Ichigo abrió la puerta de su casa y sintió una presión en el aire.",
+      "Una figura con kimono blanco lo esperaba en silencio.",
+      "—Tu destino acaba de cambiar, Shinigami —susurró.",
+      "Una luna roja comenzaba a elevarse."
+    ]
   },
   {
     "id": 6,
@@ -45,7 +80,14 @@
     "genero": "Fantasía",
     "imagen": "assets/img/fullmetal.jpg",
     "descripcion": "Dos hermanos alquimistas buscan la piedra filosofal para recuperar lo que perdieron.",
-    "historiaResumida": "Tras una tragedia provocada por sus propios errores, Edward y Alphonse Elric pagan un precio brutal. Ahora recorren el mundo en busca de la Piedra Filosofal, enfrentando secretos oscuros del gobierno y de la alquimia misma."
+    "historiaResumida": "Tras una tragedia provocada por sus propios errores, Edward y Alphonse Elric pagan un precio brutal. Ahora recorren el mundo en busca de la Piedra Filosofal, enfrentando secretos oscuros del gobierno y de la alquimia misma.",
+    "capituloDemo": [
+      "Capítulo 1: Hierro y culpa",
+      "Edward observaba sus manos metálicas bajo la lluvia.",
+      "—¿Cuántas vidas más para recuperar la tuya? —dijo, mirando a Alphonse.",
+      "La piedra no era solo poder, era sacrificio.",
+      "Y los hermanos estaban dispuestos a pagarlo todo."
+    ]
   },
   {
     "id": 7,
@@ -53,7 +95,14 @@
     "genero": "Viajes en el tiempo",
     "imagen": "assets/img/tokyo.jpg",
     "descripcion": "Un joven regresa al pasado para cambiar el destino trágico de su exnovia.",
-    "historiaResumida": "Takemichi recibe una segunda oportunidad: viajar al pasado para salvar a la chica que amó. Pero cada decisión puede cambiar el destino de bandas enteras, amigos y de él mismo. ¿Hasta dónde puede sacrificarse por amor?"
+    "historiaResumida": "Takemichi recibe una segunda oportunidad: viajar al pasado para salvar a la chica que amó. Pero cada decisión puede cambiar el destino de bandas enteras, amigos y de él mismo. ¿Hasta dónde puede sacrificarse por amor?",
+    "capituloDemo": [
+      "Capítulo 1: El tren al ayer",
+      "Takemichi se bajó del subte como si el suelo fuese memoria.",
+      "Los carteles parecían iguales, pero algo había cambiado.",
+      "Una flor marchita en una ventana lo hizo detenerse.",
+      "—Estoy en 2005 otra vez… —dijo, con los ojos humedecidos."
+    ]
   },
   {
     "id": 8,
@@ -61,7 +110,14 @@
     "genero": "Acción",
     "imagen": "assets/img/demonslayer.jpg",
     "descripcion": "Un chico lucha contra demonios para salvar a su hermana convertida en uno de ellos.",
-    "historiaResumida": "Tanjiro Kamado vive una vida simple, hasta que la tragedia lo golpea. Con su hermana convertida en demonio, emprende un viaje lleno de dolor, belleza y acción, donde cada encuentro lo lleva más cerca de entender el verdadero mal."
+    "historiaResumida": "Tanjiro Kamado vive una vida simple, hasta que la tragedia lo golpea. Con su hermana convertida en demonio, emprende un viaje lleno de dolor, belleza y acción, donde cada encuentro lo lleva más cerca de entender el verdadero mal.",
+    "capituloDemo": [
+      "Capítulo 1: El aliento del alba",
+      "Tanjiro entrenaba al amanecer mientras la nieve caía suave.",
+      "Cada respiración se volvía vapor, cada paso una danza silenciosa.",
+      "—Los demonios huyen del sol… pero yo no temo la oscuridad —pensó.",
+      "Una sombra cruzó el bosque. No estaba solo."
+    ]
   },
   {
     "id": 9,
@@ -69,7 +125,14 @@
     "genero": "Superhéroes",
     "imagen": "assets/img/mha.jpg",
     "descripcion": "En un mundo lleno de poderes, un chico sin habilidades quiere convertirse en héroe.",
-    "historiaResumida": "Izuku Midoriya nació sin poderes, pero eso no le impide soñar con salvar a otros. Cuando hereda una habilidad legendaria, comienza su camino entre héroes y villanos — descubriendo que la fuerza real está en el corazón."
+    "historiaResumida": "Izuku Midoriya nació sin poderes, pero eso no le impide soñar con salvar a otros. Cuando hereda una habilidad legendaria, comienza su camino entre héroes y villanos — descubriendo que la fuerza real está en el corazón.",
+    "capituloDemo": [
+      "Capítulo 1: El reflejo del héroe",
+      "Izuku se observaba en el espejo con su nuevo uniforme escolar.",
+      "—¿Qué haría All Might en este momento? —susurró, nervioso.",
+      "Su madre dejó en su mochila una carta con un dibujo infantil: '¡Tú eres mi héroe!'",
+            "Y en ese instante, supo que debía darlo todo."
+    ]
   },
   {
     "id": 10,
@@ -77,6 +140,163 @@
     "genero": "Thriller psicológico",
     "imagen": "assets/img/deathnote.jpg",
     "descripcion": "Un estudiante encuentra un cuaderno capaz de matar a quien escriba en él.",
-    "historiaResumida": "¿Y si pudieras decidir quién vive y quién muere? Light Yagami lo intenta, pero en su búsqueda de justicia, se convierte en algo más oscuro. Un juego mental entre genio y detective que redefine los límites del poder humano."
+    "historiaResumida": "¿Y si pudieras decidir quién vive y quién muere? Light Yagami lo intenta, pero en su búsqueda de justicia, se convierte en algo más oscuro. Un juego mental entre genio y detective que redefine los límites del poder humano.",
+    "capituloDemo": [
+      "Capítulo 1: El nombre perdido",
+      "Light encontró el cuaderno sobre una banca vacía del parque.",
+      "Lo abrió con curiosidad, pero algo en él lo hizo temblar.",
+      "El nombre que escribió... ya no existía en internet.",
+      "Y en el cielo, Ryuk sonreía."
+    ]
+  },
+  {
+    "id": 11,
+    "titulo": "Chainsaw Man",
+    "genero": "Acción",
+    "imagen": "assets/img/chainsaw.jpg",
+    "descripcion": "Un joven cazador de demonios se fusiona con una motosierra infernal.",
+    "historiaResumida": "Denji solo quiere una vida simple, pero sus deudas y demonios lo llevan a convertirse en el hombre motosierra. Una historia salvaje y visceral sobre deseos, sacrificios y caos sobrenatural.",
+    "capituloDemo": [
+      "Capítulo 1: Engranaje sangriento",
+      "Denji despertó envuelto en vísceras ajenas y el sonido de motosierra en su pecho.",
+      "Pochita lo observaba en silencio, como esperando una decisión.",
+      "—Si esta vida va a ser mía... que sea con ruido —susurró.",
+      "Y el primer demonio cayó sin tiempo de gritar."
+    ]
+  },
+  {
+    "id": 12,
+    "titulo": "Spy x Family",
+    "genero": "Comedia",
+    "imagen": "assets/img/spyxfamily.jpg",
+    "descripcion": "Un espía debe formar una familia falsa para cumplir su misión.",
+    "historiaResumida": "Loid Forger necesita una familia perfecta para infiltrarse en una escuela élite, pero termina con una asesina por esposa y una niña telépata por hija. ¿Podrá esta familia ficticia convertirse en algo real?",
+    "capituloDemo": [
+      "Capítulo 1: La cena perfecta",
+      "Loid sirvió el arroz mientras Yor limpiaba una mancha invisible.",
+      "Anya los observaba y murmuraba en su mente: 'Qué nerviosos están... qué divertido'.",
+      "—Gracias por aceptar esta cena —dijo Loid, fingiendo una sonrisa natural.",
+      "Y en ese instante, la puerta vibró. La misión había empezado."
+    ]
+  },
+  {
+    "id": 13,
+    "titulo": "Dr. Stone",
+    "genero": "Ciencia ficción",
+    "imagen": "assets/img/drstone.jpg",
+    "descripcion": "Tras siglos de petrificación, dos amigos intentan revivir la civilización con ciencia.",
+    "historiaResumida": "Senku despierta en un mundo donde la humanidad quedó convertida en piedra. Usando solo conocimiento científico, intentará reconstruir la civilización desde cero. ¡La ciencia como superpoder!",
+    "capituloDemo": [
+      "Capítulo 1: 1 mol de esperanza",
+      "Senku escribió la fórmula del jabón en el polvo del suelo.",
+      "—Con esto, iniciamos la revolución —dijo, mientras Taiju traía agua en hojas.",
+      "Un fuego controlado iluminó la noche estancada.",
+      "Y la humanidad volvió a hervir."
+    ]
+  },
+  {
+    "id": 14,
+    "titulo": "Black Clover",
+    "genero": "Magia",
+    "imagen": "assets/img/blackclover.jpg",
+    "descripcion": "Un joven sin magia lucha por convertirse en el Rey Mago.",
+    "historiaResumida": "Asta no tiene magia en un mundo donde todos la poseen. Con determinación pura y una espada antimagia, desafiará su destino y competirá por el título más poderoso del reino.",
+    "capituloDemo": [
+      "Capítulo 1: La página vacía",
+      "El grimorio giró en el aire antes de caer en las manos de Asta.",
+      "No brilló. No flotó. Solo mostró una hoja negra y silenciosa.",
+      "—Tal vez esto no sea magia... tal vez sea fuerza —dijo, levantando su espada.",
+      "Y los hechiceros por primera vez retrocedieron."
+    ]
+  },
+  {
+    "id": 15,
+    "titulo": "Fairy Tail",
+    "genero": "Aventura",
+    "imagen": "assets/img/fairytail.jpg",
+    "descripcion": "Un grupo de magos forma lazos inquebrantables enfrentando desafíos épicos.",
+    "historiaResumida": "Lucy y Natsu se unen al gremio Fairy Tail, donde la amistad es más poderosa que cualquier hechizo. Magia explosiva, humor, emoción y una familia construida en batalla.",
+    "capituloDemo": [
+      "Capítulo 1: Llamas y estrellas",
+      "Natsu rugía como dragón mientras Lucy intentaba controlar su magia celestial.",
+      "El gremio estallaba en gritos y caos, pero también en risas sinceras.",
+      "—Fairy Tail no es orden... es corazón —dijo Erza, levantando su espada.",
+      "Y todos pelearon sin miedo ni permiso."
+    ]
+  },
+  {
+    "id": 16,
+    "titulo": "The Promised Neverland",
+    "genero": "Suspenso",
+    "imagen": "assets/img/neverland.jpg",
+    "descripcion": "Un orfanato perfecto oculta un oscuro secreto detrás de sus puertas.",
+    "historiaResumida": "Emma y sus amigos viven felices hasta que descubren que su destino es aterrador. Comienza una carrera contra el tiempo para escapar y sobrevivir en un mundo que no conocen.",
+    "capituloDemo": [
+      "Capítulo 1: Código en la pared",
+      "Norman escribió números en una esquina donde nadie miraba.",
+      "Ray observaba desde el pasillo, contando pasos.",
+      "—La cena no es lo que parece —dijo Emma, sosteniendo un zapato sin dueño.",
+      "Y el reloj del pasillo marcó 2:00. Se irían esa noche."
+    ]
+  },
+  {
+    "id": 17,
+    "titulo": "Blue Lock",
+    "genero": "Deportes",
+    "imagen": "assets/img/bluelock.jpg",
+    "descripcion": "Una competencia extrema busca crear al delantero más egoísta del fútbol japonés.",
+    "historiaResumida": "Yoichi Isagi entra a Blue Lock, donde el talento no es suficiente y el egoísmo es ley. Solo uno será el nuevo 9 de Japón. Fútbol, presión y psicología en su máxima expresión.",
+    "capituloDemo": [
+      "Capítulo 1: Gol que quiebra",
+      "Isagi dudó un segundo antes de patear, pero el balón lo ignoró.",
+      "Las luces del campo no parpadeaban… juzgaban.",
+      "—No eres nadie si no anotás —dijo Ego desde su torre.",
+      "Y el arco se convirtió en su enemigo personal."
+    ]
+  },
+  {
+    "id": 18,
+    "titulo": "Horimiya",
+    "genero": "Romance",
+    "imagen": "assets/img/horimiya.jpg",
+    "descripcion": "Dos estudiantes con vidas secretas descubren que tienen mucho en común.",
+    "historiaResumida": "Hori es popular y Miyamura tímido, pero ambos esconden facetas que nadie conoce. Su encuentro revela un amor sincero entre contrastes, torpezas y momentos cálidos.",
+    "capituloDemo": [
+      "Capítulo 1: Cruzando pasillos",
+      "Miyamura dejó caer el café con leche en el suelo del pasillo.",
+      "Hori lo miró sorprendida, sin saber si reír o disculparse.",
+      "—¿Vos también sos distinto en casa? —preguntó ella.",
+      "Y esa pregunta fue más íntima que cualquier abrazo."
+    ]
+  },
+  {
+    "id": 19,
+    "titulo": "Mob Psycho 100",
+    "genero": "Sobrenatural",
+    "imagen": "assets/img/mob.jpg",
+    "descripcion": "Un chico con poderes psíquicos intenta vivir una vida normal sin explotar.",
+        "historiaResumida": "Shigeo, apodado Mob, es un adolescente con habilidades psíquicas fuera de control. Pero lo que más desea es ser normal. ¿Qué pasa cuando los sentimientos también tienen poder?",
+    "capituloDemo": [
+      "Capítulo 1: La emoción al límite",
+      "Mob saludó a su profesor con una sonrisa suave, tratando de ocultar que temblaba por dentro.",
+      "El aura a su alrededor fluctuaba con cada pensamiento reprimido.",
+      "—Respirá, no hagas explotar nada hoy —se repetía, mientras Reigen le guiñaba desde la puerta.",
+      "Y el contador interno subió al 93%."
+    ]
+  },
+  {
+    "id": 20,
+    "titulo": "Vinland Saga",
+    "genero": "Histórico",
+    "imagen": "assets/img/vinland.jpg",
+    "descripcion": "Un joven vikingo busca venganza y libertad en tiempos salvajes.",
+    "historiaResumida": "Thorfinn vive rodeado de guerra y ambición. Entre sangre y acero, su viaje lo lleva a cuestionar el sentido de la venganza y soñar con una tierra pacífica: Vinland.",
+    "capituloDemo": [
+      "Capítulo 1: Llamas del norte",
+      "Thorfinn hundió su daga en la nieve mientras el fuego consumía el pueblo vikingo.",
+      "—No volveré a matar por otro hombre —juró, mirando el reflejo de su padre en un charco helado.",
+      "Los gritos y el acero ya no le decían nada.",
+      "Solo escuchaba el silencio que lo guiaba al oeste."
+    ]
   }
 ]
