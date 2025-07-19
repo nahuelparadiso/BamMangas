@@ -1,16 +1,15 @@
-const user = JSON.parse(localStorage.getItem("bamUser"));
-const bio = localStorage.getItem("bamBio") || "";
+const user = JSON.parse(localStorage.getItem("bamActivo"));
+const bio = localStorage.getItem(`bamBio_${user?.email}`) || "";
 const avatarURL = user?.avatar || "../assets/img/avatar1.jpg";
 
 const boxPersonal = document.getElementById("perfil-personal");
 const boxBiblioteca = document.getElementById("perfil-biblioteca");
 
 if (user) {
-  // 🧑‍🎨 Panel izquierdo: Personalización
+  // 🧑‍🎨 Panel izquierdo
   boxPersonal.innerHTML = `
     <div class="perfil-box">
       <img id="avatar-img" src="${avatarURL}" alt="avatar" class="perfil-avatar" />
-
       <label class="avatar-label">Elegí tu avatar:</label>
       <div id="avatar-options" class="avatar-options">
         ${[1, 2, 3, 4, 5].map(num => `
@@ -25,39 +24,27 @@ if (user) {
       <form id="edit-form">
         <label>🙋 Nombre:</label>
         <input type="text" id="edit-name" value="${user.name}" required />
-
         <label>📧 Email:</label>
         <input type="email" id="edit-email" value="${user.email}" required />
-
         <label>📝 Biografía:</label>
         <textarea id="bio-text" rows="4">${bio}</textarea>
-
         <div class="perfil-buttons">
           <button type="submit">💾 Guardar cambios</button>
         </div>
       </form>
 
-      <button type="button" id="cerrar-sesion" style="
-        background-color: crimson;
-        color: white;
-        border: none;
-        padding: 0.5rem 1rem;
-        margin-top: 1rem;
-        border-radius: 6px;
-        cursor: pointer;
-        font-weight: bold;
-      ">🔓 Cerrar sesión</button>
+      <button type="button" id="cerrar-sesion" style="background-color: crimson; color: white; border: none; padding: 0.5rem 1rem; margin-top: 1rem; border-radius: 6px; cursor: pointer; font-weight: bold;">🔓 Cerrar sesión</button>
     </div>
   `;
 
-  // 🧭 Avatar en tiempo real
+  // Actualizar avatar en tiempo real
   document.querySelectorAll('input[name="avatar"]').forEach(radio => {
     radio.addEventListener("change", () => {
       document.getElementById("avatar-img").src = radio.value;
     });
   });
 
-  // 💾 Guardar edición
+  // Guardar cambios
   document.getElementById("edit-form").addEventListener("submit", function (e) {
     e.preventDefault();
     const newName = document.getElementById("edit-name").value.trim();
@@ -66,19 +53,28 @@ if (user) {
     const nuevaAvatar = document.querySelector('input[name="avatar"]:checked').value;
 
     const updatedUser = { ...user, name: newName, email: newEmail, avatar: nuevaAvatar };
-    localStorage.setItem("bamUser", JSON.stringify(updatedUser));
-    localStorage.setItem("bamBio", nuevaBio);
+    localStorage.setItem("bamActivo", JSON.stringify(updatedUser));
+    localStorage.setItem(`bamBio_${newEmail}`, nuevaBio);
+
+    const usuarios = JSON.parse(localStorage.getItem("bamUsers")) || [];
+    const index = usuarios.findIndex(u => u.email === user.email);
+    if (index !== -1) {
+      usuarios[index] = updatedUser;
+      localStorage.setItem("bamUsers", JSON.stringify(usuarios));
+    }
+
     alert("Perfil actualizado ✨");
+    window.location.reload();
   });
 
-  // 🚪 Cerrar sesión
+  // Cerrar sesión
   document.getElementById("cerrar-sesion").addEventListener("click", () => {
-    localStorage.removeItem("bamUser");
+    localStorage.removeItem("bamActivo");
     alert("Sesión cerrada");
     window.location.href = "../index.html";
   });
 
-  // 📚 Panel derecho: Biblioteca lectora
+  // 📚 Panel derecho: enlaces
   boxBiblioteca.innerHTML = `
     <h3>📚 Mi Biblioteca</h3>
     <ul class="biblioteca-links">
@@ -89,9 +85,9 @@ if (user) {
     <div id="lectura-historial"></div>
   `;
 
-  // 📖 Historial de capítulos leídos
+  // 📖 Historial lectura
   const historial = JSON.parse(localStorage.getItem("bamHistorialLectura")) || {};
-  const lecturas = historial[user.name] || [];
+  const lecturas = historial[user.email] || [];
 
   if (lecturas.length === 0) {
     document.getElementById("lectura-historial").innerHTML = "<p>📘 No has leído ningún capítulo aún.</p>";
@@ -120,22 +116,18 @@ if (user) {
   }
 
 } else {
-  boxPersonal.innerHTML = `
-    <p style="text-align: center;">
-      No hay sesión activa. <a href="login.html" style="color: #f47521; font-weight: bold;">Iniciar sesión</a>
-    </p>
-  `;
+  boxPersonal.innerHTML = `<p style="text-align: center;">No hay sesión activa. <a href="login.html" style="color: #f47521; font-weight: bold;">Iniciar sesión</a></p>`;
 }
 
-// 💬 Comentarios de usuarios
+// 💬 Comentarios
 document.getElementById("comentario-form")?.addEventListener("submit", function (e) {
   e.preventDefault();
   const texto = document.getElementById("comentario-texto").value.trim();
-  const user = JSON.parse(localStorage.getItem("bamUser"));
-  if (!user || !texto) return;
+  const usuario = JSON.parse(localStorage.getItem("bamActivo"));
+  if (!usuario || !texto) return;
 
   const nuevoComentario = {
-    nombre: user.name,
+    nombre: usuario.name,
     mensaje: texto,
     fecha: new Date().toLocaleDateString()
   };
@@ -161,13 +153,10 @@ function mostrarComentarios() {
   comentarios.slice().reverse().forEach(com => {
     const div = document.createElement("div");
     div.style = "margin-bottom: 1rem; padding: 0.5rem; border-bottom: 1px solid #ccc;";
-    div.innerHTML = `
-      <strong>${com.nombre}</strong> <span style="color: #999;">(${com.fecha})</span><br>
-      <p style="margin: 0.5rem 0;">${com.mensaje}</p>
-    `;
+    div.innerHTML = `<strong>${com.nombre}</strong> <span style="color: #999;">(${com.fecha})</span><br><p style="margin: 0.5rem 0;">${com.mensaje}</p>`;
     lista.appendChild(div);
   });
 }
 
-// Mostrar comentarios al cargar
+// Cargar comentarios al entrar
 mostrarComentarios();
