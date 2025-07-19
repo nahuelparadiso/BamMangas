@@ -14,6 +14,7 @@ Este proyecto forma parte de mi portfolio personal como desarrollador frontend, 
 <img width="1920" height="1080" alt="foto4" src="https://github.com/user-attachments/assets/083d51ab-ea07-4c7c-843d-2e840c06d0b4" />
 <img width="1920" height="1080" alt="foto5" src="https://github.com/user-attachments/assets/c00a4d68-c6e0-468a-bbe2-ba00aad448be" />
 <img width="1920" height="1080" alt="foto6" src="https://github.com/user-attachments/assets/77bc14f2-1205-4787-9701-ae762aabf063" />
+<img width="1920" height="1080" alt="foto 7" src="https://github.com/user-attachments/assets/ca0a1260-3b08-424b-a019-998df5d814ce" />
 
 ---
 
