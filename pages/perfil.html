@@ -3,85 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <title>Mi perfil | BamMangas</title>
-  <link rel="stylesheet" href="../style.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
 
-  <button id="toggle-theme" style="
-    background-color: #f47521;
-    color: white;
-    border: none;
-    padding: 0.4rem 0.8rem;
-    margin: 1rem auto;
-    display: block;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-  ">🌓 Cambiar tema</button>
+  <!-- 🌓 Cambiar tema -->
+  <button id="toggle-theme" class="btn-primary">🌓 Cambiar tema</button>
 
-  <header>
-    <div class="logo">
-      <a href="../index.html" class="logo-link">BamMangas</a>
-    </div>
-    <a href="perfil.html" id="boton-perfil" style="
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #f47521;
-">
-  <img id="icono-perfil" src="../assets/img/avatar1.jpg" alt="Mi avatar" style="
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #f47521;
-  ">
-  Mi Perfil
-</a>
-  </header>
+  <!-- 🧡 Banner de BamMangas -->
+  <header class="bam-banner">
+  <h1 class="titulo-principal">BamMangas</h1>
+  <div class="perfil-topbar">
+    <a href="perfil.html" class="btn-perfil">
+      <img src="../assets/img/avatar1.jpg" alt="Avatar" class="perfil-avatar" />
+      Mi Perfil
+    </a>
+    <a href="../index.html" class="btn-inicio">Inicio</a>
+  </div>
+</header>
 
-  <main style="padding: 2rem;">
-    <!-- 🧑‍🎨 Sección principal con dos columnas -->
+  <main>
+    <!-- 🧍 Sección principal del perfil -->
     <section class="perfil-seccion">
-      <div class="columna-izquierda" id="perfil-personal"></div>
-      <div class="columna-derecha" id="perfil-biblioteca"></div>
+      <div class="columna-izquierda" id="perfil-personal">
+        <!-- Perfil generado con JS -->
+      </div>
+      <div class="columna-derecha" id="perfil-biblioteca">
+        <!-- Biblioteca o favoritos generados con JS -->
+      </div>
     </section>
 
-    <!-- 💬 Hoja inferior con comentarios -->
+    <!-- 💬 Comentarios -->
     <section class="perfil-comentarios">
-      <h3>💬 Comentarios de usuarios</h3>
+      <h3>Reseñas y comentarios</h3>
 
-      <form id="comentario-form" style="margin-top: 1rem;">
-        <label for="comentario-texto">Dejá tu comentario:</label>
-        <textarea id="comentario-texto" rows="3" required style="
-          width: 100%;
-          padding: 0.5rem;
-          border: 1px solid #ccc;
-          border-radius: 6px;
-          margin-bottom: 0.8rem;
-        "></textarea>
-        <button type="submit" style="
-          background-color: #f47521;
-          color: white;
-          border: none;
-          padding: 0.5rem 1rem;
-          border-radius: 6px;
-          font-weight: bold;
-          cursor: pointer;
-        ">💾 Enviar comentario</button>
+      <form id="comentario-form">
+        <label for="comentario-texto">¿Qué te pareció la plataforma?</label>
+        <textarea id="comentario-texto" rows="3" required></textarea>
+        <button type="submit" class="btn-primary">Enviar comentario</button>
       </form>
 
-      <div id="comentarios-lista" style="margin-top: 2rem;">
+      <div id="comentarios-lista">
         <!-- Comentarios insertados dinámicamente -->
       </div>
     </section>
   </main>
 
+  <!-- ⚙️ Script del perfil -->
   <script src="../perfil.js"></script>
-
   <script>
     const toggleBtn = document.getElementById("toggle-theme");
     const body = document.body;

@@ -170,47 +170,67 @@ body.dark-mode .usuario-links button {
   padding: 2rem;
 }
 
+/* 📚 Grid de lectura */
+.lectura-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 📘 Tarjetas individuales */
 .manga-card {
   background-color: #fff8f2;
-  border-radius: 8px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
-  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
   transition: transform 0.3s ease;
+  text-align: center;
 }
 
 .manga-card:hover {
   transform: translateY(-6px);
 }
 
+/* 🖼️ Imagen portada */
 .manga-card img {
   width: 100%;
-  height: 300px;
+  height: 280px;
   object-fit: cover;
-  border-bottom: 1px solid #eee;
 }
 
+/* 🎯 Título */
 .manga-card h3 {
-  margin: 0.8rem 0 0.2rem;
-  font-size: 1.1rem;
-  color: #333;
-}
-
-.manga-card p {
-  font-size: 0.9rem;
-  color: #f47521;
-  margin-bottom: 1rem;
+  font-size: 1.15rem;
   font-weight: bold;
+  color: #f47521;
+  margin: 0.8rem 0 0.4rem;
 }
 
+/* 🧾 Descripción corta */
+.manga-card .descripcion {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0 1rem 1rem;
+  line-height: 1.4;
+}
+
+/* 🌘 Modo oscuro */
 body.dark-mode .manga-card {
-  background-color: #252018;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  background-color: #1f1f1f;
   color: #eee;
 }
 
 body.dark-mode .manga-card h3 {
-  color: #f47521;
+  color: #f9b47d;
 }
+
+body.dark-mode .manga-card .descripcion {
+  color: #ddd;
+}
+
 
 /* 🧍 Perfil */
 .perfil-box {
@@ -751,20 +771,27 @@ body.dark-mode #selector-capitulo {
 }
 
 .perfil-seccion {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  justify-content: center;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
 }
 
 .columna-izquierda,
 .columna-derecha {
-  flex: 1 1 300px;
-  background-color: #fff8f2;
+  background-color: #fffaf4;
+  border-radius: 12px;
   padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease;
 }
+
+.columna-derecha {
+  border-left: 6px solid #f47521;
+}
+
 
 body.dark-mode .columna-izquierda,
 body.dark-mode .columna-derecha {
@@ -817,20 +844,36 @@ body.dark-mode .columna-derecha {
 }
 
 .perfil-comentarios {
-  margin-top: 3rem;
-  background-color: #fefefe;
+  background-color: #fafafa;
+  border-radius: 12px;
   padding: 2rem;
-  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
   max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  margin: 3rem auto;
   border-top: 4px solid #f47521;
 }
 
-body.dark-mode .perfil-comentarios {
-  background-color: #1a1a1a;
-  color: #f1f1f1;
+#comentario-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+#comentarios-lista p {
+  background: #fff;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #f47521;
+  border-radius: 6px;
+  color: #333;
+}
+
+body.dark-mode #comentarios-lista p {
+  background-color: #2a2a2a;
+  color: #eee;
 }
 
 /* 🌟 Diseño general moderno */
@@ -864,11 +907,16 @@ h2, h3, h4 {
 .columna-derecha {
   border-left: 6px solid #f47521;
 }
-
+body.dark-mode #comentario-form textarea {
+  background-color: #2a2a2a;
+  border: 1px solid #555;
+  color: #fff;
+}
 body.dark-mode .columna-izquierda,
 body.dark-mode .columna-derecha,
 body.dark-mode .perfil-comentarios {
   background-color: #1f1f1f;
+  color: #f1f1f1;
 }
 
 /* 🌈 Efecto hover */
@@ -1048,5 +1096,420 @@ body.dark-mode .bienvenida-login {
 @keyframes aparecer {
   0% { opacity: 0; transform: scale(0.8); }
   100% { opacity: 1; transform: scale(1); }
+}
+
+
+/* 🔷 Contenedor del buscador y filtro */
+.filtro-genero-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: var(--fondo-claro, #f9f9f9);
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  max-width: 1000px;
+  margin: 0 auto 2rem;
+}
+
+/* 🟡 Etiquetas (labels) */
+.filtro-genero-container label {
+  font-weight: 600;
+  color: #333;
+}
+
+.filtro-genero-container select,
+.filtro-genero-container input.busqueda-input {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Bangers', cursive;
+  color: #333;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+/* 🧠 Efecto al enfocar */
+.filtro-genero-container select:focus,
+.busqueda-input:focus {
+  border-color: #f47521;
+  box-shadow: 0 0 6px rgba(244,117,33,0.3);
+  outline: none;
+}
+
+/* 🌓 Modo oscuro (si usás dark-mode en body) */
+body.dark-mode .filtro-genero-container {
+  background-color: #1c1c1c;
+}
+
+body.dark-mode .filtro-genero-container label {
+  color: #ddd;
+}
+
+body.dark-mode select,
+body.dark-mode .busqueda-input {
+  background-color: #2a2a2a;
+  color: #eee;
+  border: 1px solid #555;
+}
+
+/* 📱 Diseño adaptativo para pantallas grandes */
+@media (min-width: 700px) {
+  .filtro-genero-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .filtro-genero-container label {
+    margin-right: 8px;
+    white-space: nowrap;
+  }
+
+  .filtro-genero-container select,
+  .filtro-genero-container input.busqueda-input {
+    flex: 1;
+  }
+}
+
+
+.manga-info-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fdfdfd;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #2a2a2a;
+}
+
+#manga-titulo {
+  font-family: 'Bangers', cursive;
+  font-size: 2.4rem;
+  color: #f47521;
+  margin-bottom: 0.4rem;
+}
+
+#manga-genero {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 1.2rem;
+}
+
+#manga-descripcion {
+  font-size: 1.05rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+#historia-texto {
+  margin-top: 1rem;
+}
+
+#historia-texto p {
+  background-color: #fff;
+  padding: 1rem 1.2rem;
+  border-left: 4px solid #f47521;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+  .manga-info-container {
+    padding: 1rem;
+    margin: 1rem;
+    font-size: 1rem;
+  }
+
+  #manga-titulo {
+    font-size: 2rem;
+  }
+}
+
+/* 🧍 Perfil responsivo y bien distribuido */
+.perfil-seccion {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .perfil-seccion {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 🧊 Paneles del perfil */
+.columna-izquierda,
+.columna-derecha {
+  background-color: #fffaf4;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease;
+}
+
+/* 🟠 Panel biblioteca con borde lateral */
+.columna-derecha {
+  border-left: 6px solid #f47521;
+}
+
+/* 🌙 Tema oscuro limpio */
+body.dark-mode .columna-izquierda,
+body.dark-mode .columna-derecha {
+  background-color: #1f1f1f;
+  color: #f1f1f1;
+}
+
+/* 🧠 Comentarios */
+.perfil-comentarios {
+  background-color: #fafafa;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 3rem auto;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+  border-top: 4px solid #f47521;
+}
+
+body.dark-mode .perfil-comentarios {
+  background-color: #1f1f1f;
+}
+
+/* 🖼️ Avatar */
+.perfil-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 1rem auto;
+  display: block;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border: 3px solid #f47521;
+}
+
+.bam-banner {
+  background-color: #f47521;
+  padding: 1.5rem;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.titulo-principal {
+  font-family: 'Bangers', cursive;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px #00000033;
+}
+
+.perfil-topbar {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn-perfil,
+.btn-inicio {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: white;
+  color: #f47521;
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-perfil:hover,
+.btn-inicio:hover {
+  background-color: #ffe2d1;
+  transform: scale(1.05);
+}
+
+.perfil-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #f47521;
+  object-fit: cover;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.perfil-avatar:hover {
+  transform: scale(1.1);
+  border-color: #ff9b4d;
+}
+
+
+.perfil-seccion {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .perfil-seccion {
+    grid-template-columns: 1fr;
+  }
+}
+
+.columna-izquierda,
+.columna-derecha {
+  background-color: #fffaf4;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.columna-derecha {
+  border-left: 6px solid #f47521;
+}
+
+.perfil-comentarios {
+  background-color: #fafafa;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 3rem auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  border-top: 4px solid #f47521;
+}
+
+body.dark-mode .columna-izquierda,
+body.dark-mode .columna-derecha,
+body.dark-mode .perfil-comentarios {
+  background-color: #1f1f1f;
+  color: #f1f1f1;
+}
+
+.seccion-titulo {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem 0 1rem;
+  color: #f47521;
+  font-weight: bold;
+}
+
+.favoritos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.manga-card {
+  background-color: #fff8f2;
+  border-radius: 12px;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.manga-card:hover {
+  transform: translateY(-6px);
+}
+
+.manga-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.manga-card h3 {
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: #f47521;
+  margin: 0.8rem 0 0.4rem;
+}
+
+.manga-card .descripcion {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0 1rem 1rem;
+  line-height: 1.4;
+}
+
+/* 🌒 Dark mode */
+body.dark-mode .manga-card {
+  background-color: #1f1f1f;
+  color: #eee;
+}
+
+body.dark-mode .manga-card h3 {
+  color: #f9b47d;
+}
+
+body.dark-mode .manga-card .descripcion {
+  color: #ddd;
+}
+
+
+.volver-perfil {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.btn-perfil-volver {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: #f47521;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-perfil-volver:hover {
+  background-color: #e16415;
+  transform: scale(1.05);
+}
+
+.volver-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.volver-avatar:hover {
+  transform: scale(1.1);
+}
+
+/* 🌒 Modo oscuro */
+body.dark-mode .btn-perfil-volver {
+  background-color: #ff9b4d;
+  color: #1f1f1f;
+}
+
+body.dark-mode .volver-avatar {
+  border-color: #ff9b4d;
 }
 

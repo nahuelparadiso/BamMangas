@@ -19,7 +19,7 @@ function mostrarMangas(lista) {
   lista.forEach(manga => {
     const isFav = favs.includes(manga.id);
     const card = document.createElement("div");
-    card.classList.add("manga-card");
+    card.classList.add("manga-card"); // 🎯 Importante para que el buscador funcione
 
     card.innerHTML = `
       <div class="genre-badge">${manga.genero}</div>
@@ -70,6 +70,34 @@ document.getElementById("manga-list").addEventListener("click", function (e) {
       favs.push(id);
       localStorage.setItem("bamFavoritos", JSON.stringify(favs));
       e.target.classList.add("active");
+    }
+  }
+});
+
+// 🔍 Filtro visual mientras escribís (opcional, queda pro)
+document.getElementById("busquedaManga").addEventListener("input", function () {
+  const query = this.value.toLowerCase();
+  const tarjetas = document.querySelectorAll(".manga-card");
+
+  tarjetas.forEach(card => {
+    const titulo = card.querySelector("h3").textContent.toLowerCase();
+    card.style.display = titulo.includes(query) ? "block" : "none";
+  });
+});
+
+// 🚀 Redirección automática si el título coincide exactamente
+document.getElementById("busquedaManga").addEventListener("change", function () {
+  const query = this.value.trim().toLowerCase();
+  const tarjetas = document.querySelectorAll(".manga-card");
+
+  for (const card of tarjetas) {
+    const titulo = card.querySelector("h3").textContent.trim().toLowerCase();
+    if (titulo === query) {
+      const link = card.querySelector("a");
+      if (link) {
+        window.location.href = link.href;
+      }
+      break;
     }
   }
 });
