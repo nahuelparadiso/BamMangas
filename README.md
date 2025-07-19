@@ -1,82 +1,86 @@
 # 📚 BamMangas
+=======
+📚 BamMangas
+BamMangas es una aplicación web desarrollada con HTML, CSS y JavaScript puro, inspirada en el diseño editorial de plataformas como Crunchyroll. Este proyecto fue creado como parte de mi portfolio personal para demostrar habilidades en interfaz de usuario, gestión de estado, y diseño responsive.
 
-**BamMangas** es una aplicación web desarrollada con **HTML, CSS y JavaScript** puro, inspirada en el estilo visual de Crunchyroll. Funciona como proyecto personal demostrativo, con foco en experiencia de usuario, interacción, narrativa y diseño visual.
+🔒 BamMangas no será distribuido comercialmente. Es solo demostrativo para uso profesional.
 
-Este sitio no será distribuido públicamente y fue creado para mostrar mis habilidades como desarrollador frontend.
+🧪 Capturas del proyecto
 
----
 
-## 🚀 Funcionalidades principales
 
-- 🖼️ Tarjetas de manga con portada, título estilizado y descripción oculta
-- 🔍 Filtro inteligente por género desde `mangas.json`
-- 🔐 Sistema completo de usuarios:
-  - Registro con confirmación visual
-  - Login con diseño centrado y animación de bienvenida
-  - Edición de perfil
-  - Sesión persistente con `localStorage`
-  - Saludo dinámico en el header
-  - Logout visual y eficiente
-- ⭐ Favoritos personalizados por usuario
-- 📖 Lista de lectura guardada por sesión
-- 📦 Vista ampliada con sinopsis narrativa
-- 📖 Capítulo demo original y dinámico por manga
-- 🌓 Modo claro/oscuro con transición suave
-- 📱 Interfaz 100% responsive y optimizada para móviles
+🚀 Características principales
+🖼️ Navegación con tarjetas interactivas de manga
 
----
+🔍 Búsqueda y filtrado por género desde archivo JSON
 
-## 🧑‍🎨 Diseño visual aplicado
+👤 Sistema de usuario completo:
 
-| Componente           | Estilo aplicado                                                  |
-|----------------------|------------------------------------------------------------------|
-| Login y registro     | Fondo anime, layout centrado, caja animada, frase de bienvenida  |
-| Inputs y botones     | Campos amplios, feedback visual, animaciones de hover            |
-| Modal de registro    | Mensaje de éxito animado con redirección                         |
-| Tarjetas de manga    | Hover revelador + estilo editorial                               |
-| Perfil de usuario    | Vista previa del avatar + edición limpia                         |
-| Lectura narrativa    | Capítulos ficticios con presentación tipo manga                  |
-| Modo oscuro          | Aplicado en toda la interfaz 📘                                  |
-| Responsividad        | Diseño fluido adaptable a cualquier dispositivo 📱               |
+Registro y login con animación personalizada
 
----
+Edición de perfil con avatar visible
 
-## 🧠 Tecnologías utilizadas
+Saludo dinámico según sesión
 
-- HTML5 semántico
-- CSS3 modular + animaciones
-- JavaScript Vanilla
-- `localStorage` para sesión, favoritos y lectura
-- Live Server para entorno local
-- Git para control de versiones y flujo de trabajo
+Persistencia de sesión con localStorage
 
----
+⭐ Sistema de favoritos guardados por usuario
 
-## 💻 ¿Cómo ejecutar el proyecto?
+📖 Lista de lectura personalizada
 
-```bash
+📦 Capítulo demostrativo dinámico por cada obra
+
+🌓 Modo oscuro/claro con transición suave
+
+📱 Interfaz responsive 100% funcional en móvil y desktop
+
+🔁 Enlaces visuales entre lectura/favoritos y perfil
+
+🧑‍🎨 Estilo y diseño aplicado
+ Home: Tarjetas hover con portada, género y estilo narrativo
+Login y Registro:	Fondo temático, caja animada, mensaje dinámico
+Perfil de usuario:	Avatar editado + secciones divididas con color de marca
+Lectura:	Grilla adaptativa tipo lector de obras
+Favoritos:	Tarjetas tipo biblioteca personal con enlace de regreso
+Modo oscuro:	Colores personalizados, adaptado globalmente 🌓
+Navegación interna:	Botones visuales para volver al perfil desde otras vistas
+
+🧠 Tecnologías implementadas
+HTML5 semántico
+
+CSS3 modular con animaciones y modo oscuro
+
+JavaScript Vanilla con manipulación dinámica del DOM
+
+localStorage para sesión, lectura y favoritos
+
+Git + GitHub como control de versiones
+
+Live Server para entorno de desarrollo loca
+
+
+💻 Cómo ejecutar el proyecto
 git clone https://github.com/nahuelparadiso/BamMangas.git
 cd BamMangas
 npx live-server
-👉 Abrir en: http://localhost:8080
+🔗 Abrir en: http://localhost:8080
 
-📖 Capítulos narrativos originales
-Cada manga incluye un capítulo de muestra exclusivo, redactado especialmente para este proyecto:
 
-✍️ Textos creados desde cero, inspirados pero no copiados
+✍️ Capítulos narrativos originales
+Cada manga cuenta con un capítulo demo exclusivo:
+
+🧠 Redactados desde cero para el proyecto
 
 📘 Cargados dinámicamente desde mangas.json
 
-🔄 Integración automática en manga.html
+🔄 Integrados en manga.html con experiencia de lectura fluida
 
-🌓 Compatibles con modo claro/oscuro y experiencia de lectura fluida
+🌓 Compatibles con modo oscuro
 
-🧠 Pensados para escalar con más obras en el futuro
+🧑‍💻 Autor
+Nahuel Paradiso Frontend Developer apasionado por diseño UX/UI y desarrollo de interfaces web interactivas. 📍 Proyecto personal de portfolio
 
-👨‍💻 Autor
-Nahuel Paradiso Frontend Developer | Proyecto portfolio personal
+📜 Licencia y créditos
+Este proyecto fue creado con fines educativos y demostrativos. No posee fines comerciales.
 
-📜 Licencia y reconocimiento
-Este proyecto fue creado con fines educativos y demostrativos. BamMangas no tiene fines comerciales ni será distribuido públicamente.
-
-Todas las obras de manga presentadas pertenecen a sus respectivos autores/editoriales. Los capítulos incluidos fueron redactados de forma original y usados únicamente como muestra narrativa dentro del portfolio.
+Todas las obras referenciadas pertenecen a sus respectivos autores/editoriales. Los capítulos incluidos fueron creados para mostrar narrativa y estructura sin infringir derechos de autor.
