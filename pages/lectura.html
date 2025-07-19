@@ -2,21 +2,51 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Mi lista de lectura</title>
+  <title>📖 Mi lista de lectura | BamMangas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <a href="../index.html" style="color: white; text-decoration: none;">BamMangas</a>
-    </div>
-    <h2 style="text-align: center; margin: 1rem;">📖 Mi lista de lectura</h2>
+
+  <button id="toggle-theme" class="btn-primary">🌓 Cambiar tema</button>
+
+  <header class="bam-banner">
+    <h1 class="titulo-principal">BamMangas</h1>
+    <nav class="perfil-topbar">
+      <a href="../index.html" class="btn-inicio">🏠 Inicio</a>
+    </nav>
   </header>
 
   <main>
-    <div id="lectura-list" style="padding: 2rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.5rem;"></div>
+    <h2 class="seccion-titulo">📖 Mi lista de lectura</h2>
+
+    <div class="volver-perfil">
+      <a href="perfil.html" class="btn-perfil-volver">
+        <img src="../assets/img/avatar1.jpg" alt="Mi avatar" class="volver-avatar" />
+        Volver al perfil
+      </a>
+    </div>
+
+    <section class="lectura-grid" id="lectura-list">
+      <!-- Tarjetas dinámicas insertadas por JS -->
+    </section>
   </main>
 
   <script src="../lectura.js"></script>
+  <script>
+    const toggleBtn = document.getElementById("toggle-theme");
+    const body = document.body;
+
+    if (localStorage.getItem("tema") === "oscuro") {
+      body.classList.add("dark-mode");
+    }
+
+    toggleBtn?.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      const nuevoTema = body.classList.contains("dark-mode") ? "oscuro" : "claro";
+      localStorage.setItem("tema", nuevoTema);
+    });
+  </script>
 </body>
 </html>

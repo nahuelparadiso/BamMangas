@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>BamMangas</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -13,14 +14,12 @@
       <div class="logo">
         <a href="index.html" class="logo-link">BamMangas</a>
       </div>
-
       <nav class="main-nav">
         <a href="index.html">Inicio</a>
         <a href="pages/login.html" class="nav-login">Login</a>
         <a href="pages/register.html" class="nav-register">Registro</a>
       </nav>
     </div>
-
     <div class="header-right">
       <button id="toggle-theme">🌓 Cambiar tema</button>
       <div id="usuario-panel-container"></div>
@@ -28,10 +27,13 @@
   </header>
 
   <section class="filtro-genero-container">
-    <label for="filtro-genero">🔍 Buscar por género:</label>
+    <label for="filtro-genero">Buscar por Género</label>
     <select id="filtro-genero">
       <option value="">Todos</option>
     </select>
+
+    <label for="busquedaManga">Buscar por Nombre</label>
+    <input type="text" id="busquedaManga" placeholder="Escribí el título del manga..." class="busqueda-input" />
   </section>
 
   <main>
