@@ -6,12 +6,31 @@ const boxPersonal = document.getElementById("perfil-personal");
 const boxBiblioteca = document.getElementById("perfil-biblioteca");
 
 if (user) {
-  // 🧑‍🎨 Panel izquierdo
+  // 🧑‍🎨 Panel visual estilo tarjeta
   boxPersonal.innerHTML = `
-    <div class="perfil-box">
-      <img id="avatar-img" src="${avatarURL}" alt="avatar" class="perfil-avatar" />
-      <label class="avatar-label">Elegí tu avatar:</label>
-      <div id="avatar-options" class="avatar-options">
+    <img id="avatar-img" src="${avatarURL}" alt="avatar" class="avatar-big" />
+    <h2 id="nombre-usuario">${user.name}</h2>
+    <p id="rango-usuario">📚 Explorador de historias</p>
+    <div class="stats">
+      <span>📧 ${user.email}</span>
+      <span>📝 ${bio || "Sin biografía"}</span>
+    </div>
+    <button class="btn-editar" id="btn-editar">✏️ Editar perfil</button>
+    <button type="button" id="cerrar-sesion" style="background-color: crimson; color: white; border: none; padding: 0.5rem 1rem; margin-top: 1rem; border-radius: 6px; cursor: pointer; font-weight: bold;">🔓 Cerrar sesión</button>
+  `;
+
+  // ✏️ Modal o edición inline (simplificada)
+  document.getElementById("btn-editar").addEventListener("click", () => {
+    boxPersonal.innerHTML = `
+      <img id="avatar-img" src="${avatarURL}" alt="avatar" class="avatar-big" />
+      <label>🙋 Nombre:</label>
+      <input type="text" id="edit-name" value="${user.name}" required />
+      <label>📧 Email:</label>
+      <input type="email" id="edit-email" value="${user.email}" required />
+      <label>📝 Biografía:</label>
+      <textarea id="bio-text" rows="3">${bio}</textarea>
+      <label>🎨 Avatar:</label>
+      <div class="avatar-options">
         ${[1, 2, 3, 4, 5].map(num => `
           <label>
             <input type="radio" name="avatar" value="../assets/img/avatar${num}.jpg"
@@ -20,61 +39,47 @@ if (user) {
           </label>
         `).join('')}
       </div>
+      <button id="guardar-cambios" class="btn-editar">💾 Guardar</button>
+    `;
 
-      <form id="edit-form">
-        <label>🙋 Nombre:</label>
-        <input type="text" id="edit-name" value="${user.name}" required />
-        <label>📧 Email:</label>
-        <input type="email" id="edit-email" value="${user.email}" required />
-        <label>📝 Biografía:</label>
-        <textarea id="bio-text" rows="4">${bio}</textarea>
-        <div class="perfil-buttons">
-          <button type="submit">💾 Guardar cambios</button>
-        </div>
-      </form>
+    // 🎨 Actualizar avatar preview
+    document.querySelectorAll('input[name="avatar"]').forEach(radio => {
+      radio.addEventListener("change", () => {
+        document.getElementById("avatar-img").src = radio.value;
+      });
+    });
 
-      <button type="button" id="cerrar-sesion" style="background-color: crimson; color: white; border: none; padding: 0.5rem 1rem; margin-top: 1rem; border-radius: 6px; cursor: pointer; font-weight: bold;">🔓 Cerrar sesión</button>
-    </div>
-  `;
+    // 💾 Guardar cambios
+    document.getElementById("guardar-cambios").addEventListener("click", () => {
+      const newName = document.getElementById("edit-name").value.trim();
+      const newEmail = document.getElementById("edit-email").value.trim();
+      const nuevaBio = document.getElementById("bio-text").value.trim();
+      const nuevaAvatar = document.querySelector('input[name="avatar"]:checked').value;
 
-  // Actualizar avatar en tiempo real
-  document.querySelectorAll('input[name="avatar"]').forEach(radio => {
-    radio.addEventListener("change", () => {
-      document.getElementById("avatar-img").src = radio.value;
+      const updatedUser = { ...user, name: newName, email: newEmail, avatar: nuevaAvatar };
+      localStorage.setItem("bamActivo", JSON.stringify(updatedUser));
+      localStorage.setItem(`bamBio_${newEmail}`, nuevaBio);
+
+      const usuarios = JSON.parse(localStorage.getItem("bamUsers")) || [];
+      const index = usuarios.findIndex(u => u.email === user.email);
+      if (index !== -1) {
+        usuarios[index] = updatedUser;
+        localStorage.setItem("bamUsers", JSON.stringify(usuarios));
+      }
+
+      alert("Perfil actualizado ✨");
+      window.location.reload();
     });
   });
 
-  // Guardar cambios
-  document.getElementById("edit-form").addEventListener("submit", function (e) {
-    e.preventDefault();
-    const newName = document.getElementById("edit-name").value.trim();
-    const newEmail = document.getElementById("edit-email").value.trim();
-    const nuevaBio = document.getElementById("bio-text").value.trim();
-    const nuevaAvatar = document.querySelector('input[name="avatar"]:checked').value;
-
-    const updatedUser = { ...user, name: newName, email: newEmail, avatar: nuevaAvatar };
-    localStorage.setItem("bamActivo", JSON.stringify(updatedUser));
-    localStorage.setItem(`bamBio_${newEmail}`, nuevaBio);
-
-    const usuarios = JSON.parse(localStorage.getItem("bamUsers")) || [];
-    const index = usuarios.findIndex(u => u.email === user.email);
-    if (index !== -1) {
-      usuarios[index] = updatedUser;
-      localStorage.setItem("bamUsers", JSON.stringify(usuarios));
-    }
-
-    alert("Perfil actualizado ✨");
-    window.location.reload();
-  });
-
-  // Cerrar sesión
+  // 🔒 Cerrar sesión
   document.getElementById("cerrar-sesion").addEventListener("click", () => {
     localStorage.removeItem("bamActivo");
     alert("Sesión cerrada");
     window.location.href = "../index.html";
   });
 
-  // 📚 Panel derecho: enlaces
+  // 📚 Panel derecho
   boxBiblioteca.innerHTML = `
     <h3>📚 Mi Biblioteca</h3>
     <ul class="biblioteca-links">
@@ -85,7 +90,7 @@ if (user) {
     <div id="lectura-historial"></div>
   `;
 
-  // 📖 Historial lectura
+  // 📖 Historial de lectura
   const historial = JSON.parse(localStorage.getItem("bamHistorialLectura")) || {};
   const lecturas = historial[user.email] || [];
 
@@ -158,5 +163,5 @@ function mostrarComentarios() {
   });
 }
 
-// Cargar comentarios al entrar
+// 📣 Cargar comentarios al entrar
 mostrarComentarios();

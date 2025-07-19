@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Mi perfil | BamMangas</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
@@ -14,29 +14,30 @@
 
   <!-- 🧡 Banner de BamMangas -->
   <header class="bam-banner">
-  <h1 class="titulo-principal">BamMangas</h1>
-  <div class="perfil-topbar">
-    <a href="perfil.html" class="btn-perfil">
-      <img src="../assets/img/avatar1.jpg" alt="Avatar" class="perfil-avatar" />
-      Mi Perfil
-    </a>
-    <a href="../index.html" class="btn-inicio">Inicio</a>
-  </div>
-</header>
+    <h1 class="titulo-principal">BamMangas</h1>
+    <div class="perfil-topbar">
+      <a href="perfil.html" class="btn-perfil">
+        <img src="../assets/img/avatar1.jpg" alt="Avatar" class="perfil-avatar" />
+        Mi Perfil
+      </a>
+      <a href="../index.html" class="btn-inicio">Inicio</a>
+    </div>
+  </header>
 
   <main>
     <!-- 🧍 Sección principal del perfil -->
     <section class="perfil-seccion">
-      <div class="columna-izquierda" id="perfil-personal">
-        <!-- Perfil generado con JS -->
+      <div class="perfil-card" id="perfil-personal">
+        <!-- JS inserta contenido dinámico del perfil -->
       </div>
-      <div class="columna-derecha" id="perfil-biblioteca">
-        <!-- Biblioteca o favoritos generados con JS -->
+
+      <div class="bloque-card perfil-biblioteca" id="perfil-biblioteca">
+        <!-- JS genera biblioteca, historial de lectura -->
       </div>
     </section>
 
-    <!-- 💬 Comentarios -->
-    <section class="perfil-comentarios">
+    <!-- 💬 Sección de comentarios en estilo carta -->
+    <section class="bloque-card perfil-comentarios">
       <h3>Reseñas y comentarios</h3>
 
       <form id="comentario-form">
@@ -46,7 +47,7 @@
       </form>
 
       <div id="comentarios-lista">
-        <!-- Comentarios insertados dinámicamente -->
+        <!-- JS inserta comentarios como burbujas -->
       </div>
     </section>
   </main>
