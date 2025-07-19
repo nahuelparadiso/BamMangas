@@ -1,58 +1,58 @@
 # 📚 BamMangas
 
-**BamMangas** es una aplicación web desarrollada con **HTML, CSS y JavaScript** puro, inspirada en el estilo visual de Crunchyroll. Está pensada como proyecto personal demostrativo, sin fines comerciales, con foco en experiencia de usuario, interacción y diseño.
+**BamMangas** es una aplicación web desarrollada con **HTML, CSS y JavaScript** puro, inspirada en el estilo visual de Crunchyroll. Funciona como proyecto personal demostrativo, con foco en experiencia de usuario, interacción, narrativa y diseño visual.
 
-Este sitio no será distribuido públicamente y su objetivo es mostrar mis capacidades como desarrollador frontend.
+Este sitio no será distribuido públicamente y fue creado para mostrar mis habilidades como desarrollador frontend.
 
 ---
 
 ## 🚀 Funcionalidades principales
 
-- 🖼️ Tarjetas de manga con portada, título estilizado y descripción oculta (aparece al pasar el cursor)
-- 🔍 Filtro inteligente por género extraído dinámicamente desde `mangas.json`
-- 🔐 Sistema de usuarios completo:
-  - Registro, login, edición de perfil
+- 🖼️ Tarjetas de manga con portada, título estilizado y descripción oculta
+- 🔍 Filtro inteligente por género desde `mangas.json`
+- 🔐 Sistema completo de usuarios:
+  - Registro con confirmación visual
+  - Login con diseño centrado y animación de bienvenida
+  - Edición de perfil
   - Sesión persistente con `localStorage`
-  - Saludo personalizado en el header
-  - Cierre de sesión dinámico
-- ⭐ Marcado de favoritos por usuario
-- 📖 Lista de lectura personalizada por sesión
-- 📦 Vista detallada del manga con sinopsis narrativa expandida
-- 📖 Capítulo demo exclusivo por manga (generado narrativamente)
-- 🌓 Modo claro/oscuro con transición visual
-- 📱 Interfaz completamente responsive
+  - Saludo dinámico en el header
+  - Logout visual y eficiente
+- ⭐ Favoritos personalizados por usuario
+- 📖 Lista de lectura guardada por sesión
+- 📦 Vista ampliada con sinopsis narrativa
+- 📖 Capítulo demo original y dinámico por manga
+- 🌓 Modo claro/oscuro con transición suave
+- 📱 Interfaz 100% responsive y optimizada para móviles
 
 ---
 
-## 🧑‍🎨 Detalles visuales y diseño aplicado
+## 🧑‍🎨 Diseño visual aplicado
 
-El sitio presenta una estética cuidada, moderna y adaptable:
-
-| Componente             | Estilo aplicado                                              |
-|------------------------|--------------------------------------------------------------|
-| Tarjetas de manga      | Fondo suave, sombra, hover interactivo, descripción dinámica |
-| Título de manga        | Mayúsculas estilizadas, color destacado                      |
-| Header y navegación    | Espaciado, colores vivos, botón de cambio de tema            |
-| Formulario login       | Layout centrado, inputs estilizados, feedback visual         |
-| Perfil de usuario      | Avatar con vista previa + edición de datos                   |
-| Detalle de manga       | Imagen ampliada + sinopsis narrativa destacada               |
-| Capítulo demo          | Lectura narrativa con estilo editorial                       |
-| Modo oscuro            | Aplicado en toda la interfaz 📘                              |
-| Responsive             | Layout adaptable a escritorio y móvil 📱                     |
+| Componente           | Estilo aplicado                                                  |
+|----------------------|------------------------------------------------------------------|
+| Login y registro     | Fondo anime, layout centrado, caja animada, frase de bienvenida  |
+| Inputs y botones     | Campos amplios, feedback visual, animaciones de hover            |
+| Modal de registro    | Mensaje de éxito animado con redirección                         |
+| Tarjetas de manga    | Hover revelador + estilo editorial                               |
+| Perfil de usuario    | Vista previa del avatar + edición limpia                         |
+| Lectura narrativa    | Capítulos ficticios con presentación tipo manga                  |
+| Modo oscuro          | Aplicado en toda la interfaz 📘                                  |
+| Responsividad        | Diseño fluido adaptable a cualquier dispositivo 📱               |
 
 ---
 
 ## 🧠 Tecnologías utilizadas
 
 - HTML5 semántico
-- CSS3 modular + media queries
+- CSS3 modular + animaciones
 - JavaScript Vanilla
-- `localStorage` para manejo de sesión, lectura y favoritos
+- `localStorage` para sesión, favoritos y lectura
 - Live Server para entorno local
+- Git para control de versiones y flujo de trabajo
 
 ---
 
-## 💻 ¿Cómo ejecutar?
+## 💻 ¿Cómo ejecutar el proyecto?
 
 ```bash
 git clone https://github.com/nahuelparadiso/BamMangas.git
@@ -60,27 +60,23 @@ cd BamMangas
 npx live-server
 👉 Abrir en: http://localhost:8080
 
-📖 Capítulos de lectura narrativos
-Cada manga incluye ahora un capítulo de muestra original escrito especialmente para el proyecto. Estos capítulos fueron diseñados como previews ficticias, inspiradas en el estilo de cada obra, pero respetando totalmente los derechos de autor.
+📖 Capítulos narrativos originales
+Cada manga incluye un capítulo de muestra exclusivo, redactado especialmente para este proyecto:
 
-✍️ Textos completamente originales, sin copiar escenas reales
+✍️ Textos creados desde cero, inspirados pero no copiados
 
-📘 Se muestran dinámicamente desde el archivo mangas.json
+📘 Cargados dinámicamente desde mangas.json
 
-🔄 Integración automática con la vista manga.html
+🔄 Integración automática en manga.html
 
-🌓 Compatible con modo claro/oscuro y lectura fluida
+🌓 Compatibles con modo claro/oscuro y experiencia de lectura fluida
 
-🧠 Sistema escalable para más capítulos a futuro
-
-Esta mejora transforma BamMangas en una experiencia narrativa interactiva, ideal para demostrar creatividad, manejo de datos y diseño de interfaz.
+🧠 Pensados para escalar con más obras en el futuro
 
 👨‍💻 Autor
-Nahuel Paradiso Desarrollador Frontend | Proyecto de Portfolio
+Nahuel Paradiso Frontend Developer | Proyecto portfolio personal
 
-📜 Licencia y reconocimiento de derechos
+📜 Licencia y reconocimiento
 Este proyecto fue creado con fines educativos y demostrativos. BamMangas no tiene fines comerciales ni será distribuido públicamente.
 
-Todas las obras de manga presentadas pertenecen a sus respectivos autores y editoriales. Este sitio no posee derechos sobre el contenido original y respeta la propiedad intelectual.
-
-Los capítulos de muestra incluidos fueron redactados de forma original, sin reproducir escenas oficiales, y se utilizan únicamente como parte de un portfolio personal.
+Todas las obras de manga presentadas pertenecen a sus respectivos autores/editoriales. Los capítulos incluidos fueron redactados de forma original y usados únicamente como muestra narrativa dentro del portfolio.
