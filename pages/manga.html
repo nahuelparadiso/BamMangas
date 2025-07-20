@@ -7,6 +7,9 @@
 </head>
 <body>
 
+  <!-- 🌓 Botón de cambio de tema -->
+  <button id="toggle-theme" class="btn-primary">🌓 Cambiar tema</button>
+
   <!-- 🧡 Encabezado con navegación -->
   <header class="bam-header">
     <div class="header-left">
@@ -29,9 +32,9 @@
   <main id="manga-details" style="padding: 2rem;">
     <!-- Información principal del manga -->
     <div class="manga-info-container">
-      <img id="manga-imagen" alt="Portada del manga">
+      <img id="manga-imagen" alt="Portada del manga" />
       <h2 id="manga-titulo"></h2>
-      <p id="manga-genero"></p>
+      <p id="manga-genero"></p> <!-- 🔧 Ya sin estrellitas -->
       <p id="manga-descripcion"></p>
     </div>
 
@@ -53,5 +56,28 @@
   </main>
 
   <script src="../manga.js"></script>
+  <script>
+    // 🌓 Activar modo claro/oscuro
+    const toggleBtn = document.getElementById("toggle-theme");
+    const body = document.body;
+
+    if (localStorage.getItem("tema") === "oscuro") {
+      body.classList.add("dark-mode");
+    }
+
+    toggleBtn?.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      const nuevoTema = body.classList.contains("dark-mode") ? "oscuro" : "claro";
+      localStorage.setItem("tema", nuevoTema);
+    });
+
+    // 🔁 Sincronizar avatar del botón "Mi Perfil"
+    const usuarioActivo = JSON.parse(localStorage.getItem("bamActivo"));
+    const avatarTopbar = document.querySelector(".perfil-avatar");
+
+    if (usuarioActivo && avatarTopbar) {
+      avatarTopbar.src = usuarioActivo.avatar || "../assets/img/avatar1.jpg";
+    }
+  </script>
 </body>
 </html>

@@ -15,6 +15,15 @@
           "La silueta de un barco gigante apareció en el horizonte: el Going Merry renacido.",
           "Y con él, una nueva promesa de aventura."
         ]
+      },
+      {
+        "titulo": "Capítulo 2: La brújula de fuego",
+        "contenido": [
+          "Luffy sostenía un mapa chamuscado con marcas rojas sin sentido.",
+          "Nami frunció el ceño: 'Esto no es una isla, es una advertencia'.",
+          "Zoro afilaba su katana mientras el sol caía como fuego sobre la cubierta.",
+          "La brújula comenzó a girar sola. El viaje ya no era solo por aventura."
+        ]
       }
     ]
   },
@@ -33,6 +42,15 @@
           "El viento movía las hojas, susurrando historias antiguas de Hokages olvidados.",
           "—¡Hoy empiezo mi camino ninja! —exclamó, con el sol iluminando su bandana.",
           "Pero algo lo observaba entre los árboles..."
+        ]
+      },
+      {
+        "titulo": "Capítulo 2: Juramento bajo lluvia",
+        "contenido": [
+          "La tormenta caía sobre los tejados de Konoha como si la aldea llorara sus secretos.",
+          "Sasuke cerró los ojos frente a la estatua de su clan. Naruto llegó empapado.",
+          "—¡No voy a rendirme, pase lo que pase! —gritó, apuntando al cielo.",
+          "La lluvia respondió con un trueno. El camino ninja apenas comenzaba."
         ]
       }
     ]
@@ -53,6 +71,15 @@
           "El cielo gris anunciaba cambios, y los cuervos volaban en círculo.",
           "La tierra tembló. Algo se acercaba."
         ]
+      },
+      {
+        "titulo": "Capítulo 2: El rugido del este",
+        "contenido": [
+          "Mikasa ajustó su equipo tridimensional bajo una sombra monstruosa.",
+          "Levi dio la orden sin levantar la voz: 'Dispersión en espiral. A las torres'.",
+          "Eren mordió su mano con rabia silenciosa. La transformación era inminente.",
+          "Y al este, un rugido quebró las columnas del aire."
+        ]
       }
     ]
   },
@@ -71,6 +98,15 @@
           "No sabían que lo habían desatado.",
           "Una sombra salió del suelo, y la risa se convirtió en gritos.",
           "—¿Qué hice? —pensó Yuji, mientras la oscuridad lo rodeaba."
+        ]
+      },
+      {
+        "titulo": "Capítulo 2: El dedo que no olvidó",
+        "contenido": [
+          "Satoru Gojo apareció entre la neblina con una sonrisa torcida.",
+          "—Ese dedo no está dormido, Yuji. Está esperando.",
+          "El aire vibraba, como si el mal respirara cerca del templo.",
+          "Yuji apretó el puño. El segundo fragmento estaba más cerca de lo que creía."
         ]
       }
     ]
@@ -91,6 +127,15 @@
           "—Tu destino acaba de cambiar, Shinigami —susurró.",
           "Una luna roja comenzaba a elevarse."
         ]
+      },
+      {
+        "titulo": "Capítulo 2: Puerta entre mundos",
+        "contenido": [
+          "Rukia dibujó un sello sobre el suelo de la calle vacía.",
+          "La ciudad vibraba como si alguien más estuviera cruzando.",
+          "Ichigo sintió que su alma se separaba por un instante: entre la luz y la penumbra.",
+          "El portal se abrió. Y algo lo llamaba desde el otro lado."
+        ]
       }
     ]
   },
@@ -109,6 +154,15 @@
           "—¿Cuántas vidas más para recuperar la tuya? —dijo, mirando a Alphonse.",
           "La piedra no era solo poder, era sacrificio.",
           "Y los hermanos estaban dispuestos a pagarlo todo."
+        ]
+      },
+      {
+        "titulo": "Capítulo 2: Ecos de alquimia rota",
+        "contenido": [
+          "Alphonse tocó una inscripción antigua que ardía en azul.",
+          "El suelo tembló, y una figura se formó entre las cenizas.",
+          "Edward extendió su brazo de acero sin vacilar.",
+          "La transmutación había comenzado, y el precio se sentía real."
         ]
       }
     ]
@@ -129,6 +183,15 @@
           "Una flor marchita en una ventana lo hizo detenerse.",
           "—Estoy en 2005 otra vez… —dijo, con los ojos humedecidos."
         ]
+      },
+      {
+        "titulo": "Capítulo 2: Promesa en el umbral",
+        "contenido": [
+          "Hinata apareció frente a la escuela con la misma mochila de hace diez años.",
+          "Takemichi no pudo hablar: la garganta era una avalancha de recuerdos.",
+          "—¿Te pasa algo? —preguntó ella con ternura.",
+          "Y en ese instante, él supo que todo debía cambiar desde ahí."
+        ]
       }
     ]
   },
@@ -147,6 +210,127 @@
           "Cada respiración se volvía vapor, cada paso una danza silenciosa.",
           "—Los demonios huyen del sol… pero yo no temo la oscuridad —pensó.",
           "Una sombra cruzó el bosque. No estaba solo."
+        ]
+      },
+      {
+        "titulo": "Capítulo 2: Corte entre ramas",
+        "contenido": [
+          "Nezuko se escondía detrás de un árbol ennegrecido, sus ojos brillaban como carbones.",
+          "Tanjiro dio un salto veloz, cortando en el aire a una bestia con garras de obsidiana.",
+          "La sangre se evaporó en el instante. El silencio volvió.",
+          "—No dejaré que la oscuridad se lleve nada más —susurró."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "titulo": "Bleach",
+    "genero": "Espiritual",
+    "imagen": "assets/img/bleach.jpg",
+    "descripcion": "Un adolescente obtiene poderes de Shinigami para proteger el mundo de los espíritus malignos.",
+    "historiaResumida": "Ichigo Kurosaki nunca pensó que podría ver espíritus... hasta que se convierte en un Shinigami accidentalmente. Entre la vida y la muerte, deberá proteger almas inocentes y enfrentarse a amenazas que cruzan dimensiones.",
+    "capitulos": [
+      {
+        "titulo": "Capítulo 1: El alma que despierta",
+        "contenido": [
+          "Ichigo abrió la puerta de su casa y sintió una presión en el aire.",
+          "Una figura con kimono blanco lo esperaba en silencio.",
+          "—Tu destino acaba de cambiar, Shinigami —susurró.",
+          "Una luna roja comenzaba a elevarse."
+        ]
+      },
+      {
+        "titulo": "Capítulo 2: Puerta entre mundos",
+        "contenido": [
+          "Rukia dibujó un sello sobre el suelo de la calle vacía.",
+          "La ciudad vibraba como si alguien más estuviera cruzando.",
+          "Ichigo sintió que su alma se separaba por un instante: entre la luz y la penumbra.",
+          "El portal se abrió. Y algo lo llamaba desde el otro lado."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "titulo": "Fullmetal Alchemist",
+    "genero": "Fantasía",
+    "imagen": "assets/img/fullmetal.jpg",
+    "descripcion": "Dos hermanos alquimistas buscan la piedra filosofal para recuperar lo que perdieron.",
+    "historiaResumida": "Tras una tragedia provocada por sus propios errores, Edward y Alphonse Elric pagan un precio brutal. Ahora recorren el mundo en busca de la Piedra Filosofal, enfrentando secretos oscuros del gobierno y de la alquimia misma.",
+    "capitulos": [
+      {
+        "titulo": "Capítulo 1: Hierro y culpa",
+        "contenido": [
+          "Edward observaba sus manos metálicas bajo la lluvia.",
+          "—¿Cuántas vidas más para recuperar la tuya? —dijo, mirando a Alphonse.",
+          "La piedra no era solo poder, era sacrificio.",
+          "Y los hermanos estaban dispuestos a pagarlo todo."
+        ]
+      },
+      {
+        "titulo": "Capítulo 2: Ecos de alquimia rota",
+        "contenido": [
+          "Alphonse tocó una inscripción antigua que ardía en azul.",
+          "El suelo tembló, y una figura se formó entre las cenizas.",
+          "Edward extendió su brazo de acero sin vacilar.",
+          "La transmutación había comenzado, y el precio se sentía real."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "titulo": "Tokyo Revengers",
+    "genero": "Viajes en el tiempo",
+    "imagen": "assets/img/tokyo.jpg",
+    "descripcion": "Un joven regresa al pasado para cambiar el destino trágico de su exnovia.",
+    "historiaResumida": "Takemichi recibe una segunda oportunidad: viajar al pasado para salvar a la chica que amó. Pero cada decisión puede cambiar el destino de bandas enteras, amigos y de él mismo. ¿Hasta dónde puede sacrificarse por amor?",
+    "capitulos": [
+      {
+        "titulo": "Capítulo 1: El tren al ayer",
+        "contenido": [
+          "Takemichi se bajó del subte como si el suelo fuese memoria.",
+          "Los carteles parecían iguales, pero algo había cambiado.",
+          "Una flor marchita en una ventana lo hizo detenerse.",
+          "—Estoy en 2005 otra vez… —dijo, con los ojos humedecidos."
+        ]
+      },
+      {
+        "titulo": "Capítulo 2: Promesa en el umbral",
+        "contenido": [
+          "Hinata apareció frente a la escuela con la misma mochila de hace diez años.",
+          "Takemichi no pudo hablar: la garganta era una avalancha de recuerdos.",
+          "—¿Te pasa algo? —preguntó ella con ternura.",
+          "Y en ese instante, él supo que todo debía cambiar desde ahí."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "titulo": "Demon Slayer",
+    "genero": "Acción",
+    "imagen": "assets/img/demonslayer.jpg",
+    "descripcion": "Un chico lucha contra demonios para salvar a su hermana convertida en uno de ellos.",
+    "historiaResumida": "Tanjiro Kamado vive una vida simple, hasta que la tragedia lo golpea. Con su hermana convertida en demonio, emprende un viaje lleno de dolor, belleza y acción, donde cada encuentro lo lleva más cerca de entender el verdadero mal.",
+    "capitulos": [
+      {
+        "titulo": "Capítulo 1: El aliento del alba",
+        "contenido": [
+          "Tanjiro entrenaba al amanecer mientras la nieve caía suave.",
+          "Cada respiración se volvía vapor, cada paso una danza silenciosa.",
+          "—Los demonios huyen del sol… pero yo no temo la oscuridad —pensó.",
+          "Una sombra cruzó el bosque. No estaba solo."
+        ]
+      },
+      {
+        "titulo": "Capítulo 2: Corte entre ramas",
+        "contenido": [
+          "Nezuko se escondía detrás de un árbol ennegrecido, sus ojos brillaban como carbones.",
+          "Tanjiro dio un salto veloz, cortando en el aire a una bestia con garras de obsidiana.",
+          "La sangre se evaporó en el instante. El silencio volvió.",
+          "—No dejaré que la oscuridad se lleve nada más —susurró."
         ]
       }
     ]
@@ -167,6 +351,15 @@
           "Su madre dejó en su mochila una carta con un dibujo infantil: '¡Tú eres mi héroe!'",
           "Y en ese instante, supo que debía darlo todo."
         ]
+      },
+      {
+        "titulo": "Capítulo 2: El salto del legado",
+        "contenido": [
+          "El entrenamiento exigía más que músculos: era voluntad.",
+          "Bakugo lanzaba explosiones a cada lado, midiendo la reacción de Midoriya.",
+          "—No sirve copiar —gruñó. —Tenés que crear tu forma.",
+          "Y Midoriya respiró profundo, recordando lo que significa ser el heredero."
+        ]
       }
     ]
   },
@@ -185,6 +378,15 @@
           "Lo abrió con curiosidad, pero algo en él lo hizo temblar.",
           "El nombre que escribió... ya no existía en internet.",
           "Y en el cielo, Ryuk sonreía."
+        ]
+      },
+      {
+        "titulo": "Capítulo 2: El segundo juicio",
+        "contenido": [
+          "La televisión mostraba la foto de un criminal sin remordimientos.",
+          "Light escribió sin mirar. Pero esta vez, el nombre tardó en desaparecer.",
+          "—¿Acaso duda...? —murmuró, revisando la letra.",
+          "El reloj marcó 40 segundos. El juicio seguía siendo suyo."
         ]
       }
     ]
@@ -205,6 +407,15 @@
           "—Si esta vida va a ser mía... que sea con ruido —susurró.",
           "Y el primer demonio cayó sin tiempo de gritar."
         ]
+      },
+      {
+        "titulo": "Capítulo 2: Contrato con sangre",
+        "contenido": [
+          "Makima le ofreció una comida caliente y una mirada que quemaba.",
+          "Denji pensó que el paraíso no se trataba de lujo, sino de libertad.",
+          "Los demonios rodeaban la estación subterránea. El aceite del motor volvió a rugir.",
+          "—Soy tu arma… y tu mal sueño —dijo, encendiendo su pecho una vez más."
+        ]
       }
     ]
   },
@@ -223,6 +434,15 @@
           "Anya los observaba y murmuraba en su mente: 'Qué nerviosos están... qué divertido'.",
           "—Gracias por aceptar esta cena —dijo Loid, fingiendo una sonrisa natural.",
           "Y en ese instante, la puerta vibró. La misión había empezado."
+        ]
+      },
+      {
+        "titulo": "Capítulo 2: Escuela y secretos",
+        "contenido": [
+          "Anya dibujó una bomba en su cuaderno. El maestro sudó sin entender el humor.",
+          "Yor entrenaba en la cocina sin romper platos. Loid espiaba desde el pasillo.",
+          "—Esta familia no es normal… y no debería serlo —pensó.",
+          "Pero algo en el caos parecía funcionar a la perfección."
         ]
       }
     ]
@@ -243,6 +463,15 @@
           "Un fuego controlado iluminó la noche estancada.",
           "Y la humanidad volvió a hervir."
         ]
+      },
+      {
+        "titulo": "Capítulo 2: Compuesto de futuro",
+        "contenido": [
+          "Chrome encontró restos de vidrio entre rocas erosionadas.",
+          "Senku dibujó una ecuación en la arena con el dedo firme.",
+          "—La óptica será nuestra ventana —susurró, mientras la luz atravesaba el cristal rudimentario.",
+          "La ciencia avanzaba como un virus benevolente."
+        ]
       }
     ]
   },
@@ -261,6 +490,15 @@
           "No brilló. No flotó. Solo mostró una hoja negra y silenciosa.",
           "—Tal vez esto no sea magia... tal vez sea fuerza —dijo, levantando su espada.",
           "Y los hechiceros por primera vez retrocedieron."
+        ]
+      },
+      {
+        "titulo": "Capítulo 2: Llamado entre sellos",
+        "contenido": [
+          "Yuno observó desde el risco mientras Asta entrenaba solo contra el viento.",
+          "Un símbolo antiguo apareció en el suelo sin haber sido dibujado.",
+          "La espada vibró, como si escuchara algo que nadie más podía oír.",
+          "El sello comenzó a brillar... pero no con magia."
         ]
       }
     ]
@@ -281,6 +519,15 @@
           "—Fairy Tail no es orden... es corazón —dijo Erza, levantando su espada.",
           "Y todos pelearon sin miedo ni permiso."
         ]
+      },
+      {
+        "titulo": "Capítulo 2: Misión sin mapa",
+        "contenido": [
+          "Gray recibió una carta con tinta invisible, y su expresión se congeló.",
+          "Lucy abrió una puerta estelar que no reconocía en los libros.",
+          "—Esto no está en el manual de novatos —murmuró Natsu entre risas.",
+          "Pero todos sabían que era el inicio de algo legendario."
+        ]
       }
     ]
   },
@@ -299,6 +546,15 @@
           "Ray observaba desde el pasillo, contando pasos.",
           "—La cena no es lo que parece —dijo Emma, sosteniendo un zapato sin dueño.",
           "Y el reloj del pasillo marcó 2:00. Se irían esa noche."
+        ]
+      },
+      {
+        "titulo": "Capítulo 2: Silencio en el bosque",
+        "contenido": [
+          "Los árboles no crujían, como si el bosque tuviera miedo.",
+          "Emma escondió el mapa bajo su capa y susurró coordenadas.",
+          "Ray recitó números en reversa mientras contaban huellas.",
+          "Norman cerró los ojos. Afuera, no había promesas… solo supervivencia."
         ]
       }
     ]
@@ -319,6 +575,15 @@
           "—No eres nadie si no anotás —dijo Ego desde su torre.",
           "Y el arco se convirtió en su enemigo personal."
         ]
+      },
+      {
+        "titulo": "Capítulo 2: Instinto en la línea",
+        "contenido": [
+          "El cronómetro corría como un latido rabioso.",
+          "Isagi vio el hueco y no pensó. Solo saltó.",
+          "El disparo fue imperfecto, pero lleno de hambre.",
+          "—Si vacilo, pierdo. Y yo vine a romper —pensó, al caer de pie en el área."
+        ]
       }
     ]
   },
@@ -337,6 +602,15 @@
           "Hori lo miró sorprendida, sin saber si reír o disculparse.",
           "—¿Vos también sos distinto en casa? —preguntó ella.",
           "Y esa pregunta fue más íntima que cualquier abrazo."
+        ]
+      },
+      {
+        "titulo": "Capítulo 2: Fotos borrosas",
+        "contenido": [
+          "En una cabina de fotos mal iluminada, ambos posaron en silencio.",
+          "—No mires —dijo Hori, mientras hacía una cara tonta.",
+          "Miyamura sonrió sin mostrar los piercings… pero sintió que no debía esconderlos.",
+          "La foto salió borrosa. Pero algo en ellos estaba más claro que nunca."
         ]
       }
     ]
@@ -357,6 +631,15 @@
           "—Respirá, no hagas explotar nada hoy —se repetía, mientras Reigen le guiñaba desde la puerta.",
           "Y el contador interno subió al 93%."
         ]
+      },
+      {
+        "titulo": "Capítulo 2: Vibración controlada",
+        "contenido": [
+          "Mob sostenía una hoja arrugada con los nombres del club de telepatía.",
+          "El lápiz tembló sin que nadie lo tocara. Él respiró hondo.",
+          "—No es poder. Es ansiedad —murmuró, alejándose del cartel.",
+          "Y el 94% se estabilizó... por ahora."
+        ]
       }
     ]
   },
@@ -376,9 +659,22 @@
           "Los gritos y el acero ya no le decían nada.",
           "Solo escuchaba el silencio que lo guiaba al oeste."
         ]
+      },
+      {
+        "titulo": "Capítulo 2: Tierra en la neblina",
+        "contenido": [
+          "El barco avanzaba entre una niebla que parecía susurrar en islandés antiguo.",
+          "Thorfinn cerró los ojos y vio campos sin guerra. ¿Era recuerdo o deseo?",
+          "Un cuervo sobrevoló y soltó una pluma negra sobre el mástil.",
+          "—Vinland... existe. Y yo voy a encontrarla —dijo, sin mirar atrás."
+        ]
       }
     ]
   }
 ]
+
+
+
+
 
 
