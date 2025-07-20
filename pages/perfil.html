@@ -67,6 +67,14 @@
       const nuevoTema = body.classList.contains("dark-mode") ? "oscuro" : "claro";
       localStorage.setItem("tema", nuevoTema);
     });
+
+    // 🔁 Sincronizar avatar del botón “Mi Perfil” en el topbar
+    const usuarioActivo = JSON.parse(localStorage.getItem("bamActivo"));
+    const avatarTopbar = document.querySelector(".perfil-avatar");
+
+    if (usuarioActivo && avatarTopbar) {
+      avatarTopbar.src = usuarioActivo.avatar || "../assets/img/avatar1.jpg";
+    }
   </script>
 </body>
 </html>

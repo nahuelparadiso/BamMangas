@@ -47,6 +47,14 @@
       const nuevoTema = body.classList.contains("dark-mode") ? "oscuro" : "claro";
       localStorage.setItem("tema", nuevoTema);
     });
+
+    // 🧠 Sincronizar avatar del botón "Volver al perfil"
+    const usuarioActivo = JSON.parse(localStorage.getItem("bamActivo"));
+    const avatarPerfil = document.querySelector(".volver-avatar");
+
+    if (usuarioActivo && avatarPerfil) {
+      avatarPerfil.src = usuarioActivo.avatar || "../assets/img/avatar1.jpg";
+    }
   </script>
 </body>
 </html>
