@@ -11,7 +11,9 @@ fetch("../data/mangas.json")
       document.getElementById("manga-imagen").src = `../${manga.imagen}`;
       document.getElementById("manga-imagen").alt = manga.titulo;
       document.getElementById("manga-titulo").textContent = manga.titulo;
-      document.getElementById("manga-genero").textContent = `Género: ${manga.genero}`;
+      document.getElementById("manga-genero").innerHTML = `
+  <span class="genre-badge">🌟 ${manga.genero}</span>
+`;
       document.getElementById("manga-descripcion").textContent = manga.descripcion;
       document.getElementById("historia-texto").textContent = manga.historiaResumida;
 
