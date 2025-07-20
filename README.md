@@ -8,6 +8,14 @@ Este proyecto forma parte de mi portfolio personal como desarrollador frontend, 
 ---
 
 ## 🧪 Capturas del proyecto
+<img width="1920" height="1080" alt="foto11" src="https://github.com/user-attachments/assets/ab2785b6-c3e0-4996-bd41-b37f420ca6e2" />
+<img width="1920" height="1080" alt="foto 2" src="https://github.com/user-attachments/assets/8c4edbfa-6ddd-470e-8952-2c2da62ec892" />
+<img width="1920" height="1080" alt="foto3" src="https://github.com/user-attachments/assets/c87049ac-ebe9-4034-94da-fc76048a1125" />
+<img width="1920" height="1080" alt="foto4" src="https://github.com/user-attachments/assets/519a4ba9-f627-4cb4-8c27-95305c96cfbc" />
+<img width="1920" height="1080" alt="fotomejorada5" src="https://github.com/user-attachments/assets/fd6796d0-2cd8-4c5e-96ee-be76c88a8fb1" />
+<img width="1920" height="1080" alt="foto12" src="https://github.com/user-attachments/assets/7dceac6c-fa0a-4862-9266-073c9f5dcce8" />
+<img width="1920" height="1080" alt="foto6" src="https://github.com/user-attachments/assets/496e0b58-940f-4151-99be-7bdf18bf8125" />
+
 ---
 
 ## 🚀 Características principales
