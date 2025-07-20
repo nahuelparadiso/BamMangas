@@ -8,13 +8,6 @@ Este proyecto forma parte de mi portfolio personal como desarrollador frontend, 
 ---
 
 ## 🧪 Capturas del proyecto
-<img width="1920" height="1080" alt="foto 1" src="https://github.com/user-attachments/assets/6ecc5f76-8cef-4fe9-96c5-66c878df4360" />
-<img width="1920" height="1080" alt="foto 2" src="https://github.com/user-attachments/assets/35c4c2cb-379c-468d-991a-9cebc94ce3ad" />
-<img width="1920" height="1080" alt="foto3" src="https://github.com/user-attachments/assets/ce0571bf-6dca-4152-95c5-c2e2dc72f0fd" />
-<img width="1920" height="1080" alt="foto4" src="https://github.com/user-attachments/assets/ffa6a18d-c7d4-48ca-87ae-f833781e00d1" />
-<img width="1920" height="1080" alt="fotomejorada5" src="https://github.com/user-attachments/assets/73683f41-618d-4a7d-9057-cfa255aab99c" />
-<img width="1920" height="1080" alt="foto6" src="https://github.com/user-attachments/assets/870d4c1f-1ef5-4619-a39b-bd19e19c85a7" />
-
 ---
 
 ## 🚀 Características principales
@@ -78,6 +71,15 @@ Este proyecto forma parte de mi portfolio personal como desarrollador frontend, 
 - 📦 No se requieren cambios en el frontend: se muestran automáticamente en `manga.html`
 - ✨ Mejora visual en el selector de capítulos gracias al contenido expandido
 - 🖊️ Capítulos redactados exclusivamente para BamMangas con tono editorial uniforme
+
+---
+📦 Novedades v1.2.0
+📘 Cada manga ahora incluye un Capítulo 2 tipo demo con narrativa original
+🧩 Los nuevos capítulos complementan el estilo del capítulo 1, sin romper continuidad
+🔁 Se integran directamente en el array capitulos[] dentro de mangas.json
+📦 No se requieren cambios en el frontend: se muestran automáticamente en manga.html
+✨ Mejora visual en el selector de capítulos gracias al contenido expandido
+🖊️ Capítulos redactados exclusivamente para BamMangas con tono editorial uniforme
 ---
 ## 💻 Cómo ejecutar el proyecto
 
