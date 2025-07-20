@@ -8,8 +8,11 @@ Este proyecto forma parte de mi portfolio personal como desarrollador frontend, 
 ---
 
 ## 🧪 Capturas del proyecto
+<<<<<<< HEAD
 
 <!-- [Aquí van las imágenes, sin cambios] -->
+=======
+>>>>>>> d33c0d12497c59eb9aa0c45779dc2f9988e9cef6
 
 ---
 
