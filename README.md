@@ -73,17 +73,6 @@ Este proyecto forma parte de mi portfolio personal como desarrollador frontend, 
 - 🖊️ Capítulos redactados exclusivamente para BamMangas con tono editorial uniforme
 
 ---
-## 📦 Novedades v1.2.0
-
-📘 Cada manga ahora incluye un Capítulo 2 tipo demo con narrativa original
-🧩 Los nuevos capítulos complementan el estilo del capítulo 1, sin romper continuidad
-🔁 Se integran directamente en el array capitulos[] dentro de mangas.json
-📦 No se requieren cambios en el frontend: se muestran automáticamente en manga.html
-✨ Mejora visual en el selector de capítulos gracias al contenido expandido
-🖊️ Capítulos redactados exclusivamente para BamMangas con tono editorial uniforme
-
-
----
 ## 📦 Novedades v1.3.0
 
 💬 BamTalk: Chat global integrado como ventana modal embebida
@@ -101,6 +90,7 @@ Este proyecto forma parte de mi portfolio personal como desarrollador frontend, 
 🔄 Scroll automático, diseño responsive y sin dependencias externas
 
 ⚙️ Integración completa sin romper la navegación ni el layout base
+
 ---
 ## 💻 Cómo ejecutar el proyecto
 
