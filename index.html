@@ -22,6 +22,20 @@
     </div>
     <div class="header-right">
       <button id="toggle-theme">🌓 Cambiar tema</button>
+
+      <button id="btn-chat-toggle" style="
+        margin-left: 1rem;
+        padding: 0.4rem 0.8rem;
+        background-color: #3f86f7;
+        color: white;
+        font-weight: bold;
+        border: none;
+        border-radius: 6px;
+        font-size: 0.85rem;
+        cursor: pointer;
+        box-shadow: 0 0 6px rgba(0,0,0,0.3);
+      ">💬 Chat</button>
+
       <div id="usuario-panel-container"></div>
     </div>
   </header>
@@ -53,6 +67,45 @@
       No será publicado ni distribuido comercialmente. Su propósito es mostrar mis capacidades como desarrollador frontend.
     </p>
   </section>
+
+  <!-- 🪟 Modal oculto de BamTalk -->
+  <div id="modal-chat" style="
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 720px;
+    max-width: 95%;
+    height: 520px;
+    background-color: #0c0f16;
+    border: 2px solid #3f86f7;
+    border-radius: 12px;
+    z-index: 9999;
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+    overflow: hidden;
+  ">
+    <iframe src="pages/chat.html" style="
+      width: 100%;
+      height: calc(100% - 40px);
+      border: none;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    "></iframe>
+    <button onclick="document.getElementById('modal-chat').style.display='none'" style="
+      width: 100%;
+      padding: 10px;
+      background-color: #3f86f7;
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+    ">
+      ❌ Cerrar chat
+    </button>
+  </div>
 
   <script src="app.js"></script>
   <script>
@@ -108,6 +161,14 @@
       body.classList.toggle("dark-mode");
       const nuevoTema = body.classList.contains("dark-mode") ? "oscuro" : "claro";
       localStorage.setItem("tema", nuevoTema);
+    });
+
+    // 🔁 Activar chat modal
+    const chatBtn = document.getElementById("btn-chat-toggle");
+    const chatModal = document.getElementById("modal-chat");
+
+    chatBtn?.addEventListener("click", () => {
+      chatModal.style.display = "block";
     });
   </script>
 </body>
