@@ -1,98 +1,98 @@
 # 📚 BamMangas
 
 **BamMangas** es una aplicación web desarrollada con **HTML, CSS y JavaScript puro**, inspirada en el estilo editorial de Crunchyroll.  
-Este proyecto forma parte de mi portfolio personal como desarrollador frontend, con foco en experiencia de usuario, diseño visual y navegación fluida.
+Funciona como una biblioteca digital de mangas con exploración narrativa, sistema de usuario y experiencia visual cuidada.
 
-> 🔒 BamMangas no será distribuido comercialmente. Es solo demostrativo para uso profesional.
+Este proyecto forma parte de mi portfolio personal como **desarrollador frontend**, con foco en experiencia de usuario, navegación intuitiva y diseño responsivo.
+
+> ⚠️ Proyecto demostrativo. No posee fines comerciales ni de distribución.
 
 ---
 
 ## 🧪 Capturas del proyecto
 
----
 
-## 🚀 Características principales
 
-- 🖼️ Tarjetas interactivas con portada, título y descripción
-- 🔍 Filtro por género desde archivo `mangas.json`
-- 👤 Sistema de usuario completo:
-  - Registro con validación visual
-  - Login con animación personalizada
-  - Sesión persistente con `localStorage`
-  - Edición de perfil con avatar personalizado
-- ⭐ Favoritos guardados por usuario
-- 📖 Lista de lectura sincronizada por sesión
-- 📦 Vista ampliada con sinopsis narrativa
-- 📘 Capítulo demo original por manga
-- 🌓 Modo claro/oscuro con transición suave
-- 📱 Interfaz responsive adaptable a cualquier dispositivo
-- 🔁 Navegación entre vistas con iconos sincronizados
-- 🧠 Avatar sincronizado dinámicamente en todas vistas
+## 🎯 Funcionalidades principales
+
+- 🖼️ Catálogo interactivo con tarjetas de manga, portada y descripción  
+- 🔍 Filtro dinámico por género extraído desde API local  
+- ⭐ Sistema de favoritos con confirmación visual en tiempo real  
+- 📖 Lista de lectura persistente por sesión  
+- 👤 Perfil editable con avatar personalizado, biografía y datos sincronizados  
+- 📘 Capítulos narrativos extendidos por manga en estructura JSON enriquecida  
+- 🌓 Modo claro/oscuro con transición suave y configuración persistente  
+- 🔁 Navegación entre vistas con íconos sincronizados y acceso fluido  
+- 💬 Reseñas y comentarios visibles con nombre y fecha del usuario  
+- 📱 Interfaz responsive adaptada a móviles, tablets y escritorio  
+>>>>>>> 992ec37 (Actualización profesional del README con estructura completa del proyecto)
 
 ---
 
-## 🎨 Estilo visual aplicado
+## 🌐 API local simulada con `json-server`
 
-| Sección             | Detalles                                                             |
-|---------------------|----------------------------------------------------------------------|
-| Login y registro     | Fondo temático, caja animada, mensaje dinámico                     |
-| Tarjetas de manga    | Hover revelador + estilo editorial                                 |
-| Lectura y favoritos  | Grilla tipo biblioteca visual con botón para volver al perfil      |
-| Perfil de usuario    | Vista tipo Steam: dark theme, avatar central, badges visuales      |
-| Navegación           | Avatar sincronizado en todos los íconos topbar                    |
-| Modo oscuro          | Colores adaptados globalmente 🌓                                   |
-| Mobile friendly      | Fluido y 100% funcional en pantallas pequeñas 📱                   |
+BamMangas utiliza una API local para servir todo su contenido de manera dinámica:
 
----
+- `db.json` validado con mangas, géneros, capítulos y metadatos  
+- Cada manga incluye:  
+  - `descripcion` editorial  
+  - `historiaResumida` para vista rápida  
+  - `capitulos[]` con contenido narrativo extendido  
+- Integración vía `fetch` en todas las vistas  
+- Estructura RESTful simulada:  
+  - `GET /mangas`  
+  - `GET /mangas?id=X`  
 
-## 🧠 Tecnologías implementadas
-
-- **HTML5** semántico
-- **CSS3** modular + animaciones + tema tipo Steam
-- **JavaScript Vanilla**
-- `localStorage` para sesión, lectura y favoritos
-- Git + GitHub como control de versiones
-- Live Server para desarrollo local
+> Ejecutar con: `json-server --watch db.json`
 
 ---
 
-## 📦 Novedades v1.1.0
+## 🔎 Capturas del proyecto
 
-- 🎮 Mejora estética visual estilo Steam aplicada al perfil
-- 🔁 Avatar del usuario sincronizado dinámicamente en favoritos, lectura y perfil
-- 🧼 Pulido visual en botones, enlaces, rangos e interacción
-- 📘 Vista de perfil rediseñada con jerarquía, sombras y animaciones suaves
 
 ---
-## 📦 Novedades v1.2.0
 
-- 📘 Cada manga ahora incluye un **Capítulo 2 tipo demo** con narrativa original
-- 🧩 Los nuevos capítulos complementan el estilo del capítulo 1, sin romper continuidad
-- 🔁 Se integran directamente en el array `capitulos[]` dentro de `mangas.json`
-- 📦 No se requieren cambios en el frontend: se muestran automáticamente en `manga.html`
-- ✨ Mejora visual en el selector de capítulos gracias al contenido expandido
-- 🖊️ Capítulos redactados exclusivamente para BamMangas con tono editorial uniforme
+## 📦 Actualizaciones del proyecto
 
----
-## 📦 Novedades v1.3.0
+### v1.1.0  
+- 🎮 Mejora visual estilo Steam aplicada al perfil  
+- 🔁 Avatar sincronizado dinámicamente en todas vistas  
+- 🧼 Pulido de botones, enlaces e interacción  
 
-💬 BamTalk: Chat global integrado como ventana modal embebida
+### v1.2.0  
+- 📘 Capítulo 2 narrativo original por manga  
+- ✨ Contenido integrado al array `capitulos[]` sin modificar frontend  
 
-🧠 Botón de acceso directo en el header, sin salir del index.html
+### v1.3.0  
+- 💬 BamTalk: sistema de chat global con usuarios simulados  
+- ⏳ Envío limitado cada 5s + scroll automático  
+- 👤 Mensajes vinculados al nombre del usuario  
 
-🎨 Estética visual adaptada al estilo Steam de BamMangas
-
-⏳ Envío limitado cada 5 segundos para evitar spam (cooldown)
-
-👤 Mensajes sincronizados con el nombre del usuario logueado (bamActivo)
-
-👥 Simulación de usuarios ficticios con mensajes automáticos
-
-🔄 Scroll automático, diseño responsive y sin dependencias externas
-
-⚙️ Integración completa sin romper la navegación ni el layout base
+### v1.4.0  
+- ⭐ Vista previa automática de favoritos en perfil del usuario  
+- 📖 Miniaturas visuales de mangas con lectura reciente  
+- 📘 Historial de capítulos leídos integrado en la biblioteca  
+- 🧠 Confirmación visual al añadir/eliminar favoritos  
+- 🔧 Refactorización completa de `perfil.js` para modularidad  
+- 🪄 Interacción intuitiva y presentación profesional en el dashboard  
+- 🌐 Migración de contenido a API local con estructura REST
 
 ---
+
+## 🧠 Tecnologías utilizadas
+
+| Herramienta        | Aplicación |
+|--------------------|------------|
+| **HTML5**          | Estructura semántica  
+| **CSS3**           | Estilo modular + modo oscuro  
+| **JavaScript Vanilla** | Lógica de navegación, filtros, persistencia  
+| `localStorage`     | Favoritos, sesión, lectura, comentarios  
+| `json-server`      | API local simulada con REST  
+| Git + GitHub       | Control de versiones  
+| Live Server        | Desarrollo local sin servidor externo  
+
+---
+
 ## 💻 Cómo ejecutar el proyecto
 
 ```bash
@@ -101,8 +101,13 @@ cd BamMangas
 npx live-server
 🔗 Abrí en: http://localhost:8080
 
-✍️ Capítulos narrativos originales Redactados exclusivamente para BamMangas Integrados dinámicamente con estilo editorial Compatibles con modo claro/oscuro
+📦 API local: En otra terminal, ejecutá:
+json-server --watch db.json
 
-👨‍💻 Autor Nahuel Paradiso — Frontend Developer apasionado por diseño UX/UI y desarrollo web interactivo. 📍 Proyecto portfolio personal
+---
 
-📜 Licencia y créditos Este proyecto fue creado con fines educativos y demostrativos. No posee fines comerciales ni distribución pública. Todas las obras referenciadas pertenecen a sus respectivos autores/editoriales.
+👨‍💻 Autor
+Nahuel Paradiso Frontend Developer con foco en diseño UX/UI y desarrollo web interactivo. 📍 Proyecto creado para portfolio personal y aprendizaje técnico.
+
+📜 Licencia y créditos
+Este proyecto fue creado con fines educativos y demostrativos. No contiene contenido original ni reproducción comercial. Todas las obras referenciadas pertenecen a sus respectivos autores/editoriales.
