@@ -25,7 +25,6 @@ Este proyecto forma parte de mi portfolio personal como **desarrollador frontend
 - 🔁 Navegación entre vistas con íconos sincronizados y acceso fluido  
 - 💬 Reseñas y comentarios visibles con nombre y fecha del usuario  
 - 📱 Interfaz responsive adaptada a móviles, tablets y escritorio  
->>>>>>> 992ec37 (Actualización profesional del README con estructura completa del proyecto)
 
 ---
 
