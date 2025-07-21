@@ -51,11 +51,6 @@ BamMangas utiliza una API local para servir todo su contenido de manera dinámic
 
 ---
 
-## 🔎 Capturas del proyecto
-
-
----
-
 ## 📦 Actualizaciones del proyecto
 
 ### v1.1.0  
