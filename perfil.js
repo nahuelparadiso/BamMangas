@@ -6,7 +6,6 @@ const boxPersonal = document.getElementById("perfil-personal");
 const boxBiblioteca = document.getElementById("perfil-biblioteca");
 
 if (user) {
-  // 🧑‍🎨 Panel visual estilo tarjeta
   boxPersonal.innerHTML = `
     <img id="avatar-img" src="${avatarURL}" alt="avatar" class="avatar-big" />
     <h2 id="nombre-usuario">${user.name}</h2>
@@ -19,7 +18,6 @@ if (user) {
     <button type="button" id="cerrar-sesion" style="background-color: crimson; color: white; border: none; padding: 0.5rem 1rem; margin-top: 1rem; border-radius: 6px; cursor: pointer; font-weight: bold;">🔓 Cerrar sesión</button>
   `;
 
-  // ✏️ Modal o edición inline (simplificada)
   document.getElementById("btn-editar").addEventListener("click", () => {
     boxPersonal.innerHTML = `
       <img id="avatar-img" src="${avatarURL}" alt="avatar" class="avatar-big" />
@@ -42,14 +40,12 @@ if (user) {
       <button id="guardar-cambios" class="btn-editar">💾 Guardar</button>
     `;
 
-    // 🎨 Actualizar avatar preview
     document.querySelectorAll('input[name="avatar"]').forEach(radio => {
       radio.addEventListener("change", () => {
         document.getElementById("avatar-img").src = radio.value;
       });
     });
 
-    // 💾 Guardar cambios
     document.getElementById("guardar-cambios").addEventListener("click", () => {
       const newName = document.getElementById("edit-name").value.trim();
       const newEmail = document.getElementById("edit-email").value.trim();
@@ -72,14 +68,13 @@ if (user) {
     });
   });
 
-  // 🔒 Cerrar sesión
   document.getElementById("cerrar-sesion").addEventListener("click", () => {
     localStorage.removeItem("bamActivo");
     alert("Sesión cerrada");
     window.location.href = "../index.html";
   });
 
-  // 📚 Panel derecho
+  // 📚 Sección de biblioteca
   boxBiblioteca.innerHTML = `
     <h3>📚 Mi Biblioteca</h3>
     <ul class="biblioteca-links">
@@ -97,11 +92,11 @@ if (user) {
   if (lecturas.length === 0) {
     document.getElementById("lectura-historial").innerHTML = "<p>📘 No has leído ningún capítulo aún.</p>";
   } else {
-    fetch("../data/mangas.json")
+    fetch("http://localhost:3000/mangas")
       .then(res => res.json())
       .then(mangas => {
         const historialBox = document.createElement("div");
-        historialBox.innerHTML = `<h4 style="margin-top: 1.2rem;">📖 Historial de lectura</h4><p>Has leído <strong>${lecturas.length}</strong> capítulo(s):</p>`;
+        historialBox.innerHTML = `<h4 style="margin-top:1.2rem;">📖 Historial de lectura</h4><p>Has leído <strong>${lecturas.length}</strong> capítulo(s):</p>`;
         const lista = document.createElement("ul");
         lista.style.paddingLeft = "1.2rem";
 
@@ -120,6 +115,69 @@ if (user) {
       });
   }
 
+  // ⭐ Vista previa de favoritos
+  const favoritos = JSON.parse(localStorage.getItem("bamFavoritos")) || [];
+
+  if (favoritos.length > 0) {
+    fetch("http://localhost:3000/mangas")
+      .then(res => res.json())
+      .then(mangas => {
+        const favContainer = document.createElement("div");
+        favContainer.innerHTML = `<h4 style="margin-top:1rem;">⭐ Tus favoritos (${favoritos.length})</h4>`;
+        const grid = document.createElement("div");
+        grid.style = "display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem;";
+
+        favoritos.forEach(id => {
+          const manga = mangas.find(m => m.id === id);
+          if (manga) {
+            const card = document.createElement("a");
+            card.href = `manga.html?id=${manga.id}`;
+            card.style = "text-align: center; width: 120px;";
+            card.innerHTML = `
+              <img src="${manga.imagen}" alt="${manga.titulo}" style="width: 100%; border-radius: 6px;" />
+              <p style="margin-top: 0.3rem; font-size: 0.85rem;">${manga.titulo}</p>
+            `;
+            grid.appendChild(card);
+          }
+        });
+
+        favContainer.appendChild(grid);
+        boxBiblioteca.appendChild(favContainer);
+      });
+  }
+
+  // 📖 Vista previa de mangas con lectura
+  if (lecturas.length > 0) {
+    fetch("http://localhost:3000/mangas")
+      .then(res => res.json())
+      .then(mangas => {
+        const lecturaBox = document.createElement("div");
+        lecturaBox.innerHTML = `<h4 style="margin-top:1rem;">📖 Lecturas recientes (${lecturas.length})</h4>`;
+        const grid = document.createElement("div");
+        grid.style = "display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem;";
+
+        const vistos = new Set();
+        lecturas.forEach(item => {
+          const [mangaId] = item.split("-").map(Number);
+          if (vistos.has(mangaId)) return;
+          vistos.add(mangaId);
+          const manga = mangas.find(m => m.id === mangaId);
+          if (manga) {
+            const card = document.createElement("a");
+            card.href = `manga.html?id=${manga.id}`;
+            card.style = "text-align: center; width: 120px;";
+            card.innerHTML = `
+              <img src="${manga.imagen}" alt="${manga.titulo}" style="width: 100%; border-radius: 6px;" />
+              <p style="margin-top: 0.3rem; font-size: 0.85rem;">${manga.titulo}</p>
+            `;
+                        grid.appendChild(card);
+          }
+        });
+
+        lecturaBox.appendChild(grid);
+        boxBiblioteca.appendChild(lecturaBox);
+      });
+  }
 } else {
   boxPersonal.innerHTML = `<p style="text-align: center;">No hay sesión activa. <a href="login.html" style="color: #f47521; font-weight: bold;">Iniciar sesión</a></p>`;
 }
@@ -158,13 +216,13 @@ function mostrarComentarios() {
   comentarios.slice().reverse().forEach(com => {
     const div = document.createElement("div");
     div.style = "margin-bottom: 1rem; padding: 0.5rem; border-bottom: 1px solid #ccc;";
-    div.innerHTML = `<strong>${com.nombre}</strong> <span style="color: #999;">(${com.fecha})</span><br><p style="margin: 0.5rem 0;">${com.mensaje}</p>`;
+    div.innerHTML = `
+      <strong>${com.nombre}</strong> 
+      <span style="color: #999;">(${com.fecha})</span><br>
+      <p style="margin: 0.5rem 0;">${com.mensaje}</p>
+    `;
     lista.appendChild(div);
   });
 }
 
-// 📣 Cargar comentarios al entrar
 mostrarComentarios();
-
-
-

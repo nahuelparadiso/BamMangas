@@ -23,18 +23,7 @@
     <div class="header-right">
       <button id="toggle-theme">🌓 Cambiar tema</button>
 
-      <button id="btn-chat-toggle" style="
-        margin-left: 1rem;
-        padding: 0.4rem 0.8rem;
-        background-color: #3f86f7;
-        color: white;
-        font-weight: bold;
-        border: none;
-        border-radius: 6px;
-        font-size: 0.85rem;
-        cursor: pointer;
-        box-shadow: 0 0 6px rgba(0,0,0,0.3);
-      ">💬 Chat</button>
+      <button id="btn-chat-toggle" style="margin-left: 1rem; padding: 0.4rem 0.8rem; background-color: #3f86f7; color: white; font-weight: bold; border: none; border-radius: 6px; font-size: 0.85rem; cursor: pointer; box-shadow: 0 0 6px rgba(0,0,0,0.3);">💬 Chat</button>
 
       <div id="usuario-panel-container"></div>
     </div>
@@ -69,43 +58,39 @@
   </section>
 
   <!-- 🪟 Modal oculto de BamTalk -->
-  <div id="modal-chat" style="
-    display: none;
-    position: fixed;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 720px;
-    max-width: 95%;
-    height: 520px;
-    background-color: #0c0f16;
-    border: 2px solid #3f86f7;
-    border-radius: 12px;
-    z-index: 9999;
-    box-shadow: 0 0 20px rgba(0,0,0,0.8);
-    overflow: hidden;
-  ">
-    <iframe src="pages/chat.html" style="
-      width: 100%;
-      height: calc(100% - 40px);
-      border: none;
-      border-top-left-radius: 12px;
-      border-top-right-radius: 12px;
-    "></iframe>
-    <button onclick="document.getElementById('modal-chat').style.display='none'" style="
-      width: 100%;
-      padding: 10px;
-      background-color: #3f86f7;
-      color: white;
-      border: none;
-      font-weight: bold;
-      cursor: pointer;
-      border-bottom-left-radius: 12px;
-      border-bottom-right-radius: 12px;
-    ">
+  <div id="modal-chat" style="display: none; position: fixed; top: 10%; left: 50%; transform: translateX(-50%); width: 720px; max-width: 95%; height: 520px; background-color: #0c0f16; border: 2px solid #3f86f7; border-radius: 12px; z-index: 9999; box-shadow: 0 0 20px rgba(0,0,0,0.8); overflow: hidden;">
+    <iframe src="pages/chat.html" style="width: 100%; height: calc(100% - 40px); border: none; border-top-left-radius: 12px; border-top-right-radius: 12px;"></iframe>
+    <button onclick="document.getElementById('modal-chat').style.display='none'" style="width: 100%; padding: 10px; background-color: #3f86f7; color: white; border: none; font-weight: bold; cursor: pointer; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px;">
       ❌ Cerrar chat
     </button>
   </div>
+
+  <!-- 👇 Script que conecta al API -->
+  <script>
+    fetch("http://localhost:3000/mangas")
+      .then(res => res.json())
+      .then(mangas => {
+        const contenedor = document.getElementById("manga-list");
+        contenedor.innerHTML = "";
+
+        mangas.forEach(manga => {
+          const tarjeta = document.createElement("div");
+          tarjeta.className = "manga-card";
+          tarjeta.innerHTML = `
+            <a href="pages/manga.html?id=${manga.id}" class="manga-link">
+              <img src="${manga.imagen}" alt="${manga.titulo}" class="manga-img" />
+              <h3 class="manga-title">${manga.titulo}</h3>
+              <p class="manga-gen">🎯 ${manga.genero}</p>
+            </a>
+          `;
+          contenedor.appendChild(tarjeta);
+        });
+      })
+      .catch(err => {
+        console.error("Error al cargar mangas:", err);
+        document.getElementById("manga-list").innerHTML = `<p>No se pudieron cargar los mangas 😞</p>`;
+      });
+  </script>
 
   <script src="app.js"></script>
   <script>
@@ -118,25 +103,9 @@
       panelContainer.innerHTML = `
         <div class="usuario-panel" style="display: flex; align-items: center; gap: 1rem;">
           <a href="pages/perfil.html" id="boton-perfil" title="Ir a tu perfil">
-            <img src="${avatar}" alt="Avatar" style="
-              width: 48px;
-              height: 48px;
-              border-radius: 50%;
-              object-fit: cover;
-              border: 3px solid #f47521;
-              box-shadow: 0 0 6px rgba(0,0,0,0.1);
-              transition: transform 0.2s ease;
-            ">
+            <img src="${avatar}" alt="Avatar" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 3px solid #f47521; box-shadow: 0 0 6px rgba(0,0,0,0.1); transition: transform 0.2s ease;">
           </a>
-          <button id="logout-btn" style="
-            background-color: crimson;
-            color: white;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: bold;
-          ">🔓 Cerrar sesión</button>
+          <button id="logout-btn" style="background-color: crimson; color: white; border: none; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; font-weight: bold;">🔓 Cerrar sesión</button>
         </div>
       `;
 

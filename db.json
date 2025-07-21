@@ -1,0 +1,264 @@
+{
+  "mangas": [
+    {
+      "id": 1,
+      "titulo": "Bleach",
+      "genero": "Acción sobrenatural",
+      "descripcion": "Un adolescente obtiene poderes de Shinigami y se ve envuelto en batallas espirituales épicas.",
+      "imagen": "assets/img/bleach.jpg",
+      "historiaResumida": "Ichigo Kurosaki hereda poderes de Shinigami y protege el equilibrio espiritual del mundo.",
+      "capitulos": [
+        {
+          "titulo": "La llamada del alma",
+          "contenido": [
+            "Ichigo Kurosaki jamás imaginó que su vida cambiaría al encontrarse con una Shinigami en apuros.",
+            "Tras un enfrentamiento con un Hollow, debe asumir la responsabilidad de proteger almas perdidas.",
+            "Así comienza su ingreso al mundo de las almas y los rituales espirituales."
+          ]
+        },
+        {
+          "titulo": "Los trece escuadrones",
+          "contenido": [
+            "La Sociedad de Almas está dividida en escuadrones con misiones únicas.",
+            "Ichigo debe infiltrarse para rescatar a Rukia, enfrentando desafíos que redefinirán su propósito.",
+            "Cada enfrentamiento lo acerca más al verdadero significado de deber y sacrificio."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "titulo": "Death Note",
+      "genero": "Suspenso",
+      "descripcion": "Un cuaderno misterioso y un juego mortal entre el bien y el mal.",
+      "imagen": "assets/img/deathnote.jpg",
+      "historiaResumida": "Light Yagami encuentra un cuaderno que puede matar al escribir el nombre de una persona. Lo que empieza como justicia se convierte en obsesión.",
+      "capitulos": [
+        {
+          "titulo": "La tentación del poder",
+          "contenido": [
+            "Light descubre que puede eliminar criminales con solo escribir su nombre.",
+            "Decide convertirse en un dios de la justicia, purgando al mundo de su corrupción.",
+            "Pero cada decisión lo aleja más de su humanidad y lo acerca al aislamiento moral."
+          ]
+        },
+        {
+          "titulo": "Duelo de mentes",
+          "contenido": [
+            "El detective L aparece, enfrentando a Kira con inteligencia quirúrgica.",
+            "Comienza un juego psicológico donde cada acción tiene consecuencias impredecibles.",
+            "Ambos genios se enfrentan sin saber lo cerca que están el uno del otro."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "titulo": "Chainsaw Man",
+      "genero": "Terror y acción",
+      "descripcion": "Un joven cazador de demonios se fusiona con su mascota motosierra y enfrenta horrores inimaginables.",
+      "imagen": "assets/img/chainsaw.jpg",
+      "historiaResumida": "Denji, arruinado y solo, se convierte en Chainsaw Man tras un sacrificio. Ahora lucha entre la humanidad y la monstruosidad.",
+      "capitulos": [
+        {
+          "titulo": "El pacto sangriento",
+          "contenido": [
+            "Denji vive en la miseria, cazando demonios para pagar deudas impagables.",
+            "Tras una traición, su mascota Pochita se fusiona con él, dándole un nuevo cuerpo y poder.",
+            "El mundo se abre en sangre y caos, pero también en nuevas posibilidades."
+          ]
+        },
+        {
+          "titulo": "Ruido en la oscuridad",
+          "contenido": [
+            "Denji se enfrenta a demonios que encarnan miedos humanos profundos.",
+            "Cada batalla lo hace dudar de qué significa ser humano.",
+            "La línea entre libertad y control se vuelve tan afilada como sus propias sierras."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "titulo": "One Piece",
+      "genero": "Aventura y acción",
+      "descripcion": "Un joven pirata con poderes elásticos busca el tesoro legendario junto a su tripulación.",
+      "imagen": "assets/img/onepiece.jpg",
+      "historiaResumida": "Luffy navega el mundo en busca del tesoro One Piece y sueña con convertirse en el Rey de los Piratas.",
+      "capitulos": [
+        {
+          "titulo": "La bandera que no cae",
+          "contenido": [
+            "Luffy defiende su bandera ante fuerzas que buscan doblegar su voluntad.",
+            "La tripulación se une para proteger los ideales que los sostienen.",
+            "Cada isla visitada revela parte del legado del mar."
+          ]
+        },
+        {
+          "titulo": "Compañeros del mar",
+          "contenido": [
+            "Zoro, Nami, Usopp y Sanji comparten historias de dolor y sueños que los unen.",
+            "Más que compañeros, se convierten en familia elegida.",
+            "La nave no solo transporta cuerpos, sino promesas y esperanza."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "titulo": "Naruto",
+      "genero": "Acción",
+      "descripcion": "Un joven ninja busca ser reconocido mientras carga el poder de una bestia legendaria.",
+      "imagen": "assets/img/naruto.jpg",
+      "historiaResumida": "Naruto Uzumaki desea convertirse en Hokage y romper con su pasado de rechazo y soledad.",
+      "capitulos": [
+        {
+          "titulo": "El camino del shinobi",
+          "contenido": [
+            "Naruto entrena con intensidad para demostrar su valor ante la aldea.",
+            "Descubre que la fuerza viene tanto del esfuerzo como del vínculo con otros.",
+            "Cada misión lo forma como líder que inspira y protege."
+          ]
+        },
+        {
+          "titulo": "Sombras del pasado",
+          "contenido": [
+            "Aprende sobre Kurama y la tragedia de sus padres.",
+            "El ciclo de odio entre clanes amenaza con repetir viejas guerras.",
+            "Naruto decide cambiar el destino con empatía y convicción."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "titulo": "Vinland Saga",
+      "genero": "Histórico",
+      "descripcion": "Una épica vikinga de guerra, honor y redención.",
+      "imagen": "assets/img/vinland.jpg",
+      "historiaResumida": "Thorfinn busca redención tras años de guerra, soñando con una tierra sin odio: Vinland.",
+      "capitulos": [
+        {
+          "titulo": "La saga de Thorfinn",
+          "contenido": [
+            "El asesinato de su padre lleva a Thorfinn a seguir un camino de venganza.",
+            "Las batallas lo endurecen, pero también lo vacían de propósito.",
+            "Años después, decide que la paz debe construirse desde la humildad."
+          ]
+        },
+        {
+          "titulo": "Más allá del mar",
+          "contenido": [
+            "Thorfinn escucha leyendas de Vinland, donde no existe la esclavitud.",
+            "Con nuevos aliados, deja atrás la espada y toma el arado.",
+            "Vinland ya no es solo un lugar: es un ideal que decide encarnar."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "titulo": "Fullmetal Alchemist",
+      "genero": "Acción y drama",
+      "descripcion": "Dos hermanos alquimistas buscan la Piedra Filosofal tras perderlo todo en un ritual prohibido.",
+      "imagen": "assets/img/fma.jpg",
+      "historiaResumida": "Edward y Alphonse buscan recuperar sus cuerpos tras fallar en un ritual de transmutación humana.",
+      "capitulos": [
+        {
+          "titulo": "El precio de la alquimia",
+          "contenido": [
+            "La Ley del Intercambio Equivalente marca cada intento de recuperar lo perdido.",
+            "Los hermanos enfrentan secretos oscuros sobre la Piedra Filosofal.",
+            "Cada paso los acerca a respuestas dolorosas sobre la verdad y el sacrificio."
+          ]
+        },
+        {
+          "titulo": "Armadura vacía",
+          "contenido": [
+            "Alphonse vive atrapado en una armadura, Edward se esfuerza para devolverle su cuerpo.",
+            "La química se mezcla con filosofía mientras el poder se cuestiona desde la ética.",
+            "Su vínculo fraternal se vuelve más fuerte que cualquier metal."
+          ]
+        }
+      ]
+    },
+        {
+      "id": 8,
+      "titulo": "Spy x Family",
+      "genero": "Comedia y espionaje",
+      "descripcion": "Un espía, una asesina y una niña telépata deben fingir ser familia mientras esconden grandes secretos.",
+      "imagen": "assets/img/spyxfamily.jpg",
+      "historiaResumida": "Para cumplir una misión, el espía Twilight forma una familia falsa con una asesina profesional y una niña con poderes mentales.",
+      "capitulos": [
+        {
+          "titulo": "Misión familiar",
+          "contenido": [
+            "Twilight debe infiltrarse en una escuela de élite, lo que requiere aparentar ser un padre con una familia común.",
+            "Yor, una asesina silenciosa, y Anya, una niña telépata, completan un hogar caótico pero funcional.",
+            "Aunque todos ocultan sus verdaderas identidades, los lazos que nacen empiezan a parecer reales."
+          ]
+        },
+        {
+          "titulo": "Telepatía en la mesa",
+          "contenido": [
+            "Anya lee pensamientos durante la cena, descubriendo secretos que no puede revelar.",
+            "Yor intenta ser una madre normal mientras esquiva su pasado criminal.",
+            "La rutina doméstica se vuelve más peligrosa que cualquier misión encubierta."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "titulo": "Kimetsu no Yaiba",
+      "genero": "Acción y sobrenatural",
+      "descripcion": "Tanjiro lucha contra demonios para salvar a su hermana convertida en uno de ellos.",
+      "imagen": "assets/img/kimetsu.jpg",
+      "historiaResumida": "Tanjiro Kamado se convierte en cazador de demonios para proteger a su hermana Nezuko y buscar la cura que restaure su humanidad.",
+      "capitulos": [
+        {
+          "titulo": "La danza del fuego",
+          "contenido": [
+            "Tanjiro ve morir a su familia y a Nezuko convertirse en demonio.",
+            "Jurando salvarla, entrena bajo un cazador legendario y aprende la respiración del sol.",
+            "La espada que porta no solo corta enemigos, también abre caminos de redención."
+          ]
+        },
+        {
+          "titulo": "La flor de Nezuko",
+          "contenido": [
+            "Nezuko resiste el instinto demoníaco y demuestra emociones humanas.",
+            "Los cazadores dudan de ella, pero su vínculo con Tanjiro es prueba de amor y fe.",
+            "Incluso en la oscuridad más profunda, ella florece con ternura feroz."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "titulo": "Jujutsu Kaisen",
+      "genero": "Acción sobrenatural",
+      "descripcion": "Un joven se convierte en recipiente de una maldición poderosa mientras lucha contra monstruos invisibles.",
+      "imagen": "assets/img/jujutsu.jpg",
+      "historiaResumida": "Yuji Itadori ingiere una reliquia maldita y se une a una escuela de hechiceros para aprender a controlar el poder de Sukuna dentro de él.",
+      "capitulos": [
+        {
+          "titulo": "El dedo de Sukuna",
+          "contenido": [
+            "Yuji consume un dedo maldito para proteger a sus amigos, convirtiéndose en receptáculo de Sukuna.",
+            "Los hechiceros lo observan con temor y esperanza, sabiendo que es una amenaza potencial.",
+            "Mientras combate maldiciones, debe enfrentar el riesgo de ser devorado por el poder que ahora lo habita."
+          ]
+        },
+        {
+          "titulo": "Maestros del oculto",
+          "contenido": [
+            "La escuela de jujutsu le enseña técnicas antiguas para canalizar energía maldita.",
+            "Yuji encuentra aliados como Megumi y Nobara, con quienes forma un lazo combativo y emocional.",
+            "Cada clase y combate lo acercan al verdadero significado de proteger sin perder su alma."
+          ]
+        }
+      ]
+    }
+  ]
+}

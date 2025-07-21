@@ -1,10 +1,11 @@
-const lectura = JSON.parse(localStorage.getItem("bamLectura")) || [];
+const lecturaRaw = localStorage.getItem("bamLectura") || "[]";
+const lectura = JSON.parse(lecturaRaw).map(id => Number(id));
 
-fetch("../data/mangas.json")
+fetch("http://localhost:3000/mangas")
   .then(res => res.json())
   .then(mangas => {
     const container = document.getElementById("lectura-list");
-    const seleccionados = mangas.filter(m => lectura.includes(m.id));
+    const seleccionados = mangas.filter(m => lectura.includes(Number(m.id)));
 
     if (seleccionados.length === 0) {
       container.innerHTML = `
@@ -31,7 +32,6 @@ fetch("../data/mangas.json")
         <p class="descripcion">${manga.descripcion}</p>
         <button class="btn-quitar" onclick="quitarLectura(${manga.id})">❌ Quitar de lectura</button>
       `;
-
       container.appendChild(card);
     });
   })
@@ -46,7 +46,7 @@ fetch("../data/mangas.json")
 
 function quitarLectura(id) {
   let lectura = JSON.parse(localStorage.getItem("bamLectura")) || [];
-  lectura = lectura.filter(mangaId => mangaId !== id);
+  lectura = lectura.filter(mangaId => Number(mangaId) !== Number(id));
   localStorage.setItem("bamLectura", JSON.stringify(lectura));
 
   const card = document.getElementById(`card-${id}`);

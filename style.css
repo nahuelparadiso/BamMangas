@@ -1956,5 +1956,9 @@ body {
   color: #3f86f7;
 }
 
+@keyframes fadein {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
 
 

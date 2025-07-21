@@ -1,6 +1,6 @@
 let todosLosMangas = [];
 
-fetch('./data/mangas.json')
+fetch('http://localhost:3000/mangas')
   .then(res => res.json())
   .then(mangas => {
     todosLosMangas = mangas;
@@ -19,7 +19,7 @@ function mostrarMangas(lista) {
   lista.forEach(manga => {
     const isFav = favs.includes(manga.id);
     const card = document.createElement("div");
-    card.classList.add("manga-card"); // 🎯 Importante para que el buscador funcione
+    card.classList.add("manga-card");
 
     card.innerHTML = `
       <div class="genre-badge">${manga.genero}</div>
@@ -66,15 +66,16 @@ document.getElementById("manga-list").addEventListener("click", function (e) {
       const updated = favs.filter(f => f !== id);
       localStorage.setItem("bamFavoritos", JSON.stringify(updated));
       e.target.classList.remove("active");
+      mostrarAlertaFavorito("❌ Eliminado de favoritos");
     } else {
       favs.push(id);
       localStorage.setItem("bamFavoritos", JSON.stringify(favs));
       e.target.classList.add("active");
+      mostrarAlertaFavorito("✅ Manga añadido a favoritos");
     }
   }
 });
 
-// 🔍 Filtro visual mientras escribís (opcional, queda pro)
 document.getElementById("busquedaManga").addEventListener("input", function () {
   const query = this.value.toLowerCase();
   const tarjetas = document.querySelectorAll(".manga-card");
@@ -85,7 +86,6 @@ document.getElementById("busquedaManga").addEventListener("input", function () {
   });
 });
 
-// 🚀 Redirección automática si el título coincide exactamente
 document.getElementById("busquedaManga").addEventListener("change", function () {
   const query = this.value.trim().toLowerCase();
   const tarjetas = document.querySelectorAll(".manga-card");
@@ -101,3 +101,32 @@ document.getElementById("busquedaManga").addEventListener("change", function () 
     }
   }
 });
+
+// ✅ Función visual para avisos al usuario
+function mostrarAlertaFavorito(mensajeTexto) {
+  const mensaje = document.createElement("div");
+  mensaje.textContent = mensajeTexto;
+  mensaje.style = `
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #3f86f7;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    font-size: 0.9rem;
+    z-index: 9999;
+    animation: fadein 0.3s ease;
+  `;
+  document.body.appendChild(mensaje);
+
+  setTimeout(() => {
+    mensaje.style.opacity = "0";
+  }, 1800);
+
+  setTimeout(() => {
+    mensaje.remove();
+  }, 2400);
+}
