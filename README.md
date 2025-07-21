@@ -78,7 +78,7 @@ BamMangas utiliza una API local para servir todo su contenido de manera dinámic
 
 ---
 
-Mejoras futuras: acomodar el css en varios archivos de una manera más profesional y clara para todo aquel que deba retocar codigo.
+Mejoras futuras: acomodar el css en varios archivos de una manera más profesional y clara para todo aquel que deba retocar codigo, cabe recalcar que este proyecto fue puro paso y error remodelando, arreglando y sucesivamente. Espero que les guste.
 
 ## 🧠 Tecnologías utilizadas
 
